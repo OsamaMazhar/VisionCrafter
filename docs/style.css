@@ -28,3 +28,37 @@ footer {
     width: 100%;
     bottom: 0;
 }
+.img-row-fixed {
+    max-height: 240px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 0.25rem;
+}
+
+.img-row-large {
+    max-height: 340px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 0.25rem;
+}
+.row.g-4 > [class^="col-"] {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+.fancy-autoalign .autoalign-animated {
+    display: inline-block;
+    background: linear-gradient(90deg, #007bff, #00c6ff, #007bff);
+    background-size: 200% 200%;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    animation: shine 2s linear infinite;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.15);
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
