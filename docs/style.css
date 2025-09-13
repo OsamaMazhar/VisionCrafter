@@ -29,7 +29,7 @@ footer {
     bottom: 0;
 }
 .img-row-fixed {
-    max-height: 240px;
+    max-height: 220px;
     width: 100%;
     object-fit: contain;
     margin-bottom: 0.25rem;
