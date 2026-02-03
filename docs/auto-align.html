@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Align | orbitaar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #f1f3f5;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-tertiary: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #eff6ff;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --border-light: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .navbar { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); padding: 1rem 0; transition: all 0.3s ease; }
+        .navbar-brand { font-weight: 600; font-size: 1.25rem; color: var(--text-primary); text-decoration: none; }
+        .navbar-brand img { width: 36px; height: 36px; border-radius: 8px; margin-right: 0.5rem; }
+        .nav-link { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.5rem 1rem !important; transition: color 0.2s ease; }
+        .nav-link:hover, .nav-link.active { color: var(--text-primary); }
+        footer { position: static; background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 1.5rem 0; text-align: center; }
+        footer p { color: var(--text-tertiary); font-size: 0.875rem; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in-up { animation: fadeInUp 0.8s ease forwards; }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        /* Hero Section */
+        .hero { min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; padding: 7rem 1rem 2.5rem; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1200px; height: 400px; background: radial-gradient(ellipse at center, var(--accent-blue-light) 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; padding: 0 2rem; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--text-primary); line-height: 1.1; }
+        .hero h1 span { background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: clamp(1.125rem, 2vw, 1.25rem); color: var(--text-secondary); max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; margin-bottom: 1.5rem; border: 1px solid var(--border-light); }
+        .hero-badge i { color: var(--accent-blue); }
+
+        /* App Icon */
+        .app-icon-container { width: 140px; height: 140px; margin: 0 auto 1.5rem; position: relative; }
+        .app-icon-container .app-icon { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 36px; box-shadow: var(--shadow-xl); transition: opacity 0.5s ease; }
+
+        /* Sections */
+        .section { padding: 3.5rem 0; }
+        .section-alt { background: var(--bg-secondary); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 2rem; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--text-primary); }
+        .section-header p { font-size: 1.125rem; color: var(--text-secondary); }
+
+        /* Content Card */
+        .content-card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 24px; padding: 3rem; max-width: 1100px; margin: 0 auto; transition: all 0.3s ease; }
+        .content-card:hover { box-shadow: var(--shadow-lg); }
+
+        /* Download Button */
+        .download-section { text-align: center; margin: 1.5rem 0; }
+        .download-section p { color: var(--text-secondary); margin-bottom: 1rem; }
+        .download-section img { height: 54px; transition: transform 0.2s ease; }
+        .download-section img:hover { transform: scale(1.05); }
+
+        /* Feature Cards */
+        .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+        .feature-card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 20px; padding: 2rem; transition: all 0.3s ease; }
+        .feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+        .feature-card.can { border-left: 4px solid var(--accent-green); }
+        .feature-card.cannot { border-left: 4px solid var(--accent-red); }
+        .feature-card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .feature-card h3 i { font-size: 1.5rem; }
+        .feature-card.can h3 { color: var(--accent-green); }
+        .feature-card.cannot h3 { color: var(--accent-red); }
+        .feature-card ul { list-style: none; padding: 0; margin: 0; }
+        .feature-card ul li { padding: 0.5rem 0; color: var(--text-secondary); display: flex; align-items: flex-start; gap: 0.5rem; }
+        .feature-card ul li::before { content: '•'; color: var(--text-tertiary); font-weight: bold; }
+
+        /* Image Grid */
+        .image-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 1.5rem 0; }
+        .image-grid.two-col { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-left: auto; margin-right: auto; }
+        .image-item { text-align: center; }
+        .image-item img { width: 100%; height: auto; max-height: 400px; object-fit: contain; background-color: var(--bg-secondary); box-shadow: var(--shadow-md); transition: all 0.3s ease; }
+        .image-item:hover img { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+        .image-item .caption { margin-top: 0.75rem; font-weight: 600; font-size: 0.9rem; color: var(--text-primary); }
+        .image-item .caption.error { color: var(--accent-red); }
+
+        /* Explanation Cards */
+        .explanation-card { background: var(--bg-tertiary); border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; }
+        .explanation-card h4 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary); }
+        .explanation-card p { color: var(--text-secondary); margin: 0; }
+
+        /* Policy Links */
+        .policy-section { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-light); }
+        .policy-section h4 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary); }
+        .policy-section p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .policy-button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-primary); color: var(--text-primary); padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 500; font-size: 0.95rem; text-decoration: none; border: 1px solid var(--border-light); transition: all 0.3s ease; margin: 0.5rem; }
+        .policy-button:hover { background: var(--bg-tertiary); color: var(--text-primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+        /* Marketing Image */
+        .marketing-image { width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); margin: 1.5rem 0; }
+
+        @media (max-width: 992px) { .feature-grid { grid-template-columns: 1fr; } .image-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .hero { padding: 6rem 1rem 2rem; } .section { padding: 2.5rem 0; } .content-card { padding: 2rem; } .image-grid { grid-template-columns: 1fr; } .image-grid.two-col { grid-template-columns: 1fr; } .app-icon-container { width: 120px; height: 120px; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
+                <span>orbitaar</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="apps.html">Apps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="app-icon-container fade-in-up delay-1" id="icon-animation">
+                <img src="assets/blue_auto_dark-iOS-Default-1024x1024@1x.png" class="app-icon" style="opacity:1;">
+                <img src="assets/blue_auto_tinted-iOS-Default-1024x1024@1x.png" class="app-icon" style="opacity:0;">
+                <img src="assets/blue_auto-iOS-Default-1024x1024@1x.png" class="app-icon" style="opacity:0;">
+            </div>
+            <span class="hero-badge fade-in-up delay-2"><i class="bi bi-apple"></i> Available for iOS, iPadOS & Mac</span>
+            <h1 class="fade-in-up delay-2"><span>Auto Align</span></h1>
+            <p class="fade-in-up delay-3">Experience effortless photo perfection. Instantly correct leaning buildings and wide-angle distortions with a single tap.</p>
+            <div class="download-section fade-in-up delay-4">
+                <a href="https://apps.apple.com/app/id6751121944" target="_blank" rel="noopener">
+                    <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="content-card">
+                <img src="assets/marketing_slide.png" alt="Auto Align Features Summary" class="marketing-image">
+
+                <div class="feature-grid">
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-check-circle-fill"></i> What Auto Align Can Do</h3>
+                        <ul>
+                            <li>Automatically detects and corrects leaning buildings in photos</li>
+                            <li>Fixes wide-angle distortions common in urban photography</li>
+                            <li>Fully preserves HDR gain maps for stunning dynamic range and vivid colors</li>
+                            <li>Simple, one-tap interface for fast results</li>
+                            <li>Easily undo edits at any time and keep all your original photo details</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card cannot">
+                        <h3><i class="bi bi-x-circle-fill"></i> What Auto Align Cannot Do</h3>
+                        <ul>
+                            <li>Does not add missing parts of buildings cropped out of the frame</li>
+                            <li>Cannot fix extreme perspective distortions beyond a certain limit</li>
+                            <li>May not work if there are no visible leaning buildings or urban structures in the image</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intended Use-cases</h2>
+                <p>Auto Align delivers optimal results for urban photography with clear buildings, cityscapes, and architectural structures.</p>
+            </div>
+            <div class="content-card">
+                <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem;">When your photo contains clear, straight lines and well-defined urban elements, the app can automatically detect distortions and correct them with a single tap—ideal for real estate, travel, and creative city photography.</p>
+
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="assets/can1-original.jpg" alt="Original urban photo">
+                        <div class="caption">Original</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/can1-w-annotation.png" alt="Detected lines">
+                        <div class="caption">Detected Structures</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/can1-processed_wide.jpeg" alt="Wide-angle corrected">
+                        <div class="caption">Wide-angle Correction</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/can1-processed_cropped.jpeg" alt="Cropped corrected">
+                        <div class="caption">Cropped Correction</div>
+                    </div>
+                </div>
+
+                <div class="image-grid" style="margin-top: 2rem;">
+                    <div class="image-item">
+                        <img src="assets/can2-original.jpg" alt="Original urban photo">
+                        <div class="caption">Original</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/can2-w-annotation.png" alt="Detected lines">
+                        <div class="caption">Detected Structures</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/can2-processed_wide.jpeg" alt="Wide-angle corrected">
+                        <div class="caption">Wide-angle Correction</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/can2-processed_cropped.jpeg" alt="Cropped corrected">
+                        <div class="caption">Cropped Correction</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <div class="explanation-card">
+                        <h4>Wide Angle Correction</h4>
+                        <p>When capturing tall buildings from ground level with a wide-angle lens, the camera records a broader scene. This extra information is compressed into the frame, often causing buildings to appear tilted. Auto Align intelligently corrects this distortion and fills in missing edge pixels by smoothly extending the edge colors, resulting in a natural-looking image.</p>
+                    </div>
+                    <div class="explanation-card">
+                        <h4>Cropped Correction</h4>
+                        <p>Cropped correction gives you the choice to keep only the undistorted, known pixels in a rectangular image, or to retain all corrected pixels—including areas where missing information is filled. This lets you decide between a clean crop or a full correction, based on your preference.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Non-Intended Use-cases</h2>
+                <p>Auto Align works best with city photos that have clear buildings and straight lines.</p>
+            </div>
+            <div class="content-card">
+                <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem;">If your picture doesn't show obvious urban features, the app may not be able to fix it automatically.</p>
+
+                <div class="image-grid two-col">
+                    <div class="image-item">
+                        <img src="assets/cannot2-original.jpeg" alt="Original non-urban photo">
+                        <div class="caption">Original</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/cannot2-w-annotation.png" alt="No urban structures detected">
+                        <div class="caption error">No urban structures detected</div>
+                    </div>
+                </div>
+
+                <p style="color: var(--text-tertiary); text-align: center; margin-top: 2rem; font-size: 0.9rem;">Photos without clear city buildings or straight lines may not be suitable for automatic correction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-card">
+                <div class="policy-section" style="border-top: none; padding-top: 0; margin-top: 0;">
+                    <h4>Privacy Policy & Terms of Use</h4>
+                    <p>For our privacy policy and terms of use for Auto Align, please see the links below.</p>
+                    <a href="autoalign/privacy-policy.html" class="policy-button"><i class="bi bi-shield-check"></i> Privacy Policy</a>
+                    <a href="autoalign/terms-of-use.html" class="policy-button"><i class="bi bi-file-text"></i> Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 orbitaar — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const icons = document.querySelectorAll('#icon-animation .app-icon');
+            if (icons.length > 0) {
+                let current = 0;
+                setInterval(() => {
+                    icons[current].style.opacity = 0;
+                    current = (current + 1) % icons.length;
+                    icons[current].style.opacity = 1;
+                }, 1200);
+            }
+        });
+    </script>
+</body>
+</html>

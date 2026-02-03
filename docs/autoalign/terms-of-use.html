@@ -3,122 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use (EULA) | Auto Align</title>
-    <!-- Bootstrap CSS CDN -->
+    <title>Terms of Use | Auto Align</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #f1f3f5;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-tertiary: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #eff6ff;
+            --accent-purple: #8b5cf6;
+            --border-light: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .navbar { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); padding: 1rem 0; }
+        .navbar-brand { font-weight: 600; font-size: 1.25rem; color: var(--text-primary); text-decoration: none; }
+        .navbar-brand img { width: 36px; height: 36px; border-radius: 8px; margin-right: 0.5rem; }
+        .nav-link { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.5rem 1rem !important; transition: color 0.2s ease; }
+        .nav-link:hover { color: var(--text-primary); }
+
+        .hero { padding: 7rem 1rem 2.5rem; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1200px; height: 300px; background: radial-gradient(ellipse at center, var(--accent-blue-light) 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary); }
+        .hero h1 span { background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 0.25rem; }
+        .hero .effective-date { font-size: 0.9rem; color: var(--text-tertiary); }
+
+        .content-section { padding: 3rem 0; }
+        .content-card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 24px; padding: 2.5rem; max-width: 900px; margin: 0 auto; }
+        .content-card h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.75rem; }
+        .content-card h2 i { color: var(--accent-blue); }
+        .content-card p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+
+        .terms-list { list-style: none; padding: 0; margin: 0; counter-reset: terms-counter; }
+        .terms-list > li { margin-bottom: 1.5rem; padding-left: 0; }
+        .terms-list > li strong { display: block; font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+        .terms-list > li strong::before { counter-increment: terms-counter; content: counter(terms-counter) ". "; color: var(--accent-blue); }
+        .terms-list > li > p, .terms-list > li > ul { color: var(--text-secondary); }
+        .terms-list ul { margin-top: 0.5rem; padding-left: 1.5rem; }
+        .terms-list ul li { margin-bottom: 0.25rem; color: var(--text-secondary); }
+
+        .email-button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-tertiary); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 500; font-size: 0.875rem; border: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease; }
+        .email-button:hover { background: var(--accent-blue-light); border-color: var(--accent-blue); }
+        .email-display { display: none; background: var(--bg-secondary); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; color: var(--text-primary); margin-left: 0.5rem; }
+        .email-display.visible { display: inline-block; }
+
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer { position: static; background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 1.5rem 0; text-align: center; }
+        footer p { color: var(--text-tertiary); font-size: 0.875rem; margin: 0; }
+
+        @media (max-width: 768px) { .hero { padding: 6rem 1rem 2rem; } .content-card { padding: 1.5rem; margin: 0 1rem; } }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="../index.html">
-          <img src="../assets/Copilot_20250922_131019.png" alt="orbitaar Logo" style="width:48px; height:48px; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; margin-right: 0.5rem;">
-          orbitaar
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="../apps.html">Apps</a></li>
-            <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <header class="bg-primary text-white text-center py-5 mb-4">
-        <div class="container">
-            <h1 class="fw-bold">Terms of Use</h1>
-            <h4 class="fw-normal">Auto Align by orbitaar</h4>
-            <div class="mt-2">Effective Date: 21-09-2025</div>
-        </div>
-    </header>
-    <main class="container mb-5">
-        <section class="mb-5">
-            <div class="card shadow-sm">
-                <div class="card-body p-lg-5">
-                    <h2 class="mb-4">Terms of Use</h2>
-                    <p>Welcome to Auto Align (“the App”), operated by orbitaar (“we”, “us”, or “our”). By using this App, you agree to these Terms of Use. Please read them carefully.</p>
-                    <ol class="mb-4">
-                        <li class="mb-3">
-                            <strong>Acceptance of Terms</strong><br>
-                            By accessing or using the App, you agree to be bound by these Terms of Use and our Privacy Policy. If you do not agree, do not use the App.
-                        </li>
-                        <li class="mb-3">
-                            <strong>In-App Purchases and Subscriptions</strong><br>
-                            The App offers features and content for purchase, including but not limited to:
-                            <ul>
-                                <li>One-time purchases (such as lifetime unlocks)</li>
-                                <li>Weekly and yearly auto-renewable subscriptions</li>
-                            </ul>
-                            All purchases are processed through your Apple ID account and are subject to Apple’s terms and conditions.
-                        </li>
-                        <li class="mb-3">
-                            <strong>Subscriptions</strong>
-                            <ul>
-                                <li><strong>Auto-Renewal:</strong> Weekly and yearly subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.</li>
-                                <li><strong>Payment:</strong> Payment will be charged to your Apple ID account at confirmation of purchase.</li>
-                                <li><strong>Manage Subscription:</strong> You can manage or cancel your subscription in your Apple ID account settings at any time.</li>
-                                <li><strong>Free Trials:</strong> If a free trial is offered, any unused portion will be forfeited when you purchase a subscription.</li>
-                                <li><strong>Changes:</strong> We reserve the right to change subscription prices or features. Any changes will be communicated in advance and will not affect current subscription periods.</li>
-                            </ul>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Refunds</strong><br>
-                            All purchases are final. Refunds are handled by Apple according to their policies. For more information, visit <a href="https://support.apple.com/en-us/HT204084" target="_blank" rel="noopener">Apple’s support page</a>.
-                        </li>
-                        <li class="mb-3">
-                            <strong>License</strong><br>
-                            We grant you a limited, non-exclusive, non-transferable license to use the App. Commercial use of any outputs generated by the App is permitted only for users with an active premium subscription or a valid lifetime purchase. All other users may use the outputs for personal, non-commercial purposes only.
-                        </li>
-                        <li class="mb-3">
-                            <strong>User Content</strong><br>
-                            You retain all rights to images you process with the App. We do not claim ownership of your content. Please note that your right to use outputs for commercial purposes is subject to the License terms above.
-                        </li>
-                        <li class="mb-3">
-                            <strong>Prohibited Conduct</strong>
-                            <ul>
-                                <li>Use the App for any unlawful purpose</li>
-                                <li>Reverse engineer, decompile, or disassemble the App</li>
-                                <li>Attempt to circumvent any security features</li>
-                            </ul>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Disclaimer</strong><br>
-                            The App is provided “as is” without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted.
-                        </li>
-                        <li class="mb-3">
-                            <strong>Limitation of Liability</strong><br>
-                            To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the App.
-                        </li>
-                        <li class="mb-3">
-                            <strong>Changes to Terms</strong><br>
-                            We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms.
-                        </li>
-                        <li class="mb-3">
-                            <strong>Contact</strong><br>
-                            For questions, contact us at:<br>
-                            <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('email-obf').style.display='inline'">Show Email</button>
-                            <span id="email-obf" style="display:none; margin-left:8px;">info(dot)orbitaar(at)gmail(dot)com</span><br>
-                            Website: <a href="https://orbitaar.com" target="_blank" rel="noopener">https://orbitaar.com</a>
-                        </li>
-                        <li class="mb-3">
-                            <strong>Apple Standard EULA</strong><br>
-                            In addition to these Terms of Use, your use of this app is also governed by the Apple End User License Agreement (EULA) at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>.
-                        </li>
-                    </ol>
-                </div>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
+                <span>orbitaar</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../apps.html">Apps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
             </div>
-        </section>
-    </main>
-    <footer class="bg-dark text-white text-center py-3">
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span>Terms of Use</span></h1>
+            <p>Auto Align by orbitaar</p>
+            <div class="effective-date">Effective Date: 21-09-2025</div>
+        </div>
+    </section>
+
+    <section class="content-section">
         <div class="container">
-            &copy; 2025 orbitaar &mdash; All rights reserved.
+            <div class="content-card">
+                <h2><i class="bi bi-file-text"></i> Terms of Use</h2>
+                <p>Welcome to Auto Align ("the App"), operated by orbitaar ("we", "us", or "our"). By using this App, you agree to these Terms of Use. Please read them carefully.</p>
+
+                <ol class="terms-list">
+                    <li>
+                        <strong>Acceptance of Terms</strong>
+                        <p>By accessing or using the App, you agree to be bound by these Terms of Use and our Privacy Policy. If you do not agree, do not use the App.</p>
+                    </li>
+                    <li>
+                        <strong>In-App Purchases and Subscriptions</strong>
+                        <p>The App offers features and content for purchase, including but not limited to:</p>
+                        <ul>
+                            <li>One-time purchases (such as lifetime unlocks)</li>
+                            <li>Weekly and yearly auto-renewable subscriptions</li>
+                        </ul>
+                        <p>All purchases are processed through your Apple ID account and are subject to Apple's terms and conditions.</p>
+                    </li>
+                    <li>
+                        <strong>Subscriptions</strong>
+                        <ul>
+                            <li><strong>Auto-Renewal:</strong> Weekly and yearly subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.</li>
+                            <li><strong>Payment:</strong> Payment will be charged to your Apple ID account at confirmation of purchase.</li>
+                            <li><strong>Manage Subscription:</strong> You can manage or cancel your subscription in your Apple ID account settings at any time.</li>
+                            <li><strong>Free Trials:</strong> If a free trial is offered, any unused portion will be forfeited when you purchase a subscription.</li>
+                            <li><strong>Changes:</strong> We reserve the right to change subscription prices or features. Any changes will be communicated in advance and will not affect current subscription periods.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Refunds</strong>
+                        <p>All purchases are final. Refunds are handled by Apple according to their policies. For more information, visit <a href="https://support.apple.com/en-us/HT204084" target="_blank" rel="noopener">Apple's support page</a>.</p>
+                    </li>
+                    <li>
+                        <strong>License</strong>
+                        <p>We grant you a limited, non-exclusive, non-transferable license to use the App. Commercial use of any outputs generated by the App is permitted only for users with an active premium subscription or a valid lifetime purchase. All other users may use the outputs for personal, non-commercial purposes only.</p>
+                    </li>
+                    <li>
+                        <strong>User Content</strong>
+                        <p>You retain all rights to images you process with the App. We do not claim ownership of your content. Please note that your right to use outputs for commercial purposes is subject to the License terms above.</p>
+                    </li>
+                    <li>
+                        <strong>Prohibited Conduct</strong>
+                        <ul>
+                            <li>Use the App for any unlawful purpose</li>
+                            <li>Reverse engineer, decompile, or disassemble the App</li>
+                            <li>Attempt to circumvent any security features</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Disclaimer</strong>
+                        <p>The App is provided "as is" without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted.</p>
+                    </li>
+                    <li>
+                        <strong>Limitation of Liability</strong>
+                        <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the App.</p>
+                    </li>
+                    <li>
+                        <strong>Changes to Terms</strong>
+                        <p>We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms.</p>
+                    </li>
+                    <li>
+                        <strong>Contact</strong>
+                        <p>For questions, contact us at:</p>
+                        <div style="margin-bottom: 0.5rem;">
+                            <button class="email-button" onclick="showEmail()"><i class="bi bi-envelope"></i> Show Email</button>
+                            <span id="email-obf" class="email-display">info(dot)orbitaar(at)gmail(dot)com</span>
+                        </div>
+                        <p>Website: <a href="https://orbitaar.com" target="_blank" rel="noopener">https://orbitaar.com</a></p>
+                    </li>
+                    <li>
+                        <strong>Apple Standard EULA</strong>
+                        <p>In addition to these Terms of Use, your use of this app is also governed by the Apple End User License Agreement (EULA) at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 orbitaar — All rights reserved.</p>
         </div>
     </footer>
-    <!-- Bootstrap JS Bundle CDN -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function showEmail() {
+        document.getElementById('email-obf').classList.add('visible');
+    }
+    </script>
 </body>
 </html>

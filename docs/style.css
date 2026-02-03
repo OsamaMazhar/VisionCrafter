@@ -62,3 +62,144 @@ footer {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+/* Scroll Animation Styles */
+.scroll-feature {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered text animations inside scroll-feature */
+.scroll-feature.visible h2 {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.scroll-feature.visible p, .scroll-feature.visible ul {
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+/* iPhone specific scroll animation */
+.scroll-feature .iphone-frame {
+    transform: translateY(40px) scale(0.95) rotateX(5deg);
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-feature.visible .iphone-frame {
+    transform: translateY(0) scale(1) rotateX(0);
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* App Card Hover Effect */
+.app-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* --- SyncAlbum Modern Styles --- */
+
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-widest { letter-spacing: 0.1em; }
+
+.bg-light-soft { background-color: #fbfbfd; }
+
+/* iPhone titanium finish */
+.iphone-frame.titanium-finish {
+    background: #f5f5f7;
+    box-shadow: 
+        0 0 0 2px #d2d2d7,
+        0 0 0 6px #e8e8ed,
+        0 0 0 7px #f5f5f7,
+        0 20px 50px rgba(0,0,0,0.1);
+}
+.iphone-frame.titanium-finish::before,
+.iphone-frame.titanium-finish::after {
+    background: #d2d2d7;
+}
+
+/* Scroll Animation Styles */
+.scroll-feature {
+    opacity: 0;
+    transform: translateY(30px); /* Reduced for smoother transition */
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.iphone-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 46px; /* Slightly less than frame */
+    overflow: hidden;
+    z-index: 2;
+}
+
+.iphone-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dynamic Island */
+.dynamic-island {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 30px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+/* Side Buttons (CSS only details) */
+.iphone-frame::before {
+    /* Power button */
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 150px;
+    width: 4px;
+    height: 60px;
+    background: #1a1a1a;
+    border-radius: 2px 0 0 2px;
+}
+
+.iphone-frame::after {
+    /* Volume buttons */
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 120px;
+    width: 4px;
+    height: 110px; /* Covers both volume buttons visually simplified */
+    background: linear-gradient(to bottom, #1a1a1a 45%, transparent 45%, transparent 55%, #1a1a1a 55%);
+    border-radius: 0 2px 2px 0;
+}
+
+/* Responsive scaling for mobile */
+@media (max-width: 768px) {
+    .iphone-frame {
+        transform: scale(0.9);
+        margin-bottom: 2rem;
+    }
+}

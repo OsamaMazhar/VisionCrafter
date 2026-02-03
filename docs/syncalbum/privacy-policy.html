@@ -48,6 +48,7 @@
         .content-card h2 i { color: var(--accent-blue); }
         .content-card h5 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary); }
         .content-card p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+        .content-card ul { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; }
         .content-card .text-muted { color: var(--text-tertiary) !important; }
 
         .email-button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-tertiary); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 500; font-size: 0.875rem; border: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease; }
@@ -85,7 +86,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1><span>Privacy Policy</span></h1>
-            <p>Auto Align by orbitaar</p>
+            <p>SyncAlbum by orbitaar</p>
         </div>
     </section>
 
@@ -93,25 +94,38 @@
         <div class="container">
             <div class="content-card">
                 <h2><i class="bi bi-shield-check"></i> Your Privacy Matters</h2>
-                <p>At orbitaar, we are committed to protecting your privacy. This Privacy Policy explains how Auto Align handles your information.</p>
+                <p>This Privacy Policy explains how SyncAlbum handles information. In short: <strong>we do not collect, store, or sell any personal information</strong>.</p>
 
-                <h5>1. Data Collection and Usage</h5>
-                <p><strong>Auto Align</strong> does not collect, store, or share any personal data, images, or usage analytics. All image processing is performed locally on your device. No photos, edits, or personal information are transmitted to orbitaar or any third parties.</p>
+                <h5>1. Information We Collect</h5>
+                <p><strong>None.</strong> SyncAlbum does not collect personal information, analytics, identifiers, contact lists, location history, or device data. We do not run tracking SDKs, advertising SDKs, or any third-party analytics.</p>
 
-                <h5>2. Third-Party Services</h5>
-                <p>Auto Align does not use any third-party analytics, advertising, or tracking services. The app does not integrate with external APIs that collect or process user data.</p>
+                <h5>2. Photos & Albums</h5>
+                <p>SyncAlbum is a photo sharing app, so you choose what content to share. SyncAlbum does not upload your photos or album content to orbitaar servers because we do not operate a backend service for SyncAlbum. Your photos remain on your devices and in your own storage accounts you choose to use (for example, Apple Photos/iCloud features on your device).</p>
 
-                <h5>3. Security</h5>
-                <p>Since no data is collected or transmitted, your privacy and security are inherently protected. We recommend keeping your device secure and updated to further protect your information.</p>
+                <h5>3. Sharing</h5>
+                <p>SyncAlbum shares content only with the people you choose to share with. Anything you share becomes available to those recipients until you remove access or stop sharing.</p>
+                <p>If you revoke someone’s access, SyncAlbum is designed to remove the shared album from that person’s SyncAlbum experience/devices. However, during the period you shared content with them, recipients may have been able to copy, download, screenshot, export, or otherwise save items outside of SyncAlbum (for example, into their own photo library or storage). Content saved independently by recipients is outside of our control, and we are not responsible for how recipients store, use, or share copies they saved while they had access.</p>
 
-                <h5>4. Children's Privacy</h5>
-                <p>Auto Align is designed for general audiences and does not knowingly collect any information from children under the age of 13.</p>
+                <h5>4. Permissions</h5>
+                <p>SyncAlbum may request device permissions (such as Photos access or Camera access) to function. These permissions are used only on your device to enable core features and are not used to collect or transmit data to orbitaar.</p>
 
-                <h5>5. Changes to This Policy</h5>
-                <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page. Your continued use of Auto Align after changes are made constitutes acceptance of the updated policy.</p>
+                <h5>5. Third-Party Services</h5>
+                <p>SyncAlbum does not integrate third-party analytics or advertising services. If you follow external links (for example, App Store links), those services are governed by their own privacy policies.</p>
 
-                <h5>6. Contact Us</h5>
-                <p>If you have any questions or concerns about this Privacy Policy or your privacy when using Auto Align, please contact us:</p>
+                <h5>6. Data Retention & Deletion</h5>
+                <p>Because we do not collect or store your data on our servers, we do not retain it. You control your content directly on your device and in any storage services you choose to use. Deleting content from your device or chosen storage removes it from your control according to that provider’s behavior.</p>
+
+                <h5>7. Security</h5>
+                <p>We design SyncAlbum so that orbitaar does not receive your photos or personal data. As with any app, we recommend keeping your device updated and using strong device security (passcode/biometrics) to protect your content.</p>
+
+                <h5>8. Children’s Privacy</h5>
+                <p>SyncAlbum is not directed to children under 13, and we do not knowingly collect personal information from children. Since we do not collect user data, we do not have a way to identify or store children’s data.</p>
+
+                <h5>9. Changes to This Policy</h5>
+                <p>We may update this Privacy Policy from time to time. When we do, we will update the “Last updated” date on this page.</p>
+
+                <h5>10. Contact</h5>
+                <p>If you have questions about this policy, contact us:</p>
                 <div style="margin-bottom: 1.5rem;">
                     <button class="email-button" onclick="showEmail()"><i class="bi bi-envelope"></i> Show Email</button>
                     <span id="email" class="email-display">info(dot)orbitaar(at)gmail(dot)com</span>
@@ -128,7 +142,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 orbitaar — All rights reserved.</p>
+            <p>&copy; 2026 orbitaar — All rights reserved. | <a href="privacy-policy.html" style="color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a> | <a href="terms-of-use.html" style="color: var(--text-tertiary); text-decoration: none;">Terms of Use</a></p>
         </div>
     </footer>
 

@@ -1,38 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>orbitaar | AI & Computer Vision Apps</title>
-    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        @keyframes flash {
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #f1f3f5;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-tertiary: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #eff6ff;
+            --accent-purple: #8b5cf6;
+            --border-light: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
 
-            0%,
-            100% {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .navbar-brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            margin-right: 0.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 7rem 1rem 3rem;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, var(--accent-blue-light) 0%, transparent 70%);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        .hero-icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        .hero-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 3.5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.25rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        /* News Section */
+        .news-section {
+            background: var(--bg-secondary);
+        }
+
+        .news-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .news-item:first-child {
+            padding-top: 0;
+        }
+
+        .news-date {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            min-width: 100px;
+            font-weight: 500;
+        }
+
+        .news-content h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .news-content p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .news-flash {
+            color: var(--accent-blue);
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .badge-sale {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        /* Apps Preview Section */
+        .apps-section {
+            background: var(--bg-primary);
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--text-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+            background: #000;
+            color: white;
+        }
+
+        .btn-link-styled {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-blue);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-link-styled:hover {
+            gap: 0.75rem;
+            color: var(--accent-purple);
+        }
+
+        /* Footer */
+        footer {
+            position: static;
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-light);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
                 opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 1rem 2rem;
             }
 
-            50% {
-                opacity: 0.3;
+            .section {
+                padding: 2.5rem 0;
+            }
+
+            .news-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .news-date {
+                min-width: auto;
             }
         }
     </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/Copilot_20250922_131019.png" alt="orbitaar Logo"
-                    style="width:48px; height:48px; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-right: 0.5rem;">
-                orbitaar
+                <img src="assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
+                <span>orbitaar</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,84 +371,86 @@
             </div>
         </div>
     </nav>
-    <header class="bg-primary text-white text-center py-5 mb-4">
-        <div class="container">
-            <img src="assets/Copilot_20250922_131019.png" alt="orbitaar Logo"
-                style="width:220px; height:220px; aspect-ratio: 1/1; object-fit: cover; border-radius: 50px; margin-bottom: 1rem;">
-            <p class="lead">Crafting the next generation of technology-driven apps and games.</p>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-icon fade-in-up delay-1">
+                <img src="assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
+            </div>
+
+            <h1 class="fade-in-up delay-2">
+                Crafting the <span>Future</span> of Apps
+            </h1>
+            
+            <p class="fade-in-up delay-3">
+                Next generation of technology-driven apps and games powered by AI & Computer Vision.
+            </p>
         </div>
-    </header>
-    <main class="container mb-5">
-        <!-- News Section -->
-        <section class="mb-5">
-            <h2 class="mb-4 text-center">News</h2>
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-3 d-flex align-items-center">
-                            <span class="me-2">
-                                <i class="bi bi-lightning-fill text-warning" style="animation: flash 1s infinite;"></i>
-                            </span>
-                            <span class="text-muted me-3" style="min-width: 110px;">07.01.2026</span>
-                            <span>
-                                <strong>Auto Align v1.2 Released! <span class="text-success fw-bold">SALE: Now only
-                                        €5.99
-                                        (was €19.99)</span></strong>
-                                <span class="d-block">
-                                    Our biggest update yet! Version 1.2 adds <strong>Native HDR Support</strong>, an
-                                    <strong>Improved Algorithm</strong> for natural proportions, and a <strong>Refined
-                                        UI</strong> for a smoother experience.
-                                    <a href="apps.html" class="btn btn-outline-primary btn-sm ms-2">Learn More</a>
-                                </span>
-                            </span>
-                        </li>
-                        <li class="mb-3 d-flex align-items-center">
-                            <span class="me-2">
-                                <i class="bi bi-lightning-fill" style="visibility:hidden; width:1em;"></i>
-                            </span>
-                            <span class="text-muted me-3" style="min-width: 110px;">28.09.2025</span>
-                            <span>
-                                <strong>Auto Align Released on the App Store!</strong>
-                                <span class="d-block">
-                                    We're thrilled to announce that Auto Align is now officially available on the App
-                                    Store for iOS, iPadOS, and Mac. Download now and enjoy flawless cityscape
-                                    corrections right from your device!
-                                </span>
-                            </span>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <span class="me-2">
-                                <i class="bi bi-lightning-fill" style="visibility:hidden; width:1em;"></i>
-                            </span>
-                            <span class="text-muted me-3" style="min-width: 110px;">16.08.2025</span>
-                            <span>
-                                <strong>Auto Align Enters TestFlight!</strong>
-                                <span class="d-block">
-                                    Our first app, Auto Align, is now available for early access testing. We're excited
-                                    to share our work and gather feedback from the community.
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
+    </section>
+
+    <!-- News Section -->
+    <section class="section news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest News</h2>
+                <p>Stay updated with our latest releases and announcements.</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-item">
+                    <div class="news-date">
+                        <i class="bi bi-lightning-fill news-flash me-1"></i>
+                        07.01.2026
+                    </div>
+                    <div class="news-content">
+                        <h4>Auto Align v1.2 Released!</h4>
+                        <p>Our biggest update yet! Version 1.2 adds <strong>Native HDR Support</strong>, an <strong>Improved Algorithm</strong> for natural proportions, and a <strong>Refined UI</strong> for a smoother experience. <a href="apps.html" class="btn-link-styled">Learn More <i class="bi bi-arrow-right"></i></a></p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">28.09.2025</div>
+                    <div class="news-content">
+                        <h4>Auto Align Released on the App Store!</h4>
+                        <p>We're thrilled to announce that Auto Align is now officially available on the App Store for iOS, iPadOS, and Mac. Download now and enjoy flawless cityscape corrections right from your device!</p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">16.08.2025</div>
+                    <div class="news-content">
+                        <h4>Auto Align Enters TestFlight!</h4>
+                        <p>Our first app, Auto Align, is now available for early access testing. We're excited to share our work and gather feedback from the community.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Apps Section -->
-        <section class="mb-5 text-center">
-            <h2 class="mb-4">Our Apps</h2>
-            <p>Explore the innovative apps we're building.</p>
-            <a href="apps.html" class="btn btn-primary btn-lg">View All Apps</a>
-        </section>
-    </main>
-    <footer class="bg-dark text-white text-center py-3">
+    <!-- Apps Section -->
+    <section class="section apps-section">
         <div class="container">
-            &copy; 2026 orbitaar &mdash; All rights reserved.
+            <div class="section-header">
+                <h2>Our Apps</h2>
+                <p>Explore the innovative apps we're building.</p>
+            </div>
+
+            <a href="apps.html" class="cta-button">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+                <span>View All Apps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 orbitaar — All rights reserved.</p>
         </div>
     </footer>
-    <!-- Bootstrap JS Bundle CDN -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
