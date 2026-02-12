@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,7 +84,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 6rem 2.5rem 4rem;
+            padding: 10rem 2.5rem 4rem;
             background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
         }
@@ -528,6 +529,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -538,10 +540,21 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
 
         /* Responsive */
         @media (max-width: 992px) {
@@ -596,6 +609,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -621,18 +635,33 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-icon fade-in-up delay-1" style="background: transparent; box-shadow: none; margin-bottom: 2rem;">
-                <img src="assets/SyncAlbum_high-contrast-cropped.png" alt="SyncAlbum Icon" style="width: 180px; height: 180px; border-radius: 45px;">
+            <div class="hero-icon fade-in-up delay-1"
+                style="background: transparent; box-shadow: none; margin-bottom: 2rem;">
+                <img src="assets/SyncAlbum_high-contrast-cropped.png" alt="SyncAlbum Icon"
+                    style="width: 180px; height: 180px; border-radius: 45px;">
             </div>
 
             <h1 class="fade-in-up delay-2">
-                <span class="text-primary fw-bold">SyncAlbum</span>: Share the Moment.
-                <br>Keep the Memory.
+                <span class="text-primary fw-bold">Secure Private Albums</span>
+                <br>& Shared Collections.
             </h1>
-            
+
             <p class="fade-in-up delay-3">
-                Real-time photo sharing with friends. Instant sync, original quality, privacy-first.
+                Experience real-time photo sharing with friends and family. Create cinematic memories, track shared
+                pools, and keep everything private and secure.
             </p>
+
+            <div class="fade-in-up delay-4" style="margin-top: 2rem; margin-bottom: 4rem;">
+                <a href="user-guide.html" class="hero-cta">
+                    <i class="bi bi-book-half"></i>
+                    <span>Read User Guide</span>
+                </a>
+            </div>
+
+            <div class="fade-in-up delay-4">
+                <img src="assets/new_marketing/IMG_7592_framed.png" alt="Secure Private Albums"
+                    style="width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));">
+            </div>
         </div>
     </section>
 
@@ -640,46 +669,85 @@
     <section class="section feature-section">
         <div class="feature-grid">
             <div class="feature-content">
-                <h3>Instant &<br>Real-Time.</h3>
-                <p>No waiting for batch uploads. No "I'll send it later." Friends see your photos the moment you capture them.</p>
+                <h3>Collaborative Photo<br>Sharing with Friends.</h3>
+                <p>Snap and share instantly to groups. No waiting, no batch uploads. Friends see your photos the moment
+                    you capture them in high quality.</p>
                 <ul class="feature-list">
                     <li><i class="bi bi-check-circle-fill"></i> Auto-Sync for instant sharing</li>
                     <li><i class="bi bi-check-circle-fill"></i> Live collaboration with friends</li>
                     <li><i class="bi bi-check-circle-fill"></i> 100% Original Quality</li>
                 </ul>
             </div>
-            <div class="feature-visual">
-                <div class="floating-badge top-left">
+            <div class="feature-visual" style="position: relative;">
+                <img src="assets/new_marketing/IMG_7604_framed.png" alt="Collaborative Photo Sharing"
+                    style="width: 100%; max-width: 360px; height: auto; display: block; margin: 0 auto; transform: scale(1.05);">
+
+                <div class="floating-badge top-left" style="z-index: 10;">
                     <i class="bi bi-cloud-arrow-up-fill"></i>
                     <span>Auto-Sync</span>
                 </div>
-                <div class="floating-badge bottom-right">
+                <div class="floating-badge bottom-right" style="z-index: 10;">
                     <i class="bi bi-people-fill"></i>
                     <span>Live Collaboration</span>
-                </div>
-                <div class="device-frame">
-                    <div class="device-screen" style="padding: 0; background: #fff;">
-                        <img src="assets/SyncAlbum_Collaboration_1.png" alt="SyncAlbum Collaboration View" style="width: 100%; height: 100%; object-fit: cover; border-radius: 32px;">
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature 2: Dedicated Albums -->
+
+    <!-- Feature 3: AI Stories -->
+    <section class="section feature-section">
+        <div class="feature-grid">
+            <div class="feature-content">
+                <h3>Create Cinematic<br>Video Memories.</h3>
+                <p>Turn your photos into stunning video collages and slideshows instantly using <strong>On-Device
+                        AI</strong>. The app intelligently selects the best photos and aligns faces for perfectly smooth
+                    animations. Easily sync beats by simply dragging the waveform in the soundtrack menu.</p>
+                <ul class="feature-list">
+                    <li><i class="bi bi-check-circle-fill"></i> Best photos selected by AI</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Face-aligned animations</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Precise Beat Sync via Drag</li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <img src="assets/new_marketing/IMG_7572_framed.png" alt="Cinematic Memory 1"
+                        style="width: 100%; max-width: 260px; height: auto; display: block; transform: scale(1.02);">
+                    <img src="assets/new_marketing/Screenshot 2026-02-09 at 6.59.34 PM_framed.png"
+                        alt="Cinematic Memory 2"
+                        style="width: 100%; max-width: 260px; height: auto; display: block; transform: scale(1.02);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 4: Photo Journaling -->
     <section class="section feature-section">
         <div class="feature-grid reverse">
             <div class="feature-visual">
-                <div class="device-frame">
-                    <div class="device-screen" style="padding: 0; background: #fff;">
-                        <img src="assets/SyncAlbum_Main_AlbumView.png" alt="SyncAlbum Albums View" style="width: 100%; height: 100%; object-fit: cover; border-radius: 32px;">
-                    </div>
-                </div>
+                <img src="assets/new_marketing/IMG_7575_framed.png" alt="Travel Diary"
+                    style="width: 100%; max-width: 360px; height: auto; display: block; margin: 0 auto; transform: scale(1.05);">
             </div>
             <div class="feature-content">
-                <h3>Organized &<br>Protected.</h3>
-                <p>Your personal library stays personal. SyncAlbum creates isolated spaces for every occasion.</p>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Keep your family vacation separate from your work screenshots and memes. Dedicated storage for every trip.</p>
+                <h3>Daily Photo Journal<br>& Travel Diary.</h3>
+                <p>More than just a gallery—it's your story. Add daily notes, thoughts, and descriptions to your photos
+                    to create a lasting travel diary. Save your memories in a way that brings you back to the moment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 5: Seamless Collaboration -->
+    <section class="section feature-section">
+        <div class="feature-grid">
+            <div class="feature-content">
+                <h3>Built-in<br>Smart Camera.</h3>
+                <p>Capture photos directly into your albums. The built-in camera helps you organize as you shoot,
+                    ensuring every photo lands in the right place instantly.</p>
+            </div>
+            <div class="feature-visual">
+                <img src="assets/new_marketing/IMG_7576_framed.png" alt="Collaboration Details"
+                    style="width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));">
             </div>
         </div>
     </section>
@@ -690,14 +758,15 @@
             <h2>Powerful Features</h2>
             <p>Everything you need for seamless photo sharing.</p>
         </div>
-        
+
         <div class="main-features-grid">
             <!-- Feature 1: Instant Real-Time Photo Sharing -->
             <div class="main-feature-card">
                 <span class="feature-number">1</span>
                 <i class="bi bi-lightning-charge-fill"></i>
                 <h4>Instant Real-Time Sharing</h4>
-                <p>Share photos the moment you capture them. No waiting, no batching. Friends see your photos instantly as you upload them.</p>
+                <p>Share photos the moment you capture them. No waiting, no batching. Friends see your photos instantly
+                    as you upload them.</p>
             </div>
 
             <!-- Feature 2: Separate Dedicated Albums -->
@@ -705,7 +774,8 @@
                 <span class="feature-number">2</span>
                 <i class="bi bi-folder2-open"></i>
                 <h4>Dedicated Albums</h4>
-                <p>Create isolated albums for family vacations, milestones, parties, and events. Each album is completely separate from your main photo library.</p>
+                <p>Create isolated albums for family vacations, milestones, parties, and events. Each album is
+                    completely separate from your main photo library.</p>
             </div>
 
             <!-- Feature 3: Collaborative Photo Pools -->
@@ -713,7 +783,8 @@
                 <span class="feature-number">3</span>
                 <i class="bi bi-people-fill"></i>
                 <h4>Collaborative Pools</h4>
-                <p>For parties and events, create a shared pool where everyone can contribute. All participants see every photo in one place, instantly.</p>
+                <p>For parties and events, create a shared pool where everyone can contribute. All participants see
+                    every photo in one place, instantly.</p>
             </div>
 
             <!-- Feature 4: Category-Based Organization -->
@@ -721,7 +792,8 @@
                 <span class="feature-number">4</span>
                 <i class="bi bi-tags-fill"></i>
                 <h4>Category Organization</h4>
-                <p>Group your albums into custom categories like "Family Vacations," "Children's Milestones," or "Business Trips" for quick filtering.</p>
+                <p>Group your albums into custom categories like "Family Vacations," "Children's Milestones," or
+                    "Business Trips" for quick filtering.</p>
             </div>
 
             <!-- Feature 5: GPS Location Tagging -->
@@ -729,7 +801,8 @@
                 <span class="feature-number">5</span>
                 <i class="bi bi-geo-alt-fill"></i>
                 <h4>GPS & Date Tagging</h4>
-                <p>Every photo is automatically tagged with precise GPS coordinates and capture dates. Know exactly where and when each moment happened.</p>
+                <p>Every photo is automatically tagged with precise GPS coordinates and capture dates. Know exactly
+                    where and when each moment happened.</p>
             </div>
 
             <!-- Feature 6: AI-Powered Story Generation -->
@@ -737,7 +810,11 @@
                 <span class="feature-number">6</span>
                 <i class="bi bi-magic"></i>
                 <h4>AI-Powered Story Generation</h4>
-                <p>Automatically creates beautiful, cinematic stories from your album photos using <strong>On-device AI</strong>. The app intelligently selects your best moments, groups them by location and date, and generates compelling narratives—all processed locally on your device for maximum privacy. No data ever leaves your device. Perfect for journaling your children's growth or reliving family vacations.</p>
+                <p>Automatically creates beautiful, cinematic stories from your album photos using <strong>On-device
+                        AI</strong>. The app intelligently selects your best moments, groups them by location and date,
+                    and generates compelling narratives—all processed locally on your device for maximum privacy. No
+                    data ever leaves your device. Perfect for journaling your children's growth or reliving family
+                    vacations.</p>
             </div>
 
             <!-- Feature 7: Cross-Device Synchronization -->
@@ -745,7 +822,8 @@
                 <span class="feature-number">7</span>
                 <i class="bi bi-cloud-check-fill"></i>
                 <h4>Cross-Device Sync</h4>
-                <p>Your albums sync automatically across iPhone, iPad, and Mac. Start capturing on one device and continue seamlessly on another.</p>
+                <p>Your albums sync automatically across iPhone, iPad, and Mac. Start capturing on one device and
+                    continue seamlessly on another.</p>
             </div>
 
             <!-- Feature 8: Points-Based System -->
@@ -753,7 +831,8 @@
                 <span class="feature-number">8</span>
                 <i class="bi bi-wallet2"></i>
                 <h4>No Subscriptions</h4>
-                <p>Flexible pay-as-you-go model—purchase points once and use them anytime. 1 point = 1 photo upload. Points never expire.</p>
+                <p>Flexible pay-as-you-go model—purchase points once and use them anytime. 1 point = 1 photo upload.
+                    Points never expire.</p>
             </div>
 
             <!-- Feature 9: Photo Journaling -->
@@ -761,7 +840,10 @@
                 <span class="feature-number">9</span>
                 <i class="bi bi-journal-text"></i>
                 <h4>Photo Journaling</h4>
-                <p>Write your personal journal alongside your photos. Add your thoughts, memories, and descriptions to create lasting narratives. Perfect for documenting your children's milestones with personal notes or capturing family vacations with your own perspective. Save your journals with editable chapters and access them anytime.</p>
+                <p>Write your personal journal alongside your photos. Add your thoughts, memories, and descriptions to
+                    create lasting narratives. Perfect for documenting your children's milestones with personal notes or
+                    capturing family vacations with your own perspective. Save your journals with editable chapters and
+                    access them anytime.</p>
             </div>
         </div>
     </section>
@@ -772,13 +854,14 @@
             <h2>More Great Features</h2>
             <p>Additional capabilities that make SyncAlbum stand out.</p>
         </div>
-        
+
         <div class="additional-features-grid">
             <!-- Feature 11: Smart Face Detection -->
             <div class="additional-feature-card">
                 <i class="bi bi-person-bounding-box"></i>
                 <h5>Smart Face Detection</h5>
-                <p>Advanced <strong>On-device AI</strong> detects faces and intelligently positions them in story playback and album covers. All processing happens locally—no data ever leaves your device.</p>
+                <p>Advanced <strong>On-device AI</strong> detects faces and intelligently positions them in story
+                    playback and album covers. All processing happens locally—no data ever leaves your device.</p>
             </div>
 
             <!-- Feature 12: Ken Burns Effects -->
@@ -799,21 +882,24 @@
             <div class="additional-feature-card">
                 <i class="bi bi-shield-check"></i>
                 <h5>Privacy-First Design</h5>
-                <p>No backend, no data collection. Your photos stay in your iCloud. Only you and approved friends can see them.</p>
+                <p>No backend, no data collection. Your photos stay in your iCloud. Only you and approved friends can
+                    see them.</p>
             </div>
 
             <!-- Feature 15: Built-in Camera -->
             <div class="additional-feature-card">
                 <i class="bi bi-camera-fill"></i>
                 <h5>Built-in Camera</h5>
-                <p>Carefully designed camera with intuitive gesture controls for zoom and exposure. Photos save directly to your album—no import needed. Supports up to 48MP on compatible devices.</p>
+                <p>Carefully designed camera with intuitive gesture controls for zoom and exposure. Photos save directly
+                    to your album—no import needed. Supports up to 48MP on compatible devices.</p>
             </div>
 
             <!-- Feature 16: 4K Video Export -->
             <div class="additional-feature-card">
                 <i class="bi bi-film"></i>
                 <h5>4K Video Export</h5>
-                <p>Export stories as high-quality videos in 4K or 1080p. Choose between cinematic 30fps or smooth 60fps.</p>
+                <p>Export stories as high-quality videos in 4K or 1080p. Choose between cinematic 30fps or smooth 60fps.
+                </p>
             </div>
 
             <!-- Feature 17: Memory Efficient -->
@@ -827,14 +913,16 @@
             <div class="additional-feature-card">
                 <i class="bi bi-gift-fill"></i>
                 <h5>Guest Pool Mode</h5>
-                <p>Album owners can purchase photo upload credits that all participants can use. Perfect for family trips.</p>
+                <p>Album owners can purchase photo upload credits that all participants can use. Perfect for family
+                    trips.</p>
             </div>
 
             <!-- Feature 19: Saved Memories -->
             <div class="additional-feature-card">
                 <i class="bi bi-bookmark-star-fill"></i>
                 <h5>Saved Memories</h5>
-                <p>Save your favorite stories and photo journals with editable chapters. Access saved memories anytime.</p>
+                <p>Save your favorite stories and photo journals with editable chapters. Access saved memories anytime.
+                </p>
             </div>
 
             <!-- Feature 20: Revoke Access -->
@@ -860,11 +948,15 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 orbitaar — All rights reserved. | <a href="privacy-policy.html" style="color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a> | <a href="terms-of-use.html" style="color: var(--text-tertiary); text-decoration: none;">Terms of Use</a></p>
+            <p>&copy; 2026 orbitaar — All rights reserved. | <a href="privacy-policy.html"
+                    style="color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a> | <a
+                    href="terms-of-use.html" style="color: var(--text-tertiary); text-decoration: none;">Terms of
+                    Use</a></p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
