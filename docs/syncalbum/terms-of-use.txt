@@ -1,0 +1,58 @@
+Terms of Use - SyncAlbum by orbitaar
+
+Welcome to SyncAlbum. By accessing or using our mobile application ("App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the App.
+
+1. Use of the App
+SyncAlbum is designed for private photo sharing among friends and family. You are responsible for your use of the App and for any content you provide, including compliance with applicable laws, rules, and regulations.
+
+⚠️ Strict Prohibition on Illegal Content
+We have a zero-tolerance policy for illegal content. You may not use SyncAlbum to upload, share, or store:
+- Child Sexual Abuse Material (CSAM) or any content depicting the sexual exploitation of minors.
+- Nudity, pornography, or sexually explicit content, especially that which is non-consensual.
+- Content promoting illegal acts, violence, terrorism, or hate speech.
+
+Violation of this policy will result in immediate termination of your access to the App and may be reported to appropriate law enforcement authorities.
+
+2. iCloud and CloudKit Usage
+SyncAlbum relies on Apple's iCloud and CloudKit services for data storage and synchronization. We do not maintain our own backend servers to store your photos; your content is stored directly in your personal iCloud account and the CloudKit containers managed by Apple.
+- Apple's Security & Monitoring: Because your data is stored on Apple's servers, it is subject to Apple's iCloud Terms and Conditions. Apple employs sophisticated internal security systems to detect illegal content, including CSAM.
+- Account Flagging: If Apple's systems detect illegal content in your iCloud account (including data created via SyncAlbum), Apple may flag, suspend, or terminate your iCloud account and report the content to authorities (e.g., NCMEC).
+- Developer Liability: We (orbitaar) are not responsible for any actions taken by Apple regarding your iCloud account. We do not have access to view your private photos, but Apple acts as the storage provider and has its own governance policies.
+
+3. User Conduct
+You agree not to misuse the App. You must not:
+- Harass, abuse, or harm another person or group.
+- Impersonate any person or entity.
+- Interfere with or disrupt the App or servers/networks connected to the App.
+- Attempt to access any feature or content you are not authorized to access.
+
+4. Points System and Payments
+SyncAlbum operates on a "Points System" for photo uploads. By purchasing points, you agree to the following:
+- No Monetary Value: Points are virtual credits and have no real-world monetary value. They cannot be exchanged for cash or transferred to other users (except via the "Guest Pool" feature where applicable).
+- Non-Refundable: All purchases of points are final and non-refundable, except as required by applicable law or the policies of the Apple App Store.
+- Usage: Points are deducted as you upload photos. We are not responsible for points lost due to user error or account compromise.
+
+5. Intellectual Property
+You retain all rights to the photos and content you upload. However, by using the shared album features, you grant the specific users you have invited a limited license to view and download your content within the App.
+
+6. Termination
+We reserve the right to suspend or terminate your access to the App at any time, without notice, if we believe you have violated these Terms. Additionally, since the App relies on iCloud, if your iCloud account is suspended by Apple, you will lose access to SyncAlbum's functionality.
+
+7. Disclaimer of Warranties
+The App is provided "as is" and "as available" without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted.
+
+8. Limitation of Liability
+To the maximum extent permitted by law, orbitaar shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data or use, arising out of your use of the App.
+
+9. Changes to Terms
+We may modify these Terms at any time. We will provide notice of material changes within the App or on our website. Continued use of the App constitutes acceptance of the modified Terms.
+
+10. Contact Us
+If you have any questions about these Terms, please contact us:
+Email: info.orbitaar@gmail.com
+
+11. Apple Standard EULA
+In addition to these Terms of Use, your use of this app is also governed by the Apple End User License Agreement (EULA) at https://www.apple.com/legal/internet-services/itunes/dev/stdeula/.
+
+Last updated: February 2026
+© 2026 orbitaar. All rights reserved.
