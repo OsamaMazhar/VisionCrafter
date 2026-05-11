@@ -1,0 +1,25 @@
+# orbitaar.com — LLM site index
+# Auto Align: one-tap perspective correction for iPhone, iPad, and Mac
+
+## About this site
+Orbitaar publishes apps and guides for iPhone and Mac photographers.
+
+## Apps
+- Auto Align: https://www.orbitaar.com/auto-align.html
+  - App Store: https://apps.apple.com/app/id6751121944
+  - Purpose: Automatically corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.
+  - Platforms: iOS 16+, iPadOS 16+, macOS 13+
+
+## Blog — Auto Align
+All articles: https://www.orbitaar.com/autoalign/blog/
+- What causes buildings to lean in photos: https://www.orbitaar.com/autoalign/blog/what-causes-buildings-to-lean-in-photos.html
+- How to fix leaning buildings on iPhone: https://www.orbitaar.com/autoalign/blog/fix-leaning-buildings-iphone.html
+- Best perspective correction apps for iPhone: https://www.orbitaar.com/autoalign/blog/best-perspective-correction-apps-iphone-2026.html
+- How Auto Align works: https://www.orbitaar.com/autoalign/blog/how-auto-align-works.html
+- Keystone effect explained: https://www.orbitaar.com/autoalign/blog/keystone-effect-photography.html
+- Real estate photography guide (iPhone): https://www.orbitaar.com/autoalign/blog/real-estate-photography-iphone-guide.html
+- HDR preservation when editing on iPhone: https://www.orbitaar.com/autoalign/blog/preserve-hdr-editing-iphone.html
+
+## About Orbitaar
+- About page: https://www.orbitaar.com/about.html
+- Privacy policy: https://www.orbitaar.com/autoalign/privacy-policy.html
