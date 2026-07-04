@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Markepi</title>
+    <meta name="description" content="Markepi Terms of Use. The terms that govern your use of the Markepi watermarking and photo-provenance app by orbitaar." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="canonical" href="https://www.orbitaar.com/markepi/terms-of-use.html" />
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #f1f3f5;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-tertiary: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-blue-light: #eff6ff;
+            --accent-purple: #8b5cf6;
+            --border-light: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .navbar { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); padding: 1rem 0; }
+        .navbar-brand { font-weight: 600; font-size: 1.25rem; color: var(--text-primary); text-decoration: none; }
+        .navbar-brand img { width: 36px; height: 36px; border-radius: 8px; margin-right: 0.5rem; }
+        .nav-link { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.5rem 1rem !important; transition: color 0.2s ease; }
+        .nav-link:hover { color: var(--text-primary); }
+
+        .hero { padding: 7rem 1rem 2.5rem; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1200px; height: 300px; background: radial-gradient(ellipse at center, var(--accent-blue-light) 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary); }
+        .hero h1 span { background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.125rem; color: var(--text-secondary); }
+
+        .content-section { padding: 3rem 0; }
+        .content-card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 24px; padding: 2.5rem; max-width: 900px; margin: 0 auto; }
+        .content-card h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.75rem; }
+        .content-card h2 i { color: var(--accent-blue); }
+        .content-card h5 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary); }
+        .content-card p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+        .content-card ul { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; }
+        .content-card .text-muted { color: var(--text-tertiary) !important; }
+
+        .alert-box {
+            background-color: #fef2f2;
+            border: 1px solid #fee2e2;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .alert-box h4 { color: #991b1b; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .alert-box p { color: #b91c1c; margin-bottom: 0; font-size: 0.95rem; }
+        .alert-box ul { color: #b91c1c; margin-bottom: 0; }
+
+        .email-button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-tertiary); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 500; font-size: 0.875rem; border: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease; }
+        .email-button:hover { background: var(--accent-blue-light); border-color: var(--accent-blue); }
+        .email-display { display: none; background: var(--bg-secondary); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; color: var(--text-primary); margin-left: 0.5rem; }
+        .email-display.visible { display: inline-block; }
+
+        footer { position: static; background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 1.5rem 0; text-align: center; }
+        footer p { color: var(--text-tertiary); font-size: 0.875rem; margin: 0; }
+
+        @media (max-width: 768px) { .hero { padding: 6rem 1rem 2rem; } .content-card { padding: 1.5rem; margin: 0 1rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
+                <span>orbitaar</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../apps.html">Apps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span>Terms of Use</span></h1>
+            <p>Markepi by orbitaar</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-card">
+                <h2><i class="bi bi-file-text-fill"></i> Terms of Use</h2>
+                <p>Welcome to Markepi. By accessing or using our mobile application ("App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+
+                <h5>1. Use of the App</h5>
+                <p>Markepi is an on-device studio for watermarking and adding Content Credentials (C2PA) to your photos, videos, and Live Photos. You are responsible for your use of the App and for any content you process with it, including compliance with all applicable laws, rules, and regulations.</p>
+
+                <div class="alert-box">
+                    <h4>⚠️ Strict Prohibition on Illegal Content</h4>
+                    <p>We have a zero-tolerance policy for illegal content. You may not use Markepi to process, watermark, sign, or share:</p>
+                    <ul>
+                        <li>Child Sexual Abuse Material (CSAM) or any content depicting the sexual exploitation of minors.</li>
+                        <li>Non-consensual intimate imagery or other unlawful sexual content.</li>
+                        <li>Content promoting illegal acts, violence, terrorism, or hate speech.</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Violation of applicable law may be reported to appropriate law enforcement authorities. Because Markepi runs entirely on your device, you are solely responsible for the content you process with it.</p>
+                </div>
+
+                <h5>2. On-Device Processing</h5>
+                <p>Markepi has no backend server. All watermarking, framing, signing, and export operations happen entirely on your device. orbitaar does not receive, view, store, or have access to your photos, videos, keys, or any content you process. You are responsible for maintaining backups of your own content.</p>
+
+                <h5>3. Content Credentials, Provenance &amp; Honest Use</h5>
+                <p>Markepi lets you attach Content Credentials (C2PA) and IPTC rights metadata to your exports. You agree to use these features honestly and not to misrepresent the origin, authorship, or nature of any content — for example, by falsely declaring AI-generated content as a genuine camera capture. Markepi's device signing identity indicates that the Markepi app on your device signed a file; it is not a verification of your legal or personal identity, and you agree not to present it as such.</p>
+
+                <h5>4. Your Content &amp; Rights</h5>
+                <p>You retain all rights to the photos, videos, logos, signatures, and other content you process with Markepi. You represent that you own or have the necessary rights to any logos, images, or trademarks you add as watermarks, and that adding your watermark or rights metadata does not infringe the rights of any third party.</p>
+
+                <h5>5. Purchases (Markepi Pro)</h5>
+                <p>Markepi offers a free tier with a daily export allowance and an optional "Markepi Pro" upgrade that removes the daily limit. By purchasing, you agree to the following:</p>
+                <ul>
+                    <li><strong>Processed by Apple:</strong> All purchases and subscriptions are processed by the Apple App Store under Apple's terms. orbitaar does not process or store your payment information.</li>
+                    <li><strong>Subscriptions:</strong> Monthly and Annual options are auto-renewable subscriptions that renew unless cancelled at least 24 hours before the end of the current period. You can manage or cancel subscriptions in your App Store account settings.</li>
+                    <li><strong>Lifetime:</strong> The Lifetime option is a one-time, non-consumable purchase that unlocks unlimited exports for the app.</li>
+                    <li><strong>Refunds:</strong> Purchases are subject to Apple's refund policies. orbitaar does not independently process refunds.</li>
+                </ul>
+
+                <h5>6. Acceptable Use</h5>
+                <p>You agree not to reverse engineer, decompile, or attempt to extract the source code or signing mechanisms of the App, except to the extent permitted by law, and not to use the App to violate the intellectual property or privacy rights of others.</p>
+
+                <h5>7. Disclaimer of Warranties</h5>
+                <p>The App is provided "as is" and "as available" without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted, or that Content Credentials will be recognized or displayed by any particular third-party platform or tool.</p>
+
+                <h5>8. Limitation of Liability</h5>
+                <p>To the maximum extent permitted by law, orbitaar shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data or content, arising out of your use of the App.</p>
+
+                <h5>9. Changes to Terms</h5>
+                <p>We may modify these Terms at any time. We will provide notice of material changes within the App or on our website. Continued use of the App constitutes acceptance of the modified Terms.</p>
+
+                <h5>10. Contact Us</h5>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <div style="margin-bottom: 1.5rem;">
+                    <button class="email-button" onclick="showEmail()"><i class="bi bi-envelope"></i> Show Email</button>
+                    <span id="email" class="email-display">info(dot)orbitaar(at)gmail(dot)com</span>
+                </div>
+
+                <h5>11. Apple Standard EULA</h5>
+                <p>In addition to these Terms of Use, your use of this app is also governed by the Apple End User License Agreement (EULA) at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>.</p>
+
+                <hr style="border-color: var(--border-light); margin: 1.5rem 0;">
+                <p class="text-muted small mb-0">
+                    Last updated: July 2026<br>
+                    &copy; 2026 orbitaar. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 orbitaar — All rights reserved. | <a href="privacy-policy.html" style="color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a> | <a href="terms-of-use.html" style="color: var(--text-tertiary); text-decoration: none;">Terms of Use</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function showEmail() {
+        document.getElementById('email').classList.add('visible');
+    }
+    </script>
+</body>
+</html>

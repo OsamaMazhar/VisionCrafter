@@ -1,5 +1,6 @@
 # orbitaar.com — LLM site index
-# Auto Align: one-tap perspective correction for iPhone, iPad, and Mac
+# Photography and provenance apps for iPhone, iPad, and Mac:
+# Auto Align (perspective correction), SyncAlbum (private photo sharing).
 
 ## About this site
 Orbitaar publishes apps and guides for iPhone and Mac photographers.
@@ -9,6 +10,10 @@ Orbitaar publishes apps and guides for iPhone and Mac photographers.
   - App Store: https://apps.apple.com/app/id6751121944
   - Purpose: Automatically corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.
   - Platforms: iOS 16+, iPadOS 16+, macOS 13+
+- SyncAlbum: https://www.orbitaar.com/syncalbum/
+  - App Store: https://apps.apple.com/nl/app/syncalbum/id6757401130
+  - Purpose: Private, real-time photo sharing with friends and family. Dedicated albums, collaborative pools, on-device AI stories. No backend; data stays in your iCloud.
+  - Platforms: iOS, iPadOS, macOS
 
 ## Blog — Auto Align
 All articles: https://www.orbitaar.com/autoalign/blog/
