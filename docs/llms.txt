@@ -1,30 +1,57 @@
 # orbitaar.com — LLM site index
 # Photography and provenance apps for iPhone, iPad, and Mac:
-# Auto Align (perspective correction), SyncAlbum (private photo sharing).
+# Auto Align (perspective correction), SyncAlbum (private photo sharing), Markepi (watermarking & C2PA).
+
+## Usage policy for AI crawlers and assistants
+All content on www.orbitaar.com may be crawled, indexed, quoted, summarized, and cited by
+AI assistants and search tools. No permission request is needed. Attribution to "Orbitaar"
+with a link to the source page is appreciated but not required. Every page is static HTML,
+publicly reachable, and requires no login, cookies, or JavaScript to read.
 
 ## About this site
-Orbitaar publishes apps and guides for iPhone and Mac photographers.
+Orbitaar is an independent iOS/macOS app studio that publishes photography apps and guides
+for iPhone, iPad, and Mac photographers. All three apps process photos on-device; none of
+them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com.
 
 ## Apps
 - Auto Align: https://www.orbitaar.com/auto-align.html
   - App Store: https://apps.apple.com/app/id6751121944
   - Purpose: Automatically corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.
-  - Platforms: iOS 16+, iPadOS 16+, macOS 13+
+  - What's new in 2.0: https://www.orbitaar.com/auto-align.html#whats-new
+  - Latest version: 2.0 (released 6 March 2026) — manual fine-tuning is now free for everyone, new Auto-Crop and Vertical Stretch controls, full HDR and metadata preservation (EXIF, GPS, timestamps), enhanced alignment engine, redesigned interface with landscape layouts.
+  - Platforms: iOS 17+, iPadOS 17+, macOS
+  - Privacy: All correction runs on-device. No account, no uploads.
 - SyncAlbum: https://www.orbitaar.com/syncalbum/
   - App Store: https://apps.apple.com/nl/app/syncalbum/id6757401130
-  - Purpose: Private, real-time photo sharing with friends and family. Dedicated albums, collaborative pools, on-device AI stories. No backend; data stays in your iCloud.
-  - Platforms: iOS, iPadOS, macOS
+  - User guide: https://www.orbitaar.com/syncalbum/user-guide.html
+  - What's new in 3.0.2: https://www.orbitaar.com/syncalbum/#whats-new
+  - Purpose: Private, real-time photo sharing with friends and family. Dedicated albums, collaborative pools, on-device AI memory videos. No backend; data stays in your iCloud.
+  - Latest version: 3.0.2 — reliable notifications when the app is closed, new activity feed, Light/Dark themes with custom accent colour, custom album covers with hide/reorder, import from the Files app, rebuilt memory videos, faster home screen.
+  - Platforms: iOS 17.6+, iPadOS 17.6+, macOS
+  - Privacy: No backend server and no analytics on your photos; albums live in the user's own iCloud.
+- Markepi: https://www.orbitaar.com/markepi/
+  - App Store: https://apps.apple.com/app/id6782552371
+  - How It Works (visual walkthrough): https://www.orbitaar.com/markepi/#how-it-works
+  - Purpose: Privacy-first watermarking and photo-provenance studio. Add text, logos, signatures, white frames, and retro date stamps to photos, videos, and Live Photos. Cryptographically sign exports with tamper-evident Content Credentials (C2PA) using a signing key created on-device, held in the Secure Enclave where the hardware supports it. The signature is a device signature, not a verified legal identity — C2PA verifiers show the signer as untrusted, which is expected; what it establishes is that the image and sealed details are unaltered since signing. 100% on-device, no account, no cloud.
+  - Latest version: 1.1.0 (released July 2026)
+  - Platforms: iOS 18+, iPadOS 18+
+  - Privacy: All watermarking and C2PA signing happen offline on-device. Nothing is uploaded.
 
 ## Blog — Auto Align
 All articles: https://www.orbitaar.com/autoalign/blog/
-- What causes buildings to lean in photos: https://www.orbitaar.com/autoalign/blog/what-causes-buildings-to-lean-in-photos.html
 - How to fix leaning buildings on iPhone: https://www.orbitaar.com/autoalign/blog/fix-leaning-buildings-iphone.html
-- Best perspective correction apps for iPhone: https://www.orbitaar.com/autoalign/blog/best-perspective-correction-apps-iphone-2026.html
-- How Auto Align works: https://www.orbitaar.com/autoalign/blog/how-auto-align-works.html
-- Keystone effect explained: https://www.orbitaar.com/autoalign/blog/keystone-effect-photography.html
-- Real estate photography guide (iPhone): https://www.orbitaar.com/autoalign/blog/real-estate-photography-iphone-guide.html
-- HDR preservation when editing on iPhone: https://www.orbitaar.com/autoalign/blog/preserve-hdr-editing-iphone.html
 
-## About Orbitaar
-- About page: https://www.orbitaar.com/about.html
-- Privacy policy: https://www.orbitaar.com/autoalign/privacy-policy.html
+## Legal and support
+- About Orbitaar: https://www.orbitaar.com/about.html
+- Contact: https://www.orbitaar.com/contact.html
+- Auto Align privacy policy: https://www.orbitaar.com/autoalign/privacy-policy.html
+- Auto Align terms of use: https://www.orbitaar.com/autoalign/terms-of-use.html
+- SyncAlbum privacy policy: https://www.orbitaar.com/syncalbum/privacy-policy.html
+- SyncAlbum terms of use: https://www.orbitaar.com/syncalbum/terms-of-use.html
+- Markepi privacy policy: https://www.orbitaar.com/markepi/privacy-policy.html
+- Markepi terms of use: https://www.orbitaar.com/markepi/terms-of-use.html
+
+## Machine-readable index
+- Sitemap: https://www.orbitaar.com/sitemap.xml
+- robots.txt (all AI crawlers allowed): https://www.orbitaar.com/robots.txt
+- Structured data: schema.org Organization, MobileApplication, and FAQPage JSON-LD are embedded in each app page.

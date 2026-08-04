@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Align | orbitaar</title>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="orbitaar" />
+    <meta property="og:title" content="Auto Align | orbitaar" />
+    <meta property="og:description" content="Auto Align automatically corrects leaning buildings and wide-angle distortion in iPhone, iPad, and Mac photos. One-tap perspective correction with HDR preservation." />
+    <meta property="og:url" content="https://www.orbitaar.com/auto-align.html" />
+    <meta property="og:image" content="https://www.orbitaar.com/assets/marketing_slide.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Auto Align | orbitaar" />
+    <meta name="twitter:description" content="Auto Align automatically corrects leaning buildings and wide-angle distortion in iPhone, iPad, and Mac photos. One-tap perspective correction with HDR preservation." />
+    <meta name="twitter:image" content="https://www.orbitaar.com/assets/marketing_slide.png" />
     <meta name="description" content="Auto Align automatically corrects leaning buildings and wide-angle distortion in iPhone, iPad, and Mac photos. One-tap perspective correction with HDR preservation." />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate" type="text/plain" title="LLM Site Index" href="https://www.orbitaar.com/llms.txt" />
     <link rel="canonical" href="https://www.orbitaar.com/auto-align.html" />
 
     <!-- ── Schema: Organization (site-wide) ──────────────────────────────── -->
@@ -37,16 +49,25 @@
       "name": "Auto Align",
       "alternateName": "Auto Align: Fix Leaning Buildings",
       "description": "Auto Align automatically detects and corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.",
-      "operatingSystem": "iOS 16, iPadOS 16, macOS 13",
+      "operatingSystem": "iOS 17, iPadOS 17, macOS",
       "applicationCategory": "PhotographyApplication",
       "url": "https://www.orbitaar.com/auto-align.html",
       "downloadUrl": "https://apps.apple.com/app/id6751121944",
+      "installUrl": "https://apps.apple.com/app/id6751121944",
+      "softwareVersion": "2.0",
+      "datePublished": "2025-09-26",
+      "dateModified": "2026-03-06",
+      "releaseNotes": "https://www.orbitaar.com/auto-align.html#whats-new",
       "screenshot": "https://www.orbitaar.com/assets/marketing_slide.png",
       "featureList": [
         "Automatic perspective correction",
         "Wide-angle distortion correction",
         "HDR gain map preservation",
+        "Full EXIF, GPS, and timestamp metadata preservation",
         "One-tap correction",
+        "Free manual fine-tuning with draggable corner points",
+        "Auto-crop to restore aspect ratio after correction",
+        "Vertical stretch control",
         "Cropped and wide-angle correction modes",
         "iOS Photos extension"
       ],
@@ -54,7 +75,8 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "url": "https://apps.apple.com/app/id6751121944"
       },
       "publisher": {
         "@id": "https://www.orbitaar.com/#organization"
@@ -337,11 +359,79 @@
             </div>
             <span class="hero-badge fade-in-up delay-2"><i class="bi bi-apple"></i> Available for iOS, iPadOS & Mac</span>
             <h1 class="fade-in-up delay-2"><span>Auto Align</span></h1>
+            <p class="fade-in-up delay-3" style="margin-bottom: 0.5rem;">
+                <a href="#whats-new" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                    Version 2.0 is out — see what's new <i class="bi bi-arrow-right"></i>
+                </a>
+            </p>
             <p class="fade-in-up delay-3">Experience effortless photo perfection. Instantly correct leaning buildings and wide-angle distortions with a single tap.</p>
             <div class="download-section fade-in-up delay-4">
                 <a href="https://apps.apple.com/app/id6751121944" target="_blank" rel="noopener">
                     <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's New in 2.0 -->
+    <section class="section" id="whats-new">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's New in Version 2.0</h2>
+                <p>The biggest Auto Align release so far — a rebuilt alignment engine, full HDR and metadata
+                    preservation, and a redesigned interface. Released 6 March 2026.</p>
+            </div>
+
+            <div class="content-card">
+                <div class="feature-grid">
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-unlock-fill"></i> Manual fine-tuning is now free</h3>
+                        <p>Every user can drag the alignment corner points to fine-tune a correction by hand and get a
+                            perfect result on any photo — no purchase required.</p>
+                    </div>
+
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-sliders"></i> New advanced controls</h3>
+                        <ul>
+                            <li><span><strong>Auto-Crop</strong> — automatically restores the aspect ratio after a
+                                    correction, using center-structure-aware cropping so the building stays
+                                    framed</span></li>
+                            <li><span><strong>Vertical Stretch</strong> — fine-tune vertical proportions for the
+                                    composition you want</span></li>
+                            <li><span><strong>Perspective strength</strong> — dial in how much compensation is
+                                    applied</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-badge-hd-fill"></i> Full HDR &amp; metadata preservation</h3>
+                        <p>Corrected photos keep their complete HDR data and all original metadata — EXIF, camera
+                            settings, GPS location and timestamps. Gain map, depth and disparity data are copied across
+                            as auxiliary data instead of being re-encoded, and the HDR preview now carries through
+                            manual editing.</p>
+                    </div>
+
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-cpu-fill"></i> Enhanced alignment engine</h3>
+                        <p>Refined edge detection and smarter line analysis give more accurate perspective correction,
+                            even on difficult architectural shots.</p>
+                    </div>
+
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-phone-fill"></i> Complete UI redesign</h3>
+                        <p>A cleaner interface with smoother animations, refreshed onboarding, and two-column landscape
+                            layouts. On iOS 26 the app adopts Liquid Glass styling, with full fallbacks on earlier
+                            versions.</p>
+                    </div>
+
+                    <div class="feature-card can">
+                        <h3><i class="bi bi-lightning-charge-fill"></i> Extension, speed &amp; stability</h3>
+                        <p>The Photos app extension handles wider images with better memory management and consistent
+                            high-resolution exports across every save mode. Faster processing, smoother orientation
+                            transitions, and improved error recovery throughout — plus lower prices across all tiers.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
