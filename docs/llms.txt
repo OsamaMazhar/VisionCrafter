@@ -17,8 +17,8 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
 - Auto Align: https://www.orbitaar.com/auto-align.html
   - App Store: https://apps.apple.com/app/id6751121944
   - Purpose: Automatically corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.
-  - What's new in 2.0: https://www.orbitaar.com/auto-align.html#whats-new
-  - Latest version: 2.0 (released 6 March 2026) — manual fine-tuning is now free for everyone, new Auto-Crop and Vertical Stretch controls, full HDR and metadata preservation (EXIF, GPS, timestamps), enhanced alignment engine, redesigned interface with landscape layouts.
+  - What's new in 4.0: https://www.orbitaar.com/auto-align.html#whats-new
+  - Latest version: 4.0 — document scanning (pages cropped, straightened and filed by type, custom categories), Ask Documents with on-device Apple Intelligence (Foundation Models, no cloud), a new Photos-style editor with Straighten, Crop, Perspective and Adjust, editing several photos at once, and date, place and camera kept on every scanned page.
   - Platforms: iOS 17+, iPadOS 17+, macOS
   - Privacy: All correction runs on-device. No account, no uploads.
 - SyncAlbum: https://www.orbitaar.com/syncalbum/
@@ -40,6 +40,7 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
 ## Blog — Auto Align
 All articles: https://www.orbitaar.com/autoalign/blog/
 - How to fix leaning buildings on iPhone: https://www.orbitaar.com/autoalign/blog/fix-leaning-buildings-iphone.html
+- How Auto Align answers questions about documents with on-device Apple Intelligence: https://www.orbitaar.com/autoalign/blog/on-device-apple-intelligence-documents.html
 
 ## Legal and support
 - About Orbitaar: https://www.orbitaar.com/about.html
