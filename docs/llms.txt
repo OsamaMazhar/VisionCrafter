@@ -18,8 +18,11 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
   - App Store: https://apps.apple.com/app/id6751121944
   - Purpose: Automatically corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.
   - What's new in 4.0: https://www.orbitaar.com/auto-align.html#whats-new
-  - Latest version: 4.0 — document scanning (pages cropped, straightened and filed by type, custom categories), Ask Documents with on-device Apple Intelligence (Foundation Models, no cloud), a new Photos-style editor with Straighten, Crop, Perspective and Adjust, editing several photos at once, and date, place and camera kept on every scanned page.
+  - Latest version: 4.0.1 — any photo can now be kept in the app, even with no page in it. 4.0 added document scanning (pages cropped, straightened and filed by type, custom categories), Ask Documents with on-device Apple Intelligence (Foundation Models, no cloud), a new Photos-style editor with Straighten, Crop, Perspective and Adjust, editing several photos at once, and date, place and camera kept on every scanned page.
   - Platforms: iOS 17+, iPadOS 17+, macOS
+  - Ask Documents (experimental): needs a device that supports Apple Intelligence (iPhone 15 Pro or later) on iOS 26+. Uses only the on-device model, never Private Cloud Compute. Best with one question at a time; long chains of follow-up questions can lose track (about 4,096-token context window).
+  - Pricing: free download. Free tier includes up to 4 documents, with Ask Documents. Premium: full-resolution and HDR export, no watermark, unlimited documents.
+  - Video (30 s): https://www.orbitaar.com/assets/video/autoalign-in-action.mp4
   - Privacy: All correction runs on-device. No account, no uploads.
 - SyncAlbum: https://www.orbitaar.com/syncalbum/
   - App Store: https://apps.apple.com/nl/app/syncalbum/id6757401130
@@ -27,7 +30,7 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
   - How to share an album (two-phone video, 93 s): https://www.orbitaar.com/syncalbum/assets/v4/video/howto-share.mp4
   - Video (30 s): https://www.orbitaar.com/syncalbum/assets/v4/video/syncalbum-in-30s.mp4
   - Purpose: Shared photo albums for family and friends, stored in the users' own iCloud (CloudKit). Invite by link, QR code or share sheet; people request to join and the owner approves. Reactions, captions, comments and group favourites on every photo; one-tap video stories set to music; a journal (memory book) with map, chapters, voice notes with on-device transcripts and a photobook PDF.
-  - Latest version: 4.0 — Journal, Live Photos and videos in albums and stories, full HDR, hidden albums locked with Face ID, private albums that stay on the iPhone, share-sheet import, typo-tolerant album search, synced captions and favourites, Liquid Glass design.
+  - Upcoming version: 4.0 (coming soon; the App Store currently has 3.1) — Journal, Live Photos and videos in albums and stories, full HDR, hidden albums locked with Face ID, private albums that stay on the iPhone, share-sheet import, typo-tolerant album search, synced captions and favourites, Liquid Glass design.
   - Platforms: iOS 17.6+, iPadOS 17.6+, macOS (Apple silicon)
   - Pricing: free download, 3 shared albums free (10 friends join each album free; joined and private albums don't count). Unlimited Albums is a one-time purchase; no subscription. Earlier credit buyers get it included.
   - Privacy: No orbitaar servers, no account, no analytics or tracking; albums live in the users' own iCloud.
@@ -44,6 +47,7 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
 All articles: https://www.orbitaar.com/autoalign/blog/
 - How to fix leaning buildings on iPhone: https://www.orbitaar.com/autoalign/blog/fix-leaning-buildings-iphone.html
 - How Auto Align answers questions about documents with on-device Apple Intelligence: https://www.orbitaar.com/autoalign/blog/on-device-apple-intelligence-documents.html
+- Apple's on-device Foundation Model: what it can and can't do (developer lessons: 4,096-token window, @Generable, BM25 + embedding retrieval, multi-turn limits, prompt pitfalls): https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html
 
 ## Legal and support
 - About Orbitaar: https://www.orbitaar.com/about.html

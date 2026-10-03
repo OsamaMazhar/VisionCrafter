@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apple's On-Device Foundation Model: What It Can and Can't Do | Auto Align</title>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="description" content="Lessons from shipping document chat on Apple's on-device Foundation Model (Apple Intelligence) in AutoAlign: the 4,096-token window, guided generation, retrieval, multi-turn limits and prompt pitfalls." />
+<meta name="author" content="Osama Mazhar" />
+<link rel="canonical" href="https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html" />
+<link rel="alternate" type="text/plain" title="LLM Site Index" href="https://www.orbitaar.com/llms.txt" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Apple's on-device Foundation Model: what it can and can't do" />
+<meta property="og:description" content="Lessons from shipping document chat on Apple Intelligence's on-device model: the 4,096-token window, guided generation, retrieval, multi-turn limits and prompt pitfalls." />
+<meta property="og:url" content="https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html" />
+<meta property="og:image" content="https://www.orbitaar.com/assets/screenshots-v4/05.jpg" />
+<meta property="og:site_name" content="orbitaar" />
+<meta property="article:published_time" content="2026-10-03" />
+<meta property="article:author" content="Osama Mazhar" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Apple's on-device Foundation Model: what it can and can't do" />
+<meta name="twitter:description" content="Lessons from shipping document chat on Apple Intelligence's on-device model in AutoAlign." />
+<meta name="twitter:image" content="https://www.orbitaar.com/assets/screenshots-v4/05.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": "https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html#article",
+  "headline": "Apple's on-device Foundation Model: what it can and can't do, from shipping it in AutoAlign",
+  "description": "Lessons from shipping document chat on Apple's on-device Foundation Model (Apple Intelligence) in AutoAlign: the 4,096-token window, guided generation, retrieval, multi-turn limits and prompt pitfalls.",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "inLanguage": "en",
+  "proficiencyLevel": "Beginner",
+  "keywords": "Apple Intelligence, Foundation Models framework, on-device LLM, SystemLanguageModel, LanguageModelSession, Generable, iOS 26, RAG on iPhone, context window, document chat",
+  "about": [
+    { "@type": "Thing", "name": "Apple Foundation Models framework" },
+    { "@type": "Thing", "name": "Apple Intelligence" },
+    { "@type": "Thing", "name": "On-device large language model" }
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Osama Mazhar",
+    "url": "https://www.orbitaar.com/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.orbitaar.com/#organization",
+    "name": "Orbitaar",
+    "url": "https://www.orbitaar.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.orbitaar.com/assets/orbitaar_logo.png"
+    }
+  },
+  "image": "https://www.orbitaar.com/assets/screenshots-v4/05.jpg",
+  "mainEntityOfPage": "https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html",
+  "isPartOf": { "@id": "https://www.orbitaar.com/autoalign/blog/#blog" },
+  "mentions": { "@id": "https://www.orbitaar.com/auto-align.html#app" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.orbitaar.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Auto Align", "item": "https://www.orbitaar.com/auto-align.html" },
+    { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://www.orbitaar.com/autoalign/blog/" },
+    { "@type": "ListItem", "position": 4, "name": "Apple's on-device Foundation Model: what it can and can't do", "item": "https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How big is the context window of Apple's on-device Foundation Model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 4,096 tokens, shared by the instructions, the prompt, any image and the answer. In AutoAlign's document chat, instructions, retrieved passages and the reply leave little room for earlier turns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Apple's on-device model answer questions about many documents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by reading them all. The app has to search first and pass only the best few passages. AutoAlign uses BM25 keyword search fused with NLContextualEmbedding similarity, then gives the top four passages to the model. With that, it usually finds the right document and answers within seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Apple's on-device model good at multi-turn conversation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet, in our experience. Single questions work well. A long chain of follow-ups loses track, because older turns have to be dropped to fit the 4,096-token window."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Foundation Models framework send data to the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SystemLanguageModel runs on the device. Apple also offers larger models through Private Cloud Compute, but an app chooses which to use. AutoAlign uses only the on-device model, so documents and questions never leave the iPhone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which devices can run Apple's on-device Foundation Model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Devices that support Apple Intelligence, such as iPhone 15 Pro and later, running iOS 26 or later with Apple Intelligence turned on and its model downloaded. Apps should check SystemLanguageModel.default.availability and supportsLocale() before offering the feature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the on-device model do arithmetic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not reliably. AutoAlign computes spending totals in code and gives the model the result, and the instructions tell the model not to add amounts up itself."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="reader.css" />
+<style>
+  .facts-table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 18px 0 28px; font-size: 16px; }
+  .facts-table th, .facts-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hairline, rgba(0,0,0,0.12)); vertical-align: top; }
+  .facts-table th { font-weight: 600; width: 34%; }
+  .facts-table td, .facts-table th, article code { overflow-wrap: anywhere; }
+  pre { max-width: 100%; overflow-x: auto; padding: 16px; border-radius: 12px; background: var(--bg-alt, #f5f5f7); font-size: 14px; line-height: 1.45; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="/">orbitaar</a>
+  <nav>
+    <a href="/auto-align.html">Auto Align</a>
+    <a href="/apps.html">Apps</a>
+    <a href="/autoalign/blog/">Blog</a>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumbs" aria-label="breadcrumb">
+    <a href="/">Home</a><span>/</span>
+    <a href="/auto-align.html">Auto Align</a><span>/</span>
+    <a href="/autoalign/blog/">Blog</a><span>/</span>
+    Apple's on-device Foundation Model
+  </nav>
+
+  <article>
+  <h1>Apple's on-device Foundation Model: what it can and can't do, from shipping it in AutoAlign</h1>
+  <div class="meta">By <a href="/about.html">Osama Mazhar</a> · Published <time datetime="2026-10-03">October 3, 2026</time> · 9 min read</div>
+
+  <p>I released AutoAlign in August 2025 to fix keystone distortion, the leaning walls and buildings in photos. Correcting perspective is most of what document scanning needs, so AutoAlign 4.0 added scanning. Then, to make the scanned documents useful, I added <strong>Ask Documents</strong>: a chat that answers questions about your documents using only the on-device model of Apple Intelligence, through Apple's Foundation Models framework.</p>
+  <p>This article covers what the model did well, where it fell short, and what I had to build around it. It's written for developers considering the framework, and for anyone wondering how capable a phone-sized language model really is.</p>
+
+  <div class="quick-answer">
+    <div class="label">Quick answer</div>
+    <p>Apple's on-device Foundation Model is good at short, structured jobs: filing a document into a fixed set of fields, picking which document a question is about, and answering a single question from a few passages it is given. It is weak at arithmetic, at long multi-turn conversations, and at anything that needs more than its roughly 4,096-token context window. In AutoAlign it usually finds the right document and answers within seconds. Follow-up questions are where it still struggles.</p>
+  </div>
+
+  <h2>Key facts</h2>
+  <table class="facts-table">
+    <tr><th>Model</th><td>Apple Intelligence on-device model, via <code>SystemLanguageModel.default</code> in the Foundation Models framework</td></tr>
+    <tr><th>Cloud use</th><td>None. AutoAlign never uses Private Cloud Compute.</td></tr>
+    <tr><th>Context window</th><td>About 4,096 tokens for instructions, prompt, image and answer combined</td></tr>
+    <tr><th>Devices</th><td>Apple Intelligence devices, such as iPhone 15 Pro and later, on iOS 26 or later</td></tr>
+    <tr><th>Images</th><td>On iOS 27, where the model reports the vision capability, it can also look at the page</td></tr>
+    <tr><th>Output</th><td>Typed Swift structs through <code>@Generable</code> and <code>@Guide</code>, decoded greedily</td></tr>
+    <tr><th>Retrieval</th><td>BM25 over <code>NLTagger</code> lemmas, fused with <code>NLContextualEmbedding</code> similarity by reciprocal-rank fusion</td></tr>
+    <tr><th>Works well</th><td>Finding the right document and answering one question about it</td></tr>
+    <tr><th>Works poorly</th><td>Multi-turn conversations, arithmetic, long inputs</td></tr>
+  </table>
+
+  <h2>What is Apple's on-device Foundation Model?</h2>
+  <p>It is the compact language model that powers Apple Intelligence, opened to apps in iOS 26 through the Foundation Models framework. It runs on the device, needs no internet once downloaded, and costs nothing per request. An app opens a <code>LanguageModelSession</code>, gives it instructions, and asks it to respond, either in free text or in a structure the app defines.</p>
+  <p>Because it runs on the phone, documents never leave it. For a document app, that settled the choice before quality came into it.</p>
+
+  <h2>What is the on-device model good at?</h2>
+  <h3>Structured answers with @Generable</h3>
+  <p>Guided generation is the framework's best feature. You describe the shape of the answer as a Swift type, and the model is constrained to fill it. AutoAlign's answer type looks like this:</p>
+<pre><code>@Generable
+struct ChatAnswer {
+    @Guide(description: "The answer itself, in full sentences, in the language of the user's last message, its first words the fact asked for")
+    var text: String
+    @Guide(description: "False when the documents do not hold the answer")
+    var found: Bool
+    @Guide(description: "Titles of the documents the answer was taken from, exactly as they are listed", .maximumCount(3))
+    var documents: [String]
+}</code></pre>
+  <p>The <code>found</code> flag lets the app say plainly when the answer isn't in your documents, without parsing "not found" in seven languages. The <code>documents</code> field is how every answer shows its source.</p>
+
+  <h3>Deciding which document a message is about</h3>
+  <p>Before answering, a separate small session reads each message with the list of your documents and works out which one it means ("my last receipt", "this one", "the slides") and whether you're asking, telling it something to keep, or renaming a document. Splitting this out worked better than asking the answering session to do it: when one session did both, it labelled nearly every question as a note to keep.</p>
+
+  <h3>Answering one question from a few passages</h3>
+  <p>Given the right passages, the model answers single factual questions well: a receipt total, a due date, a number on a card. This is the case that works in most of our tests, usually within seconds.</p>
+
+  <h2>What is the on-device model bad at?</h2>
+  <h3>Multi-turn conversation</h3>
+  <p>This is the biggest limit. The instructions, the document list, the retrieved passages and room for the answer take most of the 4,096 tokens. Earlier turns have to go. AutoAlign keeps the last two exchanges, then one, then none, until the next turn fits. A chain of follow-ups like "and the one before that?" or "compare it with last month" loses track.</p>
+  <p>Two things I learned the hard way:</p>
+  <ul>
+    <li><strong>Keep the real transcript.</strong> Rebuilding a session from the messages' text made the model repeat its previous answer. AutoAlign stores the session's actual transcript on disk and resumes from it.</li>
+    <li><strong>Overflow isn't always reported as overflow.</strong> A full window does not always raise <code>exceededContextWindowSize</code>; sometimes decoding fails instead. So any failure of a session with history is retried once with only the instructions and fewer passages.</li>
+  </ul>
+
+  <h3>Arithmetic</h3>
+  <p>It cannot reliably add up a column of numbers. AutoAlign computes spending totals in code and puts them in the instructions, and the model is told not to add amounts up itself.</p>
+
+  <h3>Long inputs</h3>
+  <p>You cannot hand it all your documents. Search has to happen before the model sees anything, which is why retrieval matters more than the prompt.</p>
+
+  <h2>How do you fit a document collection into 4,096 tokens?</h2>
+  <p>By searching first, on the device, with Apple's own language tools:</p>
+  <ol>
+    <li><strong>Text recognition.</strong> Vision's <code>RecognizeDocumentsRequest</code> reads each page, with its lines and layout.</li>
+    <li><strong>Keyword ranking.</strong> BM25 over words reduced to their dictionary form with <code>NLTagger</code>, so "paid" also finds "pay". Names found in the question count double.</li>
+    <li><strong>Meaning ranking.</strong> <code>NLContextualEmbedding</code> turns passages and the question into vectors, so "groceries" can find a supermarket receipt that never uses the word.</li>
+    <li><strong>Fusion.</strong> The two rankings are merged with reciprocal-rank fusion, which needs no weights to tune.</li>
+  </ol>
+  <p>The top four passages go to the model, with the page itself as an image where the model can see. For budgeting I estimate about three characters per token and count an image as about 200 tokens.</p>
+
+  <h2>What prompt mistakes does a small model make?</h2>
+  <p>Each of these showed up in testing and needed a rule in the instructions:</p>
+  <ul>
+    <li><strong>It copies whatever you show it.</strong> Without a "do not copy" rule, it pasted each excerpt's heading (category, date, place, camera) into every answer.</li>
+    <li><strong>An example becomes a template.</strong> One example sentence in the instructions became the shape of every answer.</li>
+    <li><strong>It drifts into English.</strong> Dutch and French questions got English answers until the instructions said to reply in the language of the message.</li>
+    <li><strong>It drops currencies.</strong> A euro total came back as "22.41" until currencies were required as written on the document.</li>
+    <li><strong>Greedy decoding can echo the question.</strong> AutoAlign uses <code>GenerationOptions(samplingMode: .greedy)</code> so the same question gets the same answer. In French and Dutch that made the model start by repeating the question; "start with the answer", both in the instructions and in the <code>@Guide</code> on the text field, fixed it.</li>
+    <li><strong>Tools weren't called reliably.</strong> Things the model always needs, like the document list and the spending summary, went into the instructions, not behind a tool.</li>
+  </ul>
+
+  <h2>How should an app check if the model is available?</h2>
+  <p>Offer the feature only when it can answer now. AutoAlign shows the Ask button only when both are true:</p>
+<pre><code>SystemLanguageModel.default.availability == .available
+    &amp;&amp; SystemLanguageModel.default.supportsLocale()</code></pre>
+  <p>Otherwise there's no button and no error screen, and Settings explains why: the device isn't eligible, Apple Intelligence is off, the model is still downloading, or the language isn't supported. Arabic, one of AutoAlign's seven languages, isn't supported by the model yet. The system keeps the list of supported languages, so it grows without an app update.</p>
+
+  <h2>What's next?</h2>
+  <p>Ask Documents is still experimental. The open problem is follow-up questions: keeping the thread of a conversation inside 4,096 tokens without the model repeating itself. Rolling summaries and structured memory of what was discussed are the next things to try.</p>
+  <p>If you have an iPhone 15 Pro or later, you can try it for free: free users can scan or import 4 documents and ask about them. I'd like to hear where it answers well and where it gets things wrong. <a href="/contact.html">Send feedback</a>.</p>
+
+  <h2>FAQ</h2>
+  <h3>How big is the context window of Apple's on-device Foundation Model?</h3>
+  <p>About 4,096 tokens, shared by the instructions, the prompt, any image and the answer. In AutoAlign's document chat, instructions, retrieved passages and the reply leave little room for earlier turns.</p>
+  <h3>Can Apple's on-device model answer questions about many documents?</h3>
+  <p>Not by reading them all. The app has to search first and pass only the best few passages. AutoAlign uses BM25 keyword search fused with <code>NLContextualEmbedding</code> similarity, then gives the top four passages to the model. With that, it usually finds the right document and answers within seconds.</p>
+  <h3>Is Apple's on-device model good at multi-turn conversation?</h3>
+  <p>Not yet, in our experience. Single questions work well. A long chain of follow-ups loses track, because older turns have to be dropped to fit the 4,096-token window.</p>
+  <h3>Does the Foundation Models framework send data to the cloud?</h3>
+  <p><code>SystemLanguageModel</code> runs on the device. Apple also offers larger models through Private Cloud Compute, but an app chooses which to use. AutoAlign uses only the on-device model, so documents and questions never leave the iPhone.</p>
+  <h3>Which devices can run Apple's on-device Foundation Model?</h3>
+  <p>Devices that support Apple Intelligence, such as iPhone 15 Pro and later, running iOS 26 or later with Apple Intelligence turned on and its model downloaded. Apps should check <code>SystemLanguageModel.default.availability</code> and <code>supportsLocale()</code> before offering the feature.</p>
+  <h3>Can the on-device model do arithmetic?</h3>
+  <p>Not reliably. AutoAlign computes spending totals in code and gives the model the result, and the instructions tell the model not to add amounts up itself.</p>
+
+  <h2>Next reads</h2>
+  <ul>
+    <li><a href="/autoalign/blog/on-device-apple-intelligence-documents.html">How Auto Align answers questions about your documents with on-device Apple Intelligence</a>: the feature, step by step, for users</li>
+    <li><a href="/auto-align.html">What is Auto Align?</a>: the full app overview, with a 30-second video</li>
+    <li><a href="/autoalign/blog/fix-leaning-buildings-iphone.html">How do you fix leaning buildings in iPhone photos?</a></li>
+  </ul>
+  </article>
+
+  <div class="cta">
+    <div class="cta-text">
+      <strong>Try Ask Documents</strong>
+      <span>Free for 4 documents. iPhone 15 Pro or later.</span>
+    </div>
+    <a class="cta-btn" href="https://apps.apple.com/app/id6751121944" rel="noopener">Download</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  © 2026 orbitaar — All rights reserved.
+</footer>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<script>
+(function () {
+  var bar = document.getElementById('progress');
+  function update() {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')';
+  }
+  addEventListener('scroll', update, { passive: true }); update();
+})();
+</script>
+</body>
+</html>
