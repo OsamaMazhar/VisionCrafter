@@ -65,36 +65,36 @@
         a:hover { text-decoration: underline; }
         img, video { display: block; max-width: 100%; }
 
-        .sitebar { font-size: 12px; background: var(--bg-alt); }
-        .sitebar .in { max-width: 980px; margin: 0 auto; padding: 0 22px; height: 44px; display: flex; align-items: center; gap: 28px; }
-        .sitebar a { color: var(--text-2); }
-        .sitebar a.brand { color: var(--text); font-weight: 600; margin-right: auto; font-size: 14px; }
         .localnav { position: sticky; top: 0; z-index: 50; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
-        .localnav .in { max-width: 980px; margin: 0 auto; padding: 0 22px; height: 52px; display: flex; align-items: center; gap: 22px; }
-        .localnav .title { font-size: 21px; font-weight: 600; margin-right: auto; color: var(--text); }
-        .localnav a.item { font-size: 12px; color: var(--text); opacity: 0.8; }
-        .pill { display: inline-block; background: var(--button); color: #fff !important; border-radius: 980px; padding: 4px 11px; font-size: 12px; text-decoration: none !important; }
-        @media (max-width: 760px) { .localnav a.item { display: none; } .sitebar .in a:not(.brand) { display: none; } }
+        .localnav .in { max-width: 1200px; margin: 0 auto; padding: 0 22px; height: 52px; display: flex; align-items: center; gap: 24px; }
+        .localnav .title { font-size: 19px; font-weight: 600; margin-right: auto; display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+        .localnav .title a { color: var(--text); }
+        .localnav .title .brand { font-weight: 500; color: var(--text-2); }
+        .localnav .title .sep { color: var(--hairline); font-weight: 400; }
+        .localnav a.item { font-size: 13px; color: var(--text); opacity: 0.8; }
+        .pill { display: inline-block; background: var(--button); color: #fff !important; border-radius: 980px; padding: 5px 12px; font-size: 13px; text-decoration: none !important; }
+        .pill:hover { filter: brightness(1.08); }
+        @media (max-width: 760px) { .localnav a.item { display: none; } }
 
-        section { padding: 90px 22px; }
+        section { padding: 96px 22px; }
         .alt { background: var(--bg-alt); }
-        .wrap { max-width: 980px; margin: 0 auto; }
-        h1, h2 { font-weight: 700; letter-spacing: -0.015em; line-height: 1.07; }
-        h1 { font-size: clamp(44px, 8vw, 80px); }
-        h2 { font-size: clamp(32px, 5vw, 52px); }
-        h3 { font-size: 22px; font-weight: 600; line-height: 1.2; }
-        .lede { font-size: clamp(19px, 2.4vw, 23px); color: var(--text-2); line-height: 1.33; max-width: 700px; margin-top: 16px; font-weight: 500; }
+        .wrap { max-width: 1200px; margin: 0 auto; }
+        h1, h2 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.06; }
+        h1 { font-size: clamp(38px, 5.2vw, 64px); }
+        h2 { font-size: clamp(34px, 4.6vw, 52px); }
+        h3 { font-size: 21px; font-weight: 600; line-height: 1.2; }
+        .lede { font-size: clamp(18px, 2vw, 21px); color: var(--text-2); line-height: 1.4; max-width: 720px; margin-top: 16px; }
         .center { text-align: center; }
         .center .lede { margin-left: auto; margin-right: auto; }
-        .eyebrow { font-size: 19px; font-weight: 600; color: var(--text-2); margin-bottom: 8px; }
+        .soon { display: inline-block; margin-bottom: 14px; padding: 5px 14px; border-radius: 980px; background: var(--bg-alt); color: var(--button); font-size: 14px; font-weight: 600; }
 
         .toc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; }
-        .toc a { background: var(--tile); border-radius: 18px; padding: 18px 20px; color: var(--text); font-weight: 600; font-size: 17px; }
+        .toc a { background: var(--bg-alt); border-radius: 20px; padding: 20px 22px; text-align: left; color: var(--text); font-weight: 600; font-size: 17px; }
         .toc a span { display: block; font-weight: 400; font-size: 14px; color: var(--text-2); margin-top: 2px; }
         .toc a:hover { text-decoration: none; filter: brightness(0.97); }
         @media (max-width: 760px) { .toc { grid-template-columns: 1fr 1fr; } }
 
-        .film { max-width: 980px; margin: 44px auto 0; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16); background: #000; }
+        .film { width: min(100%, 1200px); margin: 40px auto 0; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16); background: #000; }
         .film video { width: 100%; aspect-ratio: 16 / 9; }
 
         .phone { width: 220px; background: var(--phone); border-radius: 38px; padding: 8px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16); flex: none; }
@@ -118,6 +118,11 @@
         .howto ol li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--button); color: #fff; font-size: 15px; font-weight: 700; display: grid; place-items: center; }
         .howto ol li b { color: var(--text); }
         .howto .phones { display: flex; gap: 18px; }
+        @media (max-width: 600px) {
+            .howto .phones .phone { width: min(220px, calc((100vw - 62px) / 2)); padding: 6px; border-radius: 28px; }
+            .howto .phones .phone .screen { border-radius: 22px; }
+            .localnav .title .brand, .localnav .title .brand + .sep { display: none; }
+        }
         .note { margin-top: 18px; font-size: 15px; color: var(--text-2); max-width: 520px; }
 
         .faq { max-width: 760px; margin: 40px auto 0; }
@@ -129,36 +134,28 @@
         .faq p { color: var(--text-2); font-size: 16px; margin-top: 10px; }
 
         footer { background: var(--bg-alt); color: var(--text-2); font-size: 12px; padding: 28px 22px 40px; }
-        footer .in { max-width: 980px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 24px; border-top: 1px solid var(--hairline); padding-top: 16px; }
+        footer .in { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 24px; border-top: 1px solid var(--hairline); padding-top: 16px; }
         footer a { color: var(--text-2); }
         footer .copy { margin-right: auto; }
     </style>
 </head>
 <body>
-    <div class="sitebar"><div class="in">
-        <a class="brand" href="../index.html">orbitaar</a>
-        <a href="../apps.html">Apps</a>
-        <a href="index.html">SyncAlbum</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
-    </div></div>
-
     <nav class="localnav" aria-label="How to use SyncAlbum"><div class="in">
-        <a class="title" href="index.html">SyncAlbum</a>
+        <span class="title"><a class="brand" href="../index.html">orbitaar</a><span class="sep">/</span><a href="index.html">SyncAlbum</a><span class="sep">/</span><a href="#top">How to</a></span>
         <a class="item" href="#share">Share</a>
         <a class="item" href="#create">Create</a>
         <a class="item" href="#together">React</a>
         <a class="item" href="#stories">Stories</a>
         <a class="item" href="#journal">Journal</a>
-        <a class="item" href="#organize">Organize</a>
         <a class="item" href="#private">Private</a>
+        <a class="item" href="#help">Help</a>
         <a class="pill" href="https://apps.apple.com/app/id6757401130" rel="noopener">Download</a>
     </div></nav>
 
-    <main>
-        <section class="center">
+    <main id="top">
+        <section class="center" style="padding-top:44px">
             <div class="wrap">
-                <p class="eyebrow">How to · SyncAlbum 4.0, coming soon</p>
+                <span class="soon">Coming soon · SyncAlbum 4.0</span>
                 <h1>How to use SyncAlbum.</h1>
                 <p class="lede">Every video on this page was recorded in the app. Start with sharing: it's the one thing that takes two phones.</p>
                 <div class="toc">
@@ -332,6 +329,8 @@
         <a href="index.html">SyncAlbum</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-use.html">Terms of Use</a>
+        <a href="../apps.html">Apps</a>
+        <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
     </div></footer>
 
