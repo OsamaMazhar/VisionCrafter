@@ -1,0 +1,13 @@
+To the Reviewer,
+
+Thank you for reviewing SyncAlbum.
+
+### App Overview & Features
+For a comprehensive overview of what SyncAlbum is, its core features (Secure Private Albums, Collaborative Sharing, AI Stories, etc.), and its value proposition, please refer to the main marketing page:
+- **File:** `docs/syncalbum/index.html`
+
+### User Guide & Usage Instructions
+For detailed, step-by-step instructions on how to use the app—including creating albums, inviting friends, accepting invitations, and syncing photos—please refer to the User Guide:
+- **File:** `docs/syncalbum/user-guide.html`
+
+This guide works as a complete walkthrough of the application's flow, from the perspective of both an album owner and a guest.
