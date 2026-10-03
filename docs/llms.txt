@@ -37,6 +37,7 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
 - Markepi: https://www.orbitaar.com/markepi/
   - App Store: https://apps.apple.com/app/id6782552371
   - How it works (video and steps): https://www.orbitaar.com/markepi/#how
+  - How to use Markepi (step-by-step videos: import, text, logo, signature, frames, video, Content Credentials signing, sharing, troubleshooting): https://www.orbitaar.com/markepi/user-guide.html
   - Purpose: Watermark photos, videos and Live Photos with text, logos, hand-drawn signatures and retro date stamps; add frames (12 styles plus Classic and Gallery) captioned from the photo's own camera data; share straight to any app without saving to the camera roll. Metadata is kept, with options to remove GPS and device details. Photos can be signed with C2PA Content Credentials using a key created on-device (Secure Enclave where available); the signer is self-declared, not a verified legal identity. Video signing is not available yet.
   - Pricing: free with unlimited exports (up to 2048 px photos / 1080p videos, SDR, small Markepi mark). Markepi Pro: full resolution, HDR, no mark; monthly, yearly or lifetime. Content Credentials free on both.
   - Latest version: 2.0.1 (October 2026)
@@ -52,6 +53,7 @@ All articles: https://www.orbitaar.com/autoalign/blog/
 ## Legal and support
 - About Orbitaar: https://www.orbitaar.com/about.html
 - Contact: https://www.orbitaar.com/contact.html
+- How to use Auto Align (step-by-step videos: straighten, corners, crop, Manual Fix, several photos, Photos extension, scan, documents, Ask Documents, troubleshooting): https://www.orbitaar.com/autoalign/user-guide.html
 - Auto Align privacy policy: https://www.orbitaar.com/autoalign/privacy-policy.html
 - Auto Align terms of use: https://www.orbitaar.com/autoalign/terms-of-use.html
 - SyncAlbum privacy policy: https://www.orbitaar.com/syncalbum/privacy-policy.html

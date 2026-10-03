@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use AutoAlign | orbitaar</title>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="description" content="How to use AutoAlign, with videos recorded in the app: straighten a leaning photo, fix the corners, crop, use Manual Fix, edit several photos, scan and file documents, and ask about them with on-device Apple Intelligence." />
+    <link rel="canonical" href="https://www.orbitaar.com/autoalign/user-guide.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="orbitaar" />
+    <meta property="og:title" content="How to use AutoAlign | orbitaar" />
+    <meta property="og:description" content="Straighten a photo, crop it, use Manual Fix, scan documents and ask about them. With videos recorded in the app." />
+    <meta property="og:url" content="https://www.orbitaar.com/autoalign/user-guide.html" />
+    <meta property="og:image" content="https://www.orbitaar.com/assets/video/autoalign-in-action-poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to use AutoAlign | orbitaar" />
+    <meta name="twitter:description" content="Straighten a photo, crop it, use Manual Fix, scan documents and ask about them. With videos recorded in the app." />
+    <meta name="twitter:image" content="https://www.orbitaar.com/assets/video/autoalign-in-action-poster.jpg" />
+    <link rel="alternate" type="text/plain" title="LLM Site Index" href="https://www.orbitaar.com/llms.txt" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to straighten a leaning photo with AutoAlign",
+      "description": "Pick a photo, let AutoAlign straighten it, choose what happens to the corners, crop, and save, all on iPhone.",
+      "tool": { "@type": "HowToTool", "name": "AutoAlign for iPhone" },
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Open a photo", "text": "On the home screen tap Straighten and choose one photo or several from your library." },
+        { "@type": "HowToStep", "position": 2, "name": "It opens straight", "text": "AutoAlign straightens the photo as it opens. Press and hold the photo to see the original." },
+        { "@type": "HowToStep", "position": 3, "name": "Choose the corners", "text": "Under More, choose Keep, Fill or Trim for the empty corners a correction leaves." },
+        { "@type": "HowToStep", "position": 4, "name": "Manual Fix", "text": "Under Perspective, tap Manual Fix, drag the four corners onto something that should be square, and tap Apply." },
+        { "@type": "HowToStep", "position": 5, "name": "Crop", "text": "Under Crop, drag the frame or choose a ratio." },
+        { "@type": "HowToStep", "position": 6, "name": "Full or vertical only", "text": "Under Straighten, choose Full, or Vertical only to fix just the leaning walls." },
+        { "@type": "HowToStep", "position": 7, "name": "Save", "text": "Tap Save and choose Save as New to keep the original, or Overwrite Existing." }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "orbitaar", "item": "https://www.orbitaar.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AutoAlign", "item": "https://www.orbitaar.com/auto-align.html" },
+        { "@type": "ListItem", "position": 3, "name": "How to use AutoAlign", "item": "https://www.orbitaar.com/autoalign/user-guide.html" }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #ffffff; --bg-alt: #f5f5f7; --text: #1d1d1f; --text-2: #6e6e73;
+            --link: #0066cc; --button: #0071e3; --nav-bg: rgba(255, 255, 255, 0.72); --hairline: rgba(0, 0, 0, 0.12);
+            --phone: #1d1d1f;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg: #000; --bg-alt: #101012; --text: #f5f5f7; --text-2: #a1a1a6; --link: #2997ff;
+                    --nav-bg: rgba(22, 22, 23, 0.72); --hairline: rgba(255, 255, 255, 0.16); --phone: #2c2c2e; }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.47; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img, video { display: block; max-width: 100%; }
+
+        .localnav { position: sticky; top: 0; z-index: 50; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
+        .localnav .in { max-width: 1200px; margin: 0 auto; padding: 0 22px; height: 52px; display: flex; align-items: center; gap: 24px; }
+        .localnav .title { font-size: 19px; font-weight: 600; margin-right: auto; display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+        .localnav .title a { color: var(--text); }
+        .localnav .title .brand { font-weight: 500; color: var(--text-2); }
+        .localnav .title .sep { color: var(--hairline); font-weight: 400; }
+        .localnav a.item { font-size: 13px; color: var(--text); opacity: 0.8; }
+        .pill { display: inline-block; background: var(--button); color: #fff !important; border-radius: 980px; padding: 5px 12px; font-size: 13px; text-decoration: none !important; }
+        .pill:hover { filter: brightness(1.08); }
+        @media (max-width: 760px) { .localnav a.item { display: none; } }
+
+        section { padding: 96px 22px; }
+        .alt { background: var(--bg-alt); }
+        .wrap { max-width: 1200px; margin: 0 auto; }
+        h1, h2 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.06; }
+        h1 { font-size: clamp(38px, 5.2vw, 64px); }
+        h2 { font-size: clamp(34px, 4.6vw, 52px); }
+        h3 { font-size: 21px; font-weight: 600; line-height: 1.2; }
+        .lede { font-size: clamp(18px, 2vw, 21px); color: var(--text-2); line-height: 1.4; max-width: 720px; margin-top: 16px; }
+        .center { text-align: center; }
+        .center .lede { margin-left: auto; margin-right: auto; }
+
+        .toc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; }
+        .toc a { background: var(--bg-alt); border-radius: 20px; padding: 20px 22px; text-align: left; color: var(--text); font-weight: 600; font-size: 17px; }
+        .toc a span { display: block; font-weight: 400; font-size: 14px; color: var(--text-2); margin-top: 2px; }
+        .toc a:hover { text-decoration: none; filter: brightness(0.97); }
+        @media (max-width: 760px) { .toc { grid-template-columns: 1fr 1fr; } }
+
+        .film { width: min(100%, 1200px); margin: 40px auto 0; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16); background: #000; }
+        .film video { width: 100%; aspect-ratio: 16 / 9; }
+
+        .phone { width: 220px; background: var(--phone); border-radius: 38px; padding: 8px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16); flex: none; }
+        .phone .screen { position: relative; width: 100%; aspect-ratio: 1290 / 2796; border-radius: 30px; overflow: hidden; background: #000; }
+        .phone .screen video, .phone .screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+        /* Steps grid: a phone above each step */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 44px 28px; margin-top: 56px; }
+        .card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .card .n { margin-top: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; color: var(--text-2); }
+        .card h3 { margin-top: 4px; font-size: 19px; }
+        .card p { margin-top: 6px; font-size: 15px; color: var(--text-2); max-width: 260px; }
+
+        /* A how-to: steps beside a looping phone */
+        .howto { display: flex; gap: 64px; align-items: center; margin-top: 50px; flex-wrap: wrap; justify-content: center; }
+        .howto.rev { flex-direction: row-reverse; }
+        .howto ol { max-width: 520px; padding-left: 0; list-style: none; counter-reset: s; display: grid; gap: 16px; }
+        .howto ol li { counter-increment: s; position: relative; padding-left: 44px; font-size: 18px; color: var(--text-2); }
+        .howto ol li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--button); color: #fff; font-size: 15px; font-weight: 700; display: grid; place-items: center; }
+        .howto ol li b { color: var(--text); }
+        .howto .phones { display: flex; gap: 18px; }
+        @media (max-width: 600px) {
+            .howto .phones .phone { width: min(220px, calc((100vw - 62px) / 2)); padding: 6px; border-radius: 28px; }
+            .howto .phones .phone .screen { border-radius: 22px; }
+            .localnav .title .brand, .localnav .title .brand + .sep { display: none; }
+        }
+        .note { margin-top: 18px; font-size: 15px; color: var(--text-2); max-width: 520px; }
+
+        .faq { max-width: 760px; margin: 40px auto 0; }
+        .faq details { border-bottom: 1px solid var(--hairline); padding: 20px 0; }
+        .faq summary { font-size: 18px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: "+"; color: var(--text-2); font-weight: 400; font-size: 22px; line-height: 1; }
+        .faq details[open] summary::after { content: "–"; }
+        .faq p { color: var(--text-2); font-size: 16px; margin-top: 10px; }
+
+        footer { background: var(--bg-alt); color: var(--text-2); font-size: 12px; padding: 28px 22px 40px; }
+        footer .in { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 24px; border-top: 1px solid var(--hairline); padding-top: 16px; }
+        footer a { color: var(--text-2); }
+        footer .copy { margin-right: auto; }
+    </style>
+</head>
+<body>
+    <nav class="localnav" aria-label="How to use AutoAlign"><div class="in">
+        <span class="title"><a class="brand" href="../index.html">orbitaar</a><span class="sep">/</span><a href="../auto-align.html">AutoAlign</a><span class="sep">/</span><a href="#top">How to</a></span>
+        <a class="item" href="#straighten">Straighten</a>
+        <a class="item" href="#several">Several photos</a>
+        <a class="item" href="#scan">Scan</a>
+        <a class="item" href="#ask">Ask</a>
+        <a class="item" href="#help">Help</a>
+        <a class="pill" href="https://apps.apple.com/app/id6751121944" rel="noopener">Download</a>
+    </div></nav>
+
+    <main id="top">
+        <section class="center" style="padding-top:44px">
+            <div class="wrap">
+                <h1>How to use AutoAlign.</h1>
+                <p class="lede">Every clip on this page was recorded in the app on an iPhone 15 Pro Max. Most photos need one tap. The rest is here when you want it.</p>
+                <div class="toc">
+                    <a href="#straighten">Straighten a photo<span>Corners, crop, save</span></a>
+                    <a href="#several">Several photos<span>And Adjust</span></a>
+                    <a href="#photos">Inside Photos<span>Edit without exporting</span></a>
+                    <a href="#scan">Scan a document<span>One shot per page</span></a>
+                    <a href="#documents">Your documents<span>Search, categories, PDF</span></a>
+                    <a href="#ask">Ask Documents<span>Apple Intelligence</span></a>
+                    <a href="#help">Help<span>When something's off</span></a>
+                    <a href="../auto-align.html">What's AutoAlign?<span>The product page</span></a>
+                </div>
+                <div class="film">
+                    <video controls muted playsinline preload="metadata" poster="../assets/video/autoalign-in-action-poster.jpg" aria-label="AutoAlign straightening a photo, scanning a receipt and answering a question about it">
+                        <source src="../assets/video/autoalign-in-action.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="straighten">
+            <div class="wrap center">
+                <h2>Straighten a photo.</h2>
+                <p class="lede">Open a photo and it's already straight. These are the controls for when you want a say.</p>
+            </div>
+            <div class="wrap">
+                <div class="grid">
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/howto/pick.jpg?v=6" data-loop src="assets/howto/pick.mp4?v=6" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 1</p><h3>Open a photo</h3><p>Tap Straighten on the home screen and choose a photo, or several, then tap the check mark.</p></div>
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/howto/compare.jpg?v=3" data-loop src="assets/howto/compare.mp4?v=3" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 2</p><h3>It opens straight</h3><p>Press and hold the photo to see the Original. Let go to see the fix.</p></div>
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/howto/corners.jpg?v=3" data-loop src="assets/howto/corners.mp4?v=3" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 3</p><h3>Choose the corners</h3><p>Under More: Keep the empty corners, Fill them from the picture, or Trim them away.</p></div>
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/howto/straighten.jpg?v=3" data-loop src="assets/howto/straighten.mp4?v=3" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 4</p><h3>Full or vertical only</h3><p>Under Straighten, Vertical only fixes the leaning walls and leaves the rest.</p></div>
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/howto/manual.jpg?v=4" data-loop src="assets/howto/manual.mp4?v=4" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 5</p><h3>Manual Fix</h3><p>Under Perspective, tap Manual Fix. Drag four corners onto something square and tap Apply.</p></div>
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/howto/crop.jpg?v=4" data-loop src="assets/howto/crop.mp4?v=4" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 6</p><h3>Crop</h3><p>Under Crop, drag the frame or pick a ratio, then switch to another tab to see the cropped photo. Sky also trims extra sky and ground.</p></div>
+                </div>
+                <p class="note" style="margin:44px auto 0;text-align:center">When you're done, tap <b>Save</b> and choose <b>Save as New</b> to keep the original, or <b>Overwrite Existing</b>. Either way you can revert in Photos. HDR, EXIF and GPS stay on the photo.</p>
+            </div>
+        </section>
+
+        <section id="several">
+            <div class="wrap">
+                <h2 class="center">Edit several photos.</h2>
+                <div class="howto">
+                    <div class="phones">
+                        <div class="phone"><div class="screen"><video poster="assets/howto/several.jpg?v=3" data-loop src="assets/howto/several.mp4?v=3" muted loop playsinline preload="none"></video></div></div>
+                        <div class="phone"><div class="screen"><video poster="assets/howto/adjust.jpg?v=3" data-loop src="assets/howto/adjust.mp4?v=3" muted loop playsinline preload="none"></video></div></div>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>Tap <b>Straighten</b> and select several photos in the picker.</li>
+                            <li>Each one is straightened. Move between them with the <b>strip</b> under the photo.</li>
+                            <li>Open <b>Adjust</b> for <b>Brightness</b>, <b>Contrast</b> and <b>Saturation</b>. Drag the scrubber.</li>
+                            <li>Tap <b>Save</b> when they look right.</li>
+                        </ol>
+                        <p class="note">Photos go back to your library. AutoAlign never keeps a copy of a photo unless you keep it as a document.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="photos">
+            <div class="wrap">
+                <h2 class="center">Straighten inside Photos.</h2>
+                <div class="howto rev">
+                    <div class="phones"><div class="phone"><div class="screen"><img src="../assets/app-v4/06-extension.jpg" alt="AutoAlign in the Photos app's extensions menu" loading="lazy"></div></div></div>
+                    <div>
+                        <ol>
+                            <li>In the <b>Photos</b> app, open a photo and tap <b>Edit</b>.</li>
+                            <li>Tap the <b>•••</b> button and choose <b>AutoAlign</b>.</li>
+                            <li>The photo straightens. Use the same tools as in the app, then tap <b>Done</b>.</li>
+                        </ol>
+                        <p class="note">No exporting and no duplicates. To undo, open the photo in Photos, tap Edit, then Revert.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scan">
+            <div class="wrap center">
+                <h2>Scan a document.</h2>
+                <p class="lede">Receipts, letters, cards and slides. One shot per page.</p>
+            </div>
+            <div class="wrap">
+                <div class="howto">
+                    <div class="phones">
+                        <div class="phone"><div class="screen"><video poster="assets/howto/scan.jpg?v=4" data-loop src="assets/howto/scan.mp4?v=4" muted loop playsinline preload="none"></video></div></div>
+                        <div class="phone"><div class="screen"><video poster="assets/howto/review.jpg?v=4" data-loop src="assets/howto/review.mp4?v=4" muted loop playsinline preload="none"></video></div></div>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>On the home screen tap <b>Scan</b>.</li>
+                            <li>Point at the page. It's outlined when found. Hold steady and <b>Auto</b> takes the shot, or tap the shutter.</li>
+                            <li>When it says <b>Ready for the next page</b>, move to the next one. Tap <b>Done</b> after the last.</li>
+                            <li>Check the pages in <b>Review</b>. Each is already cropped and straightened.</li>
+                            <li>The document gets a title and a category, with the date and place it was scanned.</li>
+                        </ol>
+                        <p class="note">Already have the page in Photos or Files? Open it with <b>Straighten</b> or <b>Files</b> on the home screen and tap <b>Keep</b> to file it in Documents. Inside a document, <b>+</b> adds more pages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="documents">
+            <div class="wrap">
+                <h2 class="center">Find and share documents.</h2>
+                <div class="howto rev">
+                    <div class="phones"><div class="phone"><div class="screen"><img src="../assets/app-v4/09-documents.jpg" alt="Documents sorted into categories with a search field" loading="lazy"></div></div></div>
+                    <div>
+                        <ol>
+                            <li>Your documents sit under <b>Documents</b> on the home screen. Tap one to open it.</li>
+                            <li>Use <b>Search title, issuer, or text</b> to find any word on a page, who sent it, or where you scanned it.</li>
+                            <li>Tap <b>New Category</b> to add your own, and change a document's <b>Category</b> from its screen.</li>
+                            <li>Tap the share button: <b>Export as PDF</b>, <b>Share pages as images</b>, or <b>Save to Photos</b>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ask">
+            <div class="wrap center">
+                <h2>Ask about your documents.</h2>
+                <p class="lede">Apple Intelligence answers on your iPhone and shows the document the answer came from. Nothing is sent anywhere. Experimental: one question at a time works best.</p>
+            </div>
+            <div class="wrap">
+                <div class="howto">
+                    <div class="phones">
+                        <div class="phone"><div class="screen"><video poster="assets/howto/ask.jpg?v=4" data-loop src="assets/howto/ask.mp4?v=4" muted loop playsinline preload="none"></video></div></div>
+                        <div class="phone"><div class="screen"><video poster="assets/howto/answer.jpg?v=4" data-loop src="assets/howto/answer.mp4?v=4" muted loop playsinline preload="none"></video></div></div>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>Tap <b>Ask</b> next to your documents on the home screen.</li>
+                            <li>Type a question in your own words, or tap a suggestion like <b>Summarize my latest document</b>.</li>
+                            <li>AutoAlign looks through your documents and reads the right one. This takes a few seconds.</li>
+                            <li>The answer comes with its document. Tap it to open the page.</li>
+                        </ol>
+                        <p class="note">Needs an iPhone that supports Apple Intelligence, like iPhone 15 Pro or later, on iOS 26 with Apple Intelligence on. The first clip is sped up. <a href="blog/on-device-apple-intelligence-documents.html">How it works ›</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="help">
+            <div class="wrap">
+                <h2 class="center">When something's off.</h2>
+                <div class="faq">
+                    <details><summary>The photo didn't straighten.</summary><p>AutoAlign needs clear straight lines, like walls, windows or a page edge. When it says automatic correction was not possible, use <b>Manual Fix</b> under Perspective and drag the four corners yourself.</p></details>
+                    <details><summary>The straightened photo looks stretched.</summary><p>Try <b>Vertical only</b> under Straighten, which fixes only the leaning walls. Or use Manual Fix on something you know is square.</p></details>
+                    <details><summary>I can't save to Photos.</summary><p>AutoAlign needs permission to add photos. Open the iPhone's <b>Settings › Apps › AutoAlign › Photos</b> and allow access. Straightening works either way, saving doesn't.</p></details>
+                    <details><summary>I don't see the Ask button.</summary><p>Ask Documents shows only on devices with Apple Intelligence (iPhone 15 Pro or later, iOS 26 or later), with Apple Intelligence turned on in Settings, and isn't available when the app is in Arabic.</p></details>
+                    <details><summary>Ask is slow the first time.</summary><p>The first time, AutoAlign downloads its on-device search model and reads your pages. After that, answers take a few seconds.</p></details>
+                    <details><summary>Ask forgot what I asked before.</summary><p>The on-device model has a small memory, so long chains of follow-ups can lose track. Ask the full question again, or start a new chat from <b>Chats</b>.</p></details>
+                </div>
+                <p class="note" style="margin:36px auto 0;text-align:center">Still stuck, or have an idea? <a href="../contact.html">Contact us</a>, we read every message.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="in">
+        <span class="copy">© 2026 orbitaar. All rights reserved.</span>
+        <a href="../auto-align.html">AutoAlign</a>
+        <a href="blog/">Blog</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="../apps.html">Apps</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div></footer>
+
+    <script>
+    (function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Loops play only while on screen, and never with reduced motion.
+        document.querySelectorAll('video[data-loop]').forEach(function (v) {
+            new IntersectionObserver(function (e) {
+                if (e[0].isIntersecting && !reduce) { v.preload = 'auto'; v.play().catch(function () {}); } else { v.pause(); }
+            }, { threshold: 0.3 }).observe(v);
+        });
+    })();
+    </script>
+</body>
+</html>

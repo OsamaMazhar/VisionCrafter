@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use Markepi | orbitaar</title>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="description" content="How to use Markepi, with videos recorded in the app: bring in a photo or video, add a text watermark, logo or signature, choose a frame, sign with Content Credentials (C2PA) and share to any app." />
+    <link rel="canonical" href="https://www.orbitaar.com/markepi/user-guide.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="orbitaar" />
+    <meta property="og:title" content="How to use Markepi | orbitaar" />
+    <meta property="og:description" content="Watermark, frame, sign and share photos and videos on iPhone. With videos recorded in the app." />
+    <meta property="og:url" content="https://www.orbitaar.com/markepi/user-guide.html" />
+    <meta property="og:image" content="https://www.orbitaar.com/markepi/assets/v2/video/markepi-in-action-poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to use Markepi | orbitaar" />
+    <meta name="twitter:description" content="Watermark, frame, sign and share photos and videos on iPhone. With videos recorded in the app." />
+    <meta name="twitter:image" content="https://www.orbitaar.com/markepi/assets/v2/video/markepi-in-action-poster.jpg" />
+    <link rel="alternate" type="text/plain" title="LLM Site Index" href="https://www.orbitaar.com/llms.txt" />
+    <link rel="icon" href="assets/markepi-icon.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to watermark a photo with Markepi",
+      "description": "Bring a photo or video into Markepi, add your text, logo or signature, choose a frame, optionally sign it with Content Credentials, and share it to any app without saving a copy to your camera roll.",
+      "tool": { "@type": "HowToTool", "name": "Markepi for iPhone and iPad" },
+      "video": {
+        "@type": "VideoObject",
+        "name": "How Markepi works",
+        "description": "Markepi recorded in use: frame styles, text, logo, video, share in, signing and share out.",
+        "thumbnailUrl": "https://www.orbitaar.com/markepi/assets/v2/video/markepi-how-it-works-poster.jpg",
+        "contentUrl": "https://www.orbitaar.com/markepi/assets/v2/video/markepi-how-it-works.mp4",
+        "uploadDate": "2026-10-03"
+      },
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Bring in a photo or video", "text": "Open it from your library or Files at the top of the screen, or share it to Markepi from Photos or any app." },
+        { "@type": "HowToStep", "position": 2, "name": "Add text", "text": "Tap Text, type your name or studio, and pick a font, colour and opacity." },
+        { "@type": "HowToStep", "position": 3, "name": "Add a logo", "text": "Tap Logo, choose a transparent PNG, then set its position, size and opacity, or drag it on the photo." },
+        { "@type": "HowToStep", "position": 4, "name": "Choose a frame", "text": "Tap Frame and swipe the style strip. The caption fills in from the photo's camera data." },
+        { "@type": "HowToStep", "position": 5, "name": "Sign with Content Credentials", "text": "Under More, turn on Content Credentials and rights, add your name and copyright, then tap Sign now when you share." },
+        { "@type": "HowToStep", "position": 6, "name": "Share", "text": "Tap the share button, then Continue to Share, and pick any app. Nothing is saved to your camera roll unless you choose Save." }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "orbitaar", "item": "https://www.orbitaar.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Markepi", "item": "https://www.orbitaar.com/markepi/" },
+        { "@type": "ListItem", "position": 3, "name": "How to use Markepi", "item": "https://www.orbitaar.com/markepi/user-guide.html" }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #ffffff; --bg-alt: #f5f5f7; --text: #1d1d1f; --text-2: #6e6e73;
+            --link: #0066cc; --button: #2f62d6; --nav-bg: rgba(255, 255, 255, 0.72); --hairline: rgba(0, 0, 0, 0.12);
+            --phone: #1d1d1f;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg: #000; --bg-alt: #101012; --text: #f5f5f7; --text-2: #a1a1a6; --link: #5b8bff; --button: #3a6ee8;
+                    --nav-bg: rgba(22, 22, 23, 0.72); --hairline: rgba(255, 255, 255, 0.16); --phone: #2c2c2e; }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.47; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img, video { display: block; max-width: 100%; }
+
+        .localnav { position: sticky; top: 0; z-index: 50; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
+        .localnav .in { max-width: 1200px; margin: 0 auto; padding: 0 22px; height: 52px; display: flex; align-items: center; gap: 24px; }
+        .localnav .title { font-size: 19px; font-weight: 600; margin-right: auto; display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+        .localnav .title a { color: var(--text); }
+        .localnav .title .brand { font-weight: 500; color: var(--text-2); }
+        .localnav .title .sep { color: var(--hairline); font-weight: 400; }
+        .localnav a.item { font-size: 13px; color: var(--text); opacity: 0.8; }
+        .pill { display: inline-block; background: var(--button); color: #fff !important; border-radius: 980px; padding: 5px 12px; font-size: 13px; text-decoration: none !important; }
+        .pill:hover { filter: brightness(1.08); }
+        @media (max-width: 760px) { .localnav a.item { display: none; } }
+
+        section { padding: 96px 22px; }
+        .alt { background: var(--bg-alt); }
+        .wrap { max-width: 1200px; margin: 0 auto; }
+        h1, h2 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.06; }
+        h1 { font-size: clamp(38px, 5.2vw, 64px); }
+        h2 { font-size: clamp(34px, 4.6vw, 52px); }
+        h3 { font-size: 21px; font-weight: 600; line-height: 1.2; }
+        .lede { font-size: clamp(18px, 2vw, 21px); color: var(--text-2); line-height: 1.4; max-width: 720px; margin-top: 16px; }
+        .center { text-align: center; }
+        .center .lede { margin-left: auto; margin-right: auto; }
+
+        .toc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; }
+        .toc a { background: var(--bg-alt); border-radius: 20px; padding: 20px 22px; text-align: left; color: var(--text); font-weight: 600; font-size: 17px; }
+        .toc a span { display: block; font-weight: 400; font-size: 14px; color: var(--text-2); margin-top: 2px; }
+        .toc a:hover { text-decoration: none; filter: brightness(0.97); }
+        @media (max-width: 760px) { .toc { grid-template-columns: 1fr 1fr; } }
+
+        .film { width: min(100%, 1200px); margin: 40px auto 0; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16); background: #000; }
+        .film video { width: 100%; aspect-ratio: 16 / 9; }
+
+        .phone { width: 220px; background: var(--phone); border-radius: 38px; padding: 8px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16); flex: none; }
+        .phone .screen { position: relative; width: 100%; aspect-ratio: 1320 / 2868; border-radius: 30px; overflow: hidden; background: #000; }
+        .phone .screen video, .phone .screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+        /* Steps grid: a phone above each step */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 44px 28px; margin-top: 56px; }
+        .card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .card .n { margin-top: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; color: var(--text-2); }
+        .card h3 { margin-top: 4px; font-size: 19px; }
+        .card p { margin-top: 6px; font-size: 15px; color: var(--text-2); max-width: 260px; }
+
+        /* A how-to: steps beside a looping phone */
+        .howto { display: flex; gap: 64px; align-items: center; margin-top: 50px; flex-wrap: wrap; justify-content: center; }
+        .howto.rev { flex-direction: row-reverse; }
+        .howto ol { max-width: 520px; padding-left: 0; list-style: none; counter-reset: s; display: grid; gap: 16px; }
+        .howto ol li { counter-increment: s; position: relative; padding-left: 44px; font-size: 18px; color: var(--text-2); }
+        .howto ol li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--button); color: #fff; font-size: 15px; font-weight: 700; display: grid; place-items: center; }
+        .howto ol li b { color: var(--text); }
+        .howto .phones { display: flex; gap: 18px; }
+        @media (max-width: 600px) {
+            .howto .phones .phone { width: min(220px, calc((100vw - 62px) / 2)); padding: 6px; border-radius: 28px; }
+            .howto .phones .phone .screen { border-radius: 22px; }
+            .localnav .title .brand, .localnav .title .brand + .sep { display: none; }
+        }
+        .note { margin-top: 18px; font-size: 15px; color: var(--text-2); max-width: 520px; }
+
+        .faq { max-width: 760px; margin: 40px auto 0; }
+        .faq details { border-bottom: 1px solid var(--hairline); padding: 20px 0; }
+        .faq summary { font-size: 18px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: "+"; color: var(--text-2); font-weight: 400; font-size: 22px; line-height: 1; }
+        .faq details[open] summary::after { content: "–"; }
+        .faq p { color: var(--text-2); font-size: 16px; margin-top: 10px; }
+
+        footer { background: var(--bg-alt); color: var(--text-2); font-size: 12px; padding: 28px 22px 40px; }
+        footer .in { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 24px; border-top: 1px solid var(--hairline); padding-top: 16px; }
+        footer a { color: var(--text-2); }
+        footer .copy { margin-right: auto; }
+    </style>
+</head>
+<body>
+    <nav class="localnav" aria-label="How to use Markepi"><div class="in">
+        <span class="title"><a class="brand" href="../index.html">orbitaar</a><span class="sep">/</span><a href="index.html">Markepi</a><span class="sep">/</span><a href="#top">How to</a></span>
+        <a class="item" href="#watermark">Watermark</a>
+        <a class="item" href="#frame">Frame</a>
+        <a class="item" href="#sign">Sign</a>
+        <a class="item" href="#share">Share</a>
+        <a class="item" href="#help">Help</a>
+        <a class="pill" href="https://apps.apple.com/app/id6782552371" rel="noopener">Download</a>
+    </div></nav>
+
+    <main id="top">
+        <section class="center" style="padding-top:44px">
+            <div class="wrap">
+                <h1>How to use Markepi.</h1>
+                <p class="lede">Every clip on this page was recorded in the app. Bring a photo in, put your mark on it, and share it, without a copy landing in your camera roll.</p>
+                <div class="toc">
+                    <a href="#bring">Bring it in<span>Library, Files, share sheet</span></a>
+                    <a href="#watermark">Watermark<span>Text, logo, signature</span></a>
+                    <a href="#frame">Frame<span>Styles and captions</span></a>
+                    <a href="#video">Videos<span>Same marks, same frames</span></a>
+                    <a href="#sign">Sign it<span>Content Credentials</span></a>
+                    <a href="#share">Share<span>To any app</span></a>
+                    <a href="#help">Help<span>When something's off</span></a>
+                    <a href="index.html">What's Markepi?<span>The product page</span></a>
+                </div>
+                <div class="film">
+                    <video controls muted playsinline preload="metadata" poster="assets/v2/video/markepi-in-action-poster.jpg" aria-label="Markepi framing a photo, adding a watermark and signature, and sharing it">
+                        <source src="assets/v2/video/markepi-in-action.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="bring">
+            <div class="wrap">
+                <h2 class="center">Bring in a photo or video.</h2>
+                <div class="howto">
+                    <div class="phones"><div class="phone"><div class="screen"><video poster="assets/v2/howto/sharein.jpg" data-loop src="assets/v2/howto/sharein.mp4" muted loop playsinline preload="none"></video></div></div></div>
+                    <div>
+                        <ol>
+                            <li>Open Markepi and pick from your <b>library</b> or <b>Files</b> with the buttons at the top of the screen.</li>
+                            <li>Or start in another app: in <b>Photos</b>, tap the share button and choose <b>Markepi</b>. Safari and other apps work too.</li>
+                            <li>Load up to <b>20</b> photos and videos at once. One setup applies to all of them, and you can adjust any one on its own.</li>
+                        </ol>
+                        <p class="note">Markepi works on a copy. Your originals aren't touched.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="watermark">
+            <div class="wrap center">
+                <h2>Add your mark.</h2>
+                <p class="lede">The bottom bar has Text, Logo and Sign. Use one, or all three.</p>
+            </div>
+            <div class="wrap">
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,300px));justify-content:center">
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/v2/howto/text.jpg" data-loop src="assets/v2/howto/text.mp4" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 1</p><h3>Type your name</h3><p>Tap Text, type your name or studio, then choose the font, colour and opacity.</p></div>
+                    <div class="card"><div class="phone"><div class="screen"><video poster="assets/v2/howto/logo.jpg" data-loop src="assets/v2/howto/logo.mp4" muted loop playsinline preload="none"></video></div></div>
+                        <p class="n">STEP 2</p><h3>Add a logo</h3><p>Tap Logo and pick a transparent PNG. Choose a position from the menu, or drag it on the photo.</p></div>
+                </div>
+                <p class="note" style="margin:44px auto 0;text-align:center">To sign by hand, tap <b>Sign</b> and draw with your finger, in the ink colour and thickness you pick. Drag any mark on the photo to place it. <b>Layers</b> sets which one sits in front. Like a setup? Save it as a template and load it next time.</p>
+            </div>
+        </section>
+
+        <section class="alt" id="frame">
+            <div class="wrap">
+                <h2 class="center">Choose a frame.</h2>
+                <div class="howto rev">
+                    <div class="phones"><div class="phone"><div class="screen"><video poster="assets/v2/howto/frames.jpg" data-loop src="assets/v2/howto/frames.mp4" muted loop playsinline preload="none"></video></div></div></div>
+                    <div>
+                        <ol>
+                            <li>Tap <b>Frame</b> and swipe the style strip: Float, Noir, Aura, Readout, Sunlight and more.</li>
+                            <li>The caption fills in from the photo itself: camera, lens, aperture, shutter, ISO, date and place.</li>
+                            <li>Several styles take their colours from the picture. Your camera's mark appears automatically, and you can turn it off.</li>
+                            <li>Set the border and caption in millimetres, for one style or <b>Apply to all styles</b>.</li>
+                        </ol>
+                        <p class="note">Want the old film look? Turn on <b>Retro Date Stamp</b> under More.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <div class="wrap">
+                <h2 class="center">Watermark a video.</h2>
+                <div class="howto">
+                    <div class="phones"><div class="phone"><div class="screen"><video poster="assets/v2/howto/video.jpg" data-loop src="assets/v2/howto/video.mp4" muted loop playsinline preload="none"></video></div></div></div>
+                    <div>
+                        <ol>
+                            <li>Bring in a video or Live Photo the same way as a photo.</li>
+                            <li>Add text, a logo or a frame. They're the same size on photos and video.</li>
+                            <li>Drag the slider under the video to preview any moment and check your mark there.</li>
+                            <li>Share it. Every audio track is kept.</li>
+                        </ol>
+                        <p class="note">Content Credentials are for photos only for now.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="sign">
+            <div class="wrap">
+                <h2 class="center">Sign it with Content Credentials.</h2>
+                <div class="howto rev">
+                    <div class="phones"><div class="phone"><div class="screen"><video poster="assets/v2/howto/c2pa.jpg" data-loop src="assets/v2/howto/c2pa.mp4" muted loop playsinline preload="none"></video></div></div></div>
+                    <div>
+                        <ol>
+                            <li>Open <b>More</b> and turn on <b>Content Credentials &amp; rights</b>. Add your name, copyright and credit.</li>
+                            <li>Tap the share button. The <b>Content Credentials (C2PA)</b> sheet shows what gets sealed.</li>
+                            <li>Tap <b>Sign now</b>. You'll see <b>Protected &amp; Ready</b>, with the creator, copyright and an intact signature.</li>
+                            <li>Tap <b>Continue to Share</b>.</li>
+                        </ol>
+                        <p class="note">The key is created on your iPhone. No account, upload or certificate needed. Verifiers show a self-declared signer, not a verified legal identity. Check a file at <a href="https://contentcredentials.org/verify" rel="noopener">contentcredentials.org/verify</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="share">
+            <div class="wrap">
+                <h2 class="center">Share it.</h2>
+                <div class="howto">
+                    <div class="phones"><div class="phone"><div class="screen"><video poster="assets/v2/howto/share.jpg" data-loop src="assets/v2/howto/share.mp4" muted loop playsinline preload="none"></video></div></div></div>
+                    <div>
+                        <ol>
+                            <li>Tap the <b>share button</b> at the top right.</li>
+                            <li>Check the summary: what metadata goes along, and whether the photo is signed. Then tap <b>Continue to Share</b>.</li>
+                            <li>Pick any app: Messages, Mail, AirDrop, Files or your social apps.</li>
+                        </ol>
+                        <p class="note">Nothing lands in your camera roll unless you choose <b>Save to Photos</b>. To leave out location or device, choose <b>Remove GPS &amp; device</b> under More before you share.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="help">
+            <div class="wrap">
+                <h2 class="center">When something's off.</h2>
+                <div class="faq">
+                    <details><summary>I don't see Markepi in the share sheet.</summary><p>Scroll the row of apps to the end, tap <b>More</b>, and turn Markepi on. You can drag it to the front of the list there too.</p></details>
+                    <details><summary>My white logo disappears on the frame.</summary><p>A white logo on a white border is invisible. Pick a dark frame such as Noir, or a logo with a dark version.</p></details>
+                    <details><summary>The camera caption is wrong or missing.</summary><p>Markepi reads the caption from the photo's own data. Screenshots and photos saved from other apps often have none. Turn the camera mark off if you don't want it.</p></details>
+                    <details><summary>The credentials are gone after I posted the photo.</summary><p>Some services re-encode images on upload, which can strip Content Credentials. They stay attached when the file is sent byte for byte, like AirDrop or Files.</p></details>
+                    <details><summary>Where did my photo go?</summary><p>Markepi hands the finished file to the app you chose and doesn't keep a copy. To keep one, choose Save to Photos in the share sheet.</p></details>
+                </div>
+                <p class="note" style="margin:36px auto 0;text-align:center">Still stuck, or have an idea? <a href="../contact.html">Contact us</a>, we read every message.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="in">
+        <span class="copy">© 2026 orbitaar. All rights reserved.</span>
+        <a href="index.html">Markepi</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="../apps.html">Apps</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div></footer>
+
+    <script>
+    (function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Loops play only while on screen, and never with reduced motion.
+        document.querySelectorAll('video[data-loop]').forEach(function (v) {
+            new IntersectionObserver(function (e) {
+                if (e[0].isIntersecting && !reduce) { v.preload = 'auto'; v.play().catch(function () {}); } else { v.pause(); }
+            }, { threshold: 0.3 }).observe(v);
+        });
+    })();
+    </script>
+</body>
+</html>
