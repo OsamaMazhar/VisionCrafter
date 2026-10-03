@@ -3,168 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | orbitaar</title>
+    <title>Privacy Policy | SyncAlbum | orbitaar</title>
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="description" content="SyncAlbum privacy policy. SyncAlbum has no backend server: albums live in your own iCloud, and orbitaar never sees or stores your photos." />
+    <meta name="description" content="SyncAlbum privacy policy. Your albums live in your own iCloud; orbitaar runs no servers for SyncAlbum and collects no personal data, analytics or tracking." />
     <link rel="canonical" href="https://www.orbitaar.com/syncalbum/privacy-policy.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="orbitaar" />
-    <meta property="og:title" content="Privacy Policy | orbitaar" />
-    <meta property="og:description" content="SyncAlbum privacy policy. SyncAlbum has no backend server: albums live in your own iCloud, and orbitaar never sees or stores your photos." />
+    <meta property="og:title" content="Privacy Policy | SyncAlbum | orbitaar" />
+    <meta property="og:description" content="SyncAlbum privacy policy. Your albums live in your own iCloud; orbitaar runs no servers for SyncAlbum and collects no personal data, analytics or tracking." />
     <meta property="og:url" content="https://www.orbitaar.com/syncalbum/privacy-policy.html" />
     <meta property="og:image" content="https://www.orbitaar.com/assets/orbitaar_logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Privacy Policy | orbitaar" />
-    <meta name="twitter:description" content="SyncAlbum privacy policy. SyncAlbum has no backend server: albums live in your own iCloud, and orbitaar never sees or stores your photos." />
+    <meta name="twitter:title" content="Privacy Policy | SyncAlbum | orbitaar" />
+    <meta name="twitter:description" content="SyncAlbum privacy policy. Your albums live in your own iCloud; orbitaar runs no servers for SyncAlbum and collects no personal data, analytics or tracking." />
     <meta name="twitter:image" content="https://www.orbitaar.com/assets/orbitaar_logo.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="alternate" type="text/plain" title="LLM Site Index" href="https://www.orbitaar.com/llms.txt" />
-    <style>
-        :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --bg-tertiary: #f1f3f5;
-            --text-primary: #111827;
-            --text-secondary: #6b7280;
-            --text-tertiary: #9ca3af;
-            --accent-blue: #3b82f6;
-            --accent-blue-light: #eff6ff;
-            --accent-purple: #8b5cf6;
-            --border-light: #e5e7eb;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-        .navbar { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); padding: 1rem 0; }
-        .navbar-brand { font-weight: 600; font-size: 1.25rem; color: var(--text-primary); text-decoration: none; }
-        .navbar-brand img { width: 36px; height: 36px; border-radius: 8px; margin-right: 0.5rem; }
-        .nav-link { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.5rem 1rem !important; transition: color 0.2s ease; }
-        .nav-link:hover { color: var(--text-primary); }
-
-        .hero { padding: 7rem 1rem 2.5rem; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); text-align: center; position: relative; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1200px; height: 300px; background: radial-gradient(ellipse at center, var(--accent-blue-light) 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
-        .hero-content { position: relative; z-index: 1; }
-        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary); }
-        .hero h1 span { background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: 1.125rem; color: var(--text-secondary); }
-
-        .content-section { padding: 3rem 0; }
-        .content-card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 24px; padding: 2.5rem; max-width: 900px; margin: 0 auto; }
-        .content-card h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.75rem; }
-        .content-card h2 i { color: var(--accent-blue); }
-        .content-card h5 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary); }
-        .content-card p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
-        .content-card ul { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; }
-        .content-card .text-muted { color: var(--text-tertiary) !important; }
-
-        .email-button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-tertiary); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 500; font-size: 0.875rem; border: 1px solid var(--border-light); cursor: pointer; transition: all 0.2s ease; }
-        .email-button:hover { background: var(--accent-blue-light); border-color: var(--accent-blue); }
-        .email-display { display: none; background: var(--bg-secondary); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; color: var(--text-primary); margin-left: 0.5rem; }
-        .email-display.visible { display: inline-block; }
-
-        footer { position: static; background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 1.5rem 0; text-align: center; }
-        footer p { color: var(--text-tertiary); font-size: 0.875rem; margin: 0; }
-
-        @media (max-width: 768px) { .hero { padding: 6rem 1rem 2rem; } .content-card { padding: 1.5rem; margin: 0 1rem; } }
-    </style>
+    <link rel="stylesheet" href="../autoalign/blog/reader.css" />
+<style>
+  h2 { font-size: 24px; margin-top: 44px; }
+  .email-button { font: inherit; font-size: 15px; background: var(--bg-alt); color: var(--text); border: none; border-radius: 980px; padding: 8px 16px; cursor: pointer; }
+  .email-display { display: none; margin-left: 10px; font-size: 16px; }
+  .email-display.visible { display: inline; }
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
-                <span>orbitaar</span>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../apps.html">Apps</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<header class="site-header">
+  <a class="brand" href="/">orbitaar</a>
+  <nav>
+    <a href="/syncalbum/">SyncAlbum</a>
+    <a href="/syncalbum/user-guide.html">How to</a>
+    <a href="/apps.html">Apps</a>
+  </nav>
+</header>
+<main>
+  <nav class="breadcrumbs">
+    <a href="/">Home</a><span>/</span>
+    <a href="/syncalbum/">SyncAlbum</a><span>/</span>
+    Privacy Policy
+  </nav>
+  <h1>Privacy Policy</h1>
+  <div class="meta">SyncAlbum by orbitaar · Last updated October 2026</div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1><span>Privacy Policy</span></h1>
-            <p>SyncAlbum by orbitaar</p>
-        </div>
-    </section>
+  <p>This Privacy Policy explains how SyncAlbum handles your information.</p>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-card">
-                <h2><i class="bi bi-shield-check"></i> Your Privacy Matters</h2>
-                <p>This Privacy Policy explains how SyncAlbum handles information. In short: <strong>we do not collect, store, or sell any personal information</strong>.</p>
+  <h2>The Short Version</h2>
+  <p>orbitaar does not run servers for SyncAlbum and does not collect your data. There is no SyncAlbum account, no analytics, no advertising and no tracking. Your albums are stored in your own iCloud and shared through Apple's iCloud. orbitaar never receives your photos, comments or any other content.</p>
 
-                <h5>1. Information We Collect</h5>
-                <p><strong>None.</strong> SyncAlbum does not collect personal information, analytics, identifiers, contact lists, location history, or device data. We do not run tracking SDKs, advertising SDKs, or any third-party analytics.</p>
+  <h2>Where Your Albums Live</h2>
+  <p>Albums, photos, videos, captions, comments, reactions, favourites and journal entries are stored with Apple's iCloud (CloudKit) under your Apple Account. When you share an album, the people you approve can see and add to it through iCloud sharing. Their contributions to your album are stored in your iCloud, and the albums you join are stored in their owner's iCloud. Apple's handling of iCloud data is governed by Apple's privacy policy.</p>
 
-                <h5>2. Photos & Albums</h5>
-                <p>SyncAlbum is a photo sharing app, so you choose what content to share. SyncAlbum does not upload your photos or album content to orbitaar servers because we do not operate a backend service for SyncAlbum. Your photos remain on your devices and in your own storage accounts you choose to use (for example, Apple Photos/iCloud features on your device).</p>
+  <h2>Sharing and Joining</h2>
+  <p>An album is shared only when you share its link or QR code. Anyone with the link can ask to join; nobody gets in until the owner approves. When you ask to join, your display name and the album's name are stored as a join request in SyncAlbum's iCloud database so the owner can see it. Your display name and the photos, comments and reactions you add are visible to everyone in that album. The owner can remove people at any time.</p>
+  <p>People in an album may save copies of photos, for example to their own library or as a screenshot, while they have access. Copies they saved stay with them after access is removed, and orbitaar cannot control them.</p>
 
-                <h5>3. Sharing</h5>
-                <p>SyncAlbum shares content only with the people you choose to share with. Anything you share becomes available to those recipients until you remove access or stop sharing.</p>
-                <p>If you revoke someone’s access, SyncAlbum is designed to remove the shared album from that person’s SyncAlbum experience/devices. However, during the period you shared content with them, recipients may have been able to copy, download, screenshot, export, or otherwise save items outside of SyncAlbum (for example, into their own photo library or storage). Content saved independently by recipients is outside of our control, and we are not responsible for how recipients store, use, or share copies they saved while they had access.</p>
+  <h2>Private and Hidden Albums</h2>
+  <p>Albums marked Only on this iPhone are stored on your device only and never sync. Hidden albums can be locked with Face ID or Touch ID; the check is done by iOS and SyncAlbum never sees your biometric data.</p>
 
-                <h5>4. Permissions</h5>
-                <p>SyncAlbum may request device permissions (such as Photos access or Camera access) to function. These permissions are used only on your device to enable core features and are not used to collect or transmit data to orbitaar.</p>
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Photos:</strong> to import the photos and videos you choose, and to save exported stories and photos.</li>
+    <li><strong>Camera:</strong> for the built-in camera, only while you use it.</li>
+    <li><strong>Location:</strong> if you allow it, to tag photos you take in the app. To show place names, coordinates are sent to Apple's map service.</li>
+    <li><strong>Microphone and Speech Recognition:</strong> to record video sound and journal voice notes. Voice notes are transcribed on your device.</li>
+    <li><strong>Face ID:</strong> to unlock hidden albums.</li>
+    <li><strong>Notifications:</strong> to tell you about new photos, comments, reactions and join requests. Notifications are delivered by Apple.</li>
+  </ul>
+  <p>You can change any permission in the iPhone's Settings. SyncAlbum works without the ones you don't grant.</p>
 
-                <h5>5. Third-Party Services</h5>
-                <p>SyncAlbum does not integrate third-party analytics or advertising services. If you follow external links (for example, App Store links), those services are governed by their own privacy policies.</p>
+  <h2>Stories and Journal</h2>
+  <p>Video stories, face-aware framing, the journal's days, places and chapters, and voice-note transcripts are all made on your device. Nothing is sent to orbitaar.</p>
 
-                <h5>6. Data Retention & Deletion</h5>
-                <p>Because we do not collect or store your data on our servers, we do not retain it. You control your content directly on your device and in any storage services you choose to use. Deleting content from your device or chosen storage removes it from your control according to that provider’s behavior.</p>
+  <h2>Purchases</h2>
+  <p>Unlimited Albums and any earlier purchases are handled by Apple through your Apple Account. orbitaar receives no payment details. The app may show Apple's standard prompt to rate it, which Apple handles.</p>
 
-                <h5>7. Security</h5>
-                <p>We design SyncAlbum so that orbitaar does not receive your photos or personal data. As with any app, we recommend keeping your device updated and using strong device security (passcode/biometrics) to protect your content.</p>
+  <h2>Diagnostics</h2>
+  <p>SyncAlbum keeps a diagnostic log on your device to help fix problems. It never leaves the device unless you choose to share it with us yourself.</p>
 
-                <h5>8. Children’s Privacy</h5>
-                <p>SyncAlbum is not directed to children under 13, and we do not knowingly collect personal information from children. Since we do not collect user data, we do not have a way to identify or store children’s data.</p>
+  <h2>Deleting Your Data</h2>
+  <p>Delete photos or albums in the app, or leave albums you joined. Deleting an album you own removes it for everyone in it. You can also manage SyncAlbum's iCloud data in the iPhone's Settings under your Apple Account, iCloud. Deleting the app removes what it stored on the device, including private albums.</p>
 
-                <h5>9. Changes to This Policy</h5>
-                <p>We may update this Privacy Policy from time to time. When we do, we will update the “Last updated” date on this page.</p>
+  <h2>Children's Privacy</h2>
+  <p>SyncAlbum is designed for general audiences and does not knowingly collect any information from children, or from anyone else.</p>
 
-                <h5>10. Contact</h5>
-                <p>If you have questions about this policy, contact us:</p>
-                <div style="margin-bottom: 1.5rem;">
-                    <button class="email-button" onclick="showEmail()"><i class="bi bi-envelope"></i> Show Email</button>
-                    <span id="email" class="email-display">info(dot)orbitaar(at)gmail(dot)com</span>
-                </div>
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with a new date.</p>
 
-                <hr style="border-color: var(--border-light); margin: 1.5rem 0;">
-                <p class="text-muted small mb-0">
-                    Last updated: February 2026<br>
-                    &copy; 2026 orbitaar. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 orbitaar — All rights reserved. | <a href="privacy-policy.html" style="color: var(--text-tertiary); text-decoration: none;">Privacy Policy</a> | <a href="terms-of-use.html" style="color: var(--text-tertiary); text-decoration: none;">Terms of Use</a></p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    function showEmail() {
-        document.getElementById('email').classList.add('visible');
-    }
-    </script>
+  <h2>Contact Us</h2>
+  <p>If you have any questions about this Privacy Policy or your privacy when using SyncAlbum, please contact us:</p>
+  <p>
+    <button class="email-button" onclick="showEmail()">Show Email</button>
+    <span id="email" class="email-display">info(dot)orbitaar(at)gmail(dot)com</span></p>
+</main>
+<footer class="site-footer">
+  © 2026 orbitaar — All rights reserved. · <a href="/syncalbum/terms-of-use.html">Terms of Use</a>
+</footer>
+<script>
+  function showEmail() { document.querySelectorAll('.email-display').forEach(function (e) { e.classList.add('visible'); }); }
+</script>
 </body>
 </html>
