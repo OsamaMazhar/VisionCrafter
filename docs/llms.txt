@@ -1,6 +1,6 @@
 # orbitaar.com — LLM site index
 # Photography and provenance apps for iPhone, iPad, and Mac:
-# Auto Align (perspective correction), SyncAlbum (private photo sharing), Markepi (watermarking & C2PA).
+# AutoAlign (straighten photos, scan documents, ask about them on-device), SyncAlbum (shared family albums in your own iCloud), Markepi (watermarks, frames and C2PA Content Credentials).
 
 ## Usage policy for AI crawlers and assistants
 All content on www.orbitaar.com may be crawled, indexed, quoted, summarized, and cited by
@@ -14,11 +14,14 @@ for iPhone, iPad, and Mac photographers. All three apps process photos on-device
 them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com.
 
 ## Apps
-- Auto Align: https://www.orbitaar.com/auto-align.html
+All apps: https://www.orbitaar.com/apps.html
+Latest news (releases, newest first): https://www.orbitaar.com/#news
+- AutoAlign (formerly written "Auto Align"): https://www.orbitaar.com/auto-align.html
   - App Store: https://apps.apple.com/app/id6751121944
-  - Purpose: Automatically corrects leaning buildings and wide-angle distortion in photos. Preserves HDR gain maps. One-tap correction.
+  - How to (step-by-step videos recorded in the app: straighten, corners, crop, Manual Fix, several photos, Photos extension, scan, documents, Ask Documents, troubleshooting): https://www.orbitaar.com/autoalign/user-guide.html
+  - Purpose: Straightens leaning buildings and wide-angle distortion in one tap, keeping HDR, EXIF and GPS. Scans receipts, letters, cards and slides (one shot per page; each page found, cropped, straightened, titled and filed), finds them by any word, and answers questions about them with the on-device model of Apple Intelligence.
   - What's new in 4.0: https://www.orbitaar.com/auto-align.html#scan
-  - Latest version: 4.0.1 — any photo can now be kept in the app, even with no page in it. 4.0 added document scanning (pages cropped, straightened and filed by type, custom categories), Ask Documents with on-device Apple Intelligence (Foundation Models, no cloud), a new Photos-style editor with Straighten, Crop, Perspective and Adjust, editing several photos at once, and date, place and camera kept on every scanned page.
+  - Latest version: 4.0.1 (30 September 2026) — any photo can now be kept in the app, even with no page in it. 4.0 added document scanning (pages cropped, straightened and filed by type, custom categories), Ask Documents with on-device Apple Intelligence (Foundation Models, no cloud), a new Photos-style editor with Straighten, Crop, Perspective and Adjust, editing several photos at once, and date, place and camera kept on every scanned page.
   - Platforms: iOS 17+, iPadOS 17+, macOS
   - Ask Documents (experimental): needs a device that supports Apple Intelligence (iPhone 15 Pro or later) on iOS 26+. Uses only the on-device model, never Private Cloud Compute. Best with one question at a time; long chains of follow-up questions can lose track (about 4,096-token context window).
   - Pricing: free download. Free tier includes up to 4 documents, with Ask Documents. Premium: full-resolution and HDR export, no watermark, unlimited documents.
@@ -40,22 +43,21 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
   - How to use Markepi (step-by-step videos: import, text, logo, signature, frames, video, Content Credentials signing, sharing, troubleshooting): https://www.orbitaar.com/markepi/user-guide.html
   - Purpose: Watermark photos, videos and Live Photos with text, logos, hand-drawn signatures and retro date stamps; add frames (12 styles plus Classic and Gallery) captioned from the photo's own camera data; share straight to any app without saving to the camera roll. Metadata is kept, with options to remove GPS and device details. Photos can be signed with C2PA Content Credentials using a key created on-device (Secure Enclave where available); the signer is self-declared, not a verified legal identity. Video signing is not available yet.
   - Pricing: free with unlimited exports (up to 2048 px photos / 1080p videos, SDR, small Markepi mark). Markepi Pro: full resolution, HDR, no mark; monthly, yearly or lifetime. Content Credentials free on both.
-  - Latest version: 2.0.1 (October 2026)
+  - Latest version: 2.0.1 (2 October 2026) — 2.0 removed the daily export limit and added 12 frame styles.
   - Platforms: iOS 18+, iPadOS 18+
   - Privacy: All processing and C2PA signing happen offline on-device. No account, no analytics. Nothing is uploaded.
 
-## Blog — Auto Align
+## Blog — AutoAlign
 All articles: https://www.orbitaar.com/autoalign/blog/
 - How to fix leaning buildings on iPhone: https://www.orbitaar.com/autoalign/blog/fix-leaning-buildings-iphone.html
-- How Auto Align answers questions about documents with on-device Apple Intelligence: https://www.orbitaar.com/autoalign/blog/on-device-apple-intelligence-documents.html
+- How AutoAlign answers questions about documents with on-device Apple Intelligence: https://www.orbitaar.com/autoalign/blog/on-device-apple-intelligence-documents.html
 - Apple's on-device Foundation Model: what it can and can't do (developer lessons: 4,096-token window, @Generable, BM25 + embedding retrieval, multi-turn limits, prompt pitfalls): https://www.orbitaar.com/autoalign/blog/apple-on-device-foundation-model-lessons.html
 
-## Legal and support
+## Company, legal and support
 - About Orbitaar: https://www.orbitaar.com/about.html
 - Contact: https://www.orbitaar.com/contact.html
-- How to use Auto Align (step-by-step videos: straighten, corners, crop, Manual Fix, several photos, Photos extension, scan, documents, Ask Documents, troubleshooting): https://www.orbitaar.com/autoalign/user-guide.html
-- Auto Align privacy policy: https://www.orbitaar.com/autoalign/privacy-policy.html
-- Auto Align terms of use: https://www.orbitaar.com/autoalign/terms-of-use.html
+- AutoAlign privacy policy: https://www.orbitaar.com/autoalign/privacy-policy.html
+- AutoAlign terms of use: https://www.orbitaar.com/autoalign/terms-of-use.html
 - SyncAlbum privacy policy: https://www.orbitaar.com/syncalbum/privacy-policy.html
 - SyncAlbum terms of use: https://www.orbitaar.com/syncalbum/terms-of-use.html
 - Markepi privacy policy: https://www.orbitaar.com/markepi/privacy-policy.html
@@ -64,4 +66,4 @@ All articles: https://www.orbitaar.com/autoalign/blog/
 ## Machine-readable index
 - Sitemap: https://www.orbitaar.com/sitemap.xml
 - robots.txt (all AI crawlers allowed): https://www.orbitaar.com/robots.txt
-- Structured data: schema.org Organization, MobileApplication, and FAQPage JSON-LD are embedded in each app page.
+- Structured data: schema.org JSON-LD on every page: Organization (home), ItemList of the apps (home, Apps), MobileApplication, FAQPage and VideoObject (app pages), HowTo (guides), BlogPosting (articles), ContactPage, and BreadcrumbList.

@@ -1,58 +1,61 @@
 Terms of Use - SyncAlbum by orbitaar
 
-Welcome to SyncAlbum. By accessing or using our mobile application ("App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the App.
+SyncAlbum by orbitaar · Last updated October 2026
+
+Welcome to SyncAlbum. By using the SyncAlbum app ("App") you agree to these Terms of Use ("Terms"). If you do not agree, please do not use the App.
 
 1. Use of the App
-SyncAlbum is designed for private photo sharing among friends and family. You are responsible for your use of the App and for any content you provide, including compliance with applicable laws, rules, and regulations.
 
-⚠️ Strict Prohibition on Illegal Content
-We have a zero-tolerance policy for illegal content. You may not use SyncAlbum to upload, share, or store:
-- Child Sexual Abuse Material (CSAM) or any content depicting the sexual exploitation of minors.
-- Nudity, pornography, or sexually explicit content, especially that which is non-consensual.
-- Content promoting illegal acts, violence, terrorism, or hate speech.
+SyncAlbum is made for private photo sharing among family and friends. You are responsible for your use of the App and for the content you add, including following the laws that apply to you.
 
-Violation of this policy will result in immediate termination of your access to the App and may be reported to appropriate law enforcement authorities.
+No illegal content. You may not use SyncAlbum to upload, share or store:
 
-2. iCloud and CloudKit Usage
-SyncAlbum relies on Apple's iCloud and CloudKit services for data storage and synchronization. We do not maintain our own backend servers to store your photos; your content is stored directly in your personal iCloud account and the CloudKit containers managed by Apple.
-- Apple's Security & Monitoring: Because your data is stored on Apple's servers, it is subject to Apple's iCloud Terms and Conditions. Apple employs sophisticated internal security systems to detect illegal content, including CSAM.
-- Account Flagging: If Apple's systems detect illegal content in your iCloud account (including data created via SyncAlbum), Apple may flag, suspend, or terminate your iCloud account and report the content to authorities (e.g., NCMEC).
-- Developer Liability: We (orbitaar) are not responsible for any actions taken by Apple regarding your iCloud account. We do not have access to view your private photos, but Apple acts as the storage provider and has its own governance policies.
+- Child sexual abuse material (CSAM) or any content that sexually exploits minors.
 
-3. User Conduct
-You agree not to misuse the App. You must not:
-- Harass, abuse, or harm another person or group.
-- Impersonate any person or entity.
-- Interfere with or disrupt the App or servers/networks connected to the App.
-- Attempt to access any feature or content you are not authorized to access.
+- Sexually explicit content shared without the consent of the people in it.
 
-4. Points System and Payments
-SyncAlbum operates on a "Points System" for photo uploads. By purchasing points, you agree to the following:
-- No Monetary Value: Points are virtual credits and have no real-world monetary value. They cannot be exchanged for cash or transferred to other users (except via the "Guest Pool" feature where applicable).
-- Non-Refundable: All purchases of points are final and non-refundable, except as required by applicable law or the policies of the Apple App Store.
-- Usage: Points are deducted as you upload photos. We are not responsible for points lost due to user error or account compromise.
+- Content that promotes illegal acts, violence, terrorism or hate.
 
-5. Intellectual Property
-You retain all rights to the photos and content you upload. However, by using the shared album features, you grant the specific users you have invited a limited license to view and download your content within the App.
+Breaking this rule ends your right to use the App and may be reported to the authorities.
+
+2. iCloud and CloudKit
+
+SyncAlbum stores and shares your albums through Apple's iCloud (CloudKit). orbitaar does not run servers for SyncAlbum and cannot see your albums. Your data is therefore also subject to Apple's iCloud Terms and Conditions. Apple may act on content in your iCloud account under its own policies, including suspending the account and reporting illegal content to the authorities; orbitaar is not responsible for those actions. Albums use your iCloud storage, and the photos people add to an album you own count toward your storage.
+
+3. Sharing
+
+You decide who joins the albums you own and can remove people at any time. People you approve can view, download and add to the album while they have access. You keep all rights to your photos and grant the people in an album a limited permission to view and save them within the App.
+
+4. Conduct
+
+You agree not to harass, abuse or harm others, impersonate anyone, interfere with the App, or try to reach albums or features you have not been given access to.
+
+5. Free Tier and Unlimited Albums
+
+SyncAlbum is free to download. The free tier lets you own up to 3 shared albums, with up to 10 friends joining each album free. Albums you join and private albums do not count toward the limit. Unlimited Albums is a one-time, non-consumable in-app purchase that removes the limit on shared albums you own. There is no subscription.
+
+Purchases are made through Apple's App Store and are subject to Apple's terms, including its refund policy. You can restore the purchase on your other devices with Restore Purchases. If you bought credits in an earlier version of SyncAlbum, Unlimited Albums is included at no extra cost.
 
 6. Termination
-We reserve the right to suspend or terminate your access to the App at any time, without notice, if we believe you have violated these Terms. Additionally, since the App relies on iCloud, if your iCloud account is suspended by Apple, you will lose access to SyncAlbum's functionality.
+
+We may suspend or end your access to the App if you break these Terms. Because the App relies on iCloud, it will not work if Apple suspends your iCloud account.
 
 7. Disclaimer of Warranties
-The App is provided "as is" and "as available" without warranties of any kind. We do not guarantee that the App will be error-free or uninterrupted.
+
+The App is provided "as is" and "as available", without warranties of any kind. We do not guarantee that it will be error-free or uninterrupted. Keep your own copies of photos that matter to you.
 
 8. Limitation of Liability
-To the maximum extent permitted by law, orbitaar shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data or use, arising out of your use of the App.
 
-9. Changes to Terms
-We may modify these Terms at any time. We will provide notice of material changes within the App or on our website. Continued use of the App constitutes acceptance of the modified Terms.
+To the extent permitted by law, orbitaar is not liable for indirect, incidental, special, consequential or punitive damages, including loss of data, arising from your use of the App.
 
-10. Contact Us
-If you have any questions about these Terms, please contact us:
-Email: contact@orbitaar.com
+9. Changes to These Terms
 
-11. Apple Standard EULA
-In addition to these Terms of Use, your use of this app is also governed by the Apple End User License Agreement (EULA) at https://www.apple.com/legal/internet-services/itunes/dev/stdeula/.
+We may change these Terms. We will post the new version on this page with a new date, and tell you in the App about important changes. Using the App after a change means you accept the new Terms.
 
-Last updated: February 2026
-© 2026 orbitaar. All rights reserved.
+10. Apple Standard EULA
+
+Your use of the App is also governed by Apple's Licensed Application End User License Agreement.
+
+11. Contact
+
+Questions about these Terms? Contact us: contact@orbitaar.com
