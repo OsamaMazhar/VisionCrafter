@@ -25,11 +25,10 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
   - Video (30 s): https://www.orbitaar.com/assets/video/autoalign-in-action.mp4
   - Privacy: All correction runs on-device. No account, no uploads.
 - SyncAlbum: https://www.orbitaar.com/syncalbum/
-  - App Store: https://apps.apple.com/nl/app/syncalbum/id6757401130
+  - App Store: https://apps.apple.com/app/id6757401130
   - How to (videos recorded in the app): https://www.orbitaar.com/syncalbum/user-guide.html
   - How to share an album (two-phone video, 93 s): https://www.orbitaar.com/syncalbum/assets/v4/video/howto-share.mp4
   - Video (30 s): https://www.orbitaar.com/syncalbum/assets/v4/video/syncalbum-in-30s.mp4
-  - Public beta (TestFlight, anyone can join): https://testflight.apple.com/join/hFCmcssV
   - Purpose: Shared photo albums for family and friends, stored in the users' own iCloud (CloudKit). Invite by link, QR code or share sheet; people request to join and the owner approves. Reactions, captions, comments and group favourites on every photo; one-tap video stories set to music; a journal (memory book) with map, chapters, voice notes with on-device transcripts and a photobook PDF.
   - Current version: 4.0 (released 3 October 2026) — Journal, Live Photos and videos in albums and stories, full HDR, hidden albums locked with Face ID, private albums that stay on the iPhone, share-sheet import, typo-tolerant album search, synced captions and favourites, Liquid Glass design.
   - Platforms: iOS 17.6+, iPadOS 17.6+, macOS (Apple silicon)
