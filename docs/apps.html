@@ -9,141 +9,71 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="orbitaar" />
     <meta property="og:title" content="Apps | orbitaar" />
-    <meta property="og:description" content="Explore orbitaar's apps for iPhone, iPad, and Mac. Auto Align fixes leaning buildings in one tap. SyncAlbum keeps shared family albums in your own iCloud. Markepi adds watermarks and signs Content Credentials (C2PA) on-device." />
+    <meta property="og:description" content="orbitaar's apps for iPhone, iPad and Mac: AutoAlign (straighten photos, scan documents, ask about them), SyncAlbum (shared family albums in your own iCloud) and Markepi (watermarks, frames and Content Credentials)." />
     <meta property="og:url" content="https://www.orbitaar.com/apps.html" />
     <meta property="og:image" content="https://www.orbitaar.com/assets/orbitaar_logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Apps | orbitaar" />
-    <meta name="twitter:description" content="Explore orbitaar's apps for iPhone, iPad, and Mac. Auto Align fixes leaning buildings in one tap. SyncAlbum keeps shared family albums in your own iCloud. Markepi adds watermarks and signs Content Credentials (C2PA) on-device." />
+    <meta name="twitter:description" content="orbitaar's apps for iPhone, iPad and Mac: AutoAlign (straighten photos, scan documents, ask about them), SyncAlbum (shared family albums in your own iCloud) and Markepi (watermarks, frames and Content Credentials)." />
     <meta name="twitter:image" content="https://www.orbitaar.com/assets/orbitaar_logo.png" />
-    <meta name="description" content="Explore orbitaar's apps for iPhone, iPad, and Mac. Auto Align fixes leaning buildings in one tap. SyncAlbum keeps shared family albums in your own iCloud. Markepi adds watermarks and signs Content Credentials (C2PA) on-device." />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="orbitaar's apps for iPhone, iPad and Mac: AutoAlign (straighten photos, scan documents, ask about them), SyncAlbum (shared family albums in your own iCloud) and Markepi (watermarks, frames and Content Credentials)." />
     <link rel="alternate" type="text/plain" title="LLM Site Index" href="https://www.orbitaar.com/llms.txt" />
-    <style>
-
-        :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --bg-tertiary: #f1f3f5;
-            --text-primary: #111827;
-            --text-secondary: #6b7280;
-            --text-tertiary: #9ca3af;
-            --accent-blue: #3b82f6;
-            --accent-blue-light: #eff6ff;
-            --accent-purple: #8b5cf6;
-            --accent-green: #10b981;
-            --accent-red: #ef4444;
-            --border-light: #e5e7eb;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        .navbar { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-light); padding: 1rem 0; transition: all 0.3s ease; }
-        .navbar-brand { font-weight: 600; font-size: 1.25rem; color: var(--text-primary); text-decoration: none; }
-        .navbar-brand img { width: 36px; height: 36px; border-radius: 8px; margin-right: 0.5rem; }
-        .nav-link { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.5rem 1rem !important; transition: color 0.2s ease; }
-        .nav-link:hover, .nav-link.active { color: var(--text-primary); }
-        footer { position: static; background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 1.5rem 0; text-align: center; }
-        footer p { color: var(--text-tertiary); font-size: 0.875rem; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in-up { animation: fadeInUp 0.8s ease forwards; }
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
-
-        .hero { min-height: auto; display: flex; align-items: center; justify-content: center; text-align: center; padding: 7rem 1rem 2.5rem; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); position: relative; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1200px; height: 400px; background: radial-gradient(ellipse at center, var(--accent-blue-light) 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
-        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 2rem; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.1; }
-        .hero h1 span { background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: clamp(1.125rem, 2vw, 1.25rem); color: var(--text-secondary); max-width: 500px; margin-left: auto; margin-right: auto; }
-        .section { padding: 3.5rem 0; }
-        .apps-section { background: var(--bg-secondary); }
-        .apps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .app-card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 32px; padding: 3rem; text-align: center; transition: all 0.3s ease; }
-        .app-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-8px); border-color: transparent; }
-        .app-icon { width: 140px; height: 140px; margin: 0 auto 2rem; border-radius: 32px; box-shadow: var(--shadow-lg); overflow: hidden; }
-        .app-icon img { width: 100%; height: 100%; object-fit: contain; }
-        .app-card h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
-        .app-card p { font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem; max-width: 320px; margin-left: auto; margin-right: auto; }
-        .app-button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--text-primary); color: white; padding: 0.875rem 2rem; border-radius: 9999px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-md); }
-        .app-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); background: #000; color: white; }
-        .app-button.secondary { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-light); }
-        .app-button.secondary:hover { background: var(--bg-tertiary); color: var(--text-primary); }
-        @media (max-width: 992px) { .apps-grid { grid-template-columns: 1fr; max-width: 500px; } }
-        @media (max-width: 768px) { .hero { padding: 6rem 1rem 2rem; } .section { padding: 2.5rem 0; } .app-card { padding: 2rem; } }
-    </style>
+    <link rel="icon" type="image/png" href="assets/Copilot_20250922_131019.png">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/Copilot_20250922_131019.png" alt="orbitaar Logo">
-                <span>orbitaar</span>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="apps.html">Apps</a></li>
-                    <li class="nav-item"><a class="nav-link" href="autoalign/blog/">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in-up delay-1">Our <span>Apps</span></h1>
-            <p class="fade-in-up delay-2">Innovative tools for photography and memories.</p>
-        </div>
-    </section>
-    <section class="section apps-section">
-        <div class="apps-grid">
-            <div class="app-card fade-in-up delay-3">
-                <div class="app-icon"><img src="assets/autoalign-icon.png" alt="AutoAlign icon"></div>
-                <h2>AutoAlign</h2>
-                <p>Straighten leaning buildings in one tap, scan receipts, letters and cards into filed documents, and ask questions about them with the on-device model of Apple Intelligence. Nothing leaves your iPhone.</p>
-                <a href="auto-align.html" class="app-button"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-            <div class="app-card fade-in-up delay-4">
-                <div class="app-icon"><img src="syncalbum/assets/v4/icon.png" alt="SyncAlbum Icon"></div>
-                <h2>SyncAlbum</h2>
-                <p>Shared family albums that live in your own iCloud. Invite with one link, react and comment on every photo, and turn albums into video stories and a journal you write together. No subscription, no ads.</p>
-                <a href="syncalbum/index.html" class="app-button"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
+    <div class="sitebar"><div class="in">
+        <a class="brand" href="index.html">orbitaar</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="autoalign/blog/">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div></div>
 
-            <div class="app-card fade-in-up delay-5">
-                <div class="app-icon"><img src="markepi/assets/markepi-icon.png" alt="Markepi Icon"></div>
-                <h2>Markepi</h2>
-                <p>Watermark photos and videos with your name, logo or signature, add frames built from your camera data, and share straight to any app without cluttering your camera roll. Sign photos with Content Credentials (C2PA). 100% on-device.</p>
-                <a href="markepi/index.html" class="app-button"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
+    <main>
+        <section class="hero center">
+            <h1>Our apps.</h1>
+            <p class="lede">Tools for photography, documents and memories. Each one runs on your device and keeps your data yours.</p>
+        </section>
 
+        <section style="padding-top:0">
+            <div class="wrap">
+        <div class="tiles">
+            <div class="tile">
+                <img src="assets/autoalign-icon.png" alt="AutoAlign icon" width="96" height="96">
+                <p class="name">AutoAlign</p>
+                <h3>Straighten. Scan. Ask.</h3>
+                <p>Leaning buildings fixed in one tap. Receipts, letters and cards scanned and filed, and your questions about them answered by Apple Intelligence, on your iPhone.</p>
+                <a class="pill" href="https://apps.apple.com/app/id6751121944" rel="noopener">Download</a>
+                <div class="links"><a href="auto-align.html">Learn more ›</a><a href="autoalign/user-guide.html">How to ›</a></div>
+            </div>
+            <div class="tile">
+                <img src="syncalbum/assets/v4/icon.png" alt="SyncAlbum icon" width="96" height="96">
+                <p class="name">SyncAlbum</p>
+                <h3>Share. Sync. Remember.</h3>
+                <p>Shared family albums in your own iCloud. React and comment on every photo, and turn albums into video stories and a journal you write together.</p>
+                <a class="pill" href="https://apps.apple.com/app/id6757401130" rel="noopener">Download</a>
+                <div class="links"><a href="syncalbum/">Learn more ›</a><a href="syncalbum/user-guide.html">How to ›</a><a href="https://testflight.apple.com/join/hFCmcssV" rel="noopener">TestFlight ›</a></div>
+            </div>
+            <div class="tile">
+                <img src="markepi/assets/markepi-icon.png" alt="Markepi icon" width="96" height="96">
+                <p class="name">Markepi</p>
+                <h3>Watermark. Frame. Share.</h3>
+                <p>Your name, logo or signature on photos and videos, frames built from your camera data, and Content Credentials to prove a photo is yours. All on your device.</p>
+                <a class="pill" href="https://apps.apple.com/app/id6782552371" rel="noopener">Download</a>
+                <div class="links"><a href="markepi/">Learn more ›</a><a href="markepi/user-guide.html">How to ›</a></div>
+            </div>
         </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 orbitaar — All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="in">
+        <span class="copy">© 2026 orbitaar. All rights reserved.</span>
+        <a href="apps.html">Apps</a>
+        <a href="autoalign/blog/">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div></footer>
 </body>
 </html>
