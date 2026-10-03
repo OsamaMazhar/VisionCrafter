@@ -31,11 +31,12 @@ them run a backend that stores user photos. Contact: contact(at)orbitaar(dot)com
   - Privacy: No backend server and no analytics on your photos; albums live in the user's own iCloud.
 - Markepi: https://www.orbitaar.com/markepi/
   - App Store: https://apps.apple.com/app/id6782552371
-  - How It Works (visual walkthrough): https://www.orbitaar.com/markepi/#how-it-works
-  - Purpose: Privacy-first watermarking and photo-provenance studio. Add text, logos, signatures, white frames, and retro date stamps to photos, videos, and Live Photos. Cryptographically sign exports with tamper-evident Content Credentials (C2PA) using a signing key created on-device, held in the Secure Enclave where the hardware supports it. The signature is a device signature, not a verified legal identity — C2PA verifiers show the signer as untrusted, which is expected; what it establishes is that the image and sealed details are unaltered since signing. 100% on-device, no account, no cloud.
-  - Latest version: 1.1.0 (released July 2026)
+  - How it works (video and steps): https://www.orbitaar.com/markepi/#how
+  - Purpose: Watermark photos, videos and Live Photos with text, logos, hand-drawn signatures and retro date stamps; add frames (12 styles plus Classic and Gallery) captioned from the photo's own camera data; share straight to any app without saving to the camera roll. Metadata is kept, with options to remove GPS and device details. Photos can be signed with C2PA Content Credentials using a key created on-device (Secure Enclave where available); the signer is self-declared, not a verified legal identity. Video signing is not available yet.
+  - Pricing: free with unlimited exports (up to 2048 px photos / 1080p videos, SDR, small Markepi mark). Markepi Pro: full resolution, HDR, no mark; monthly, yearly or lifetime. Content Credentials free on both.
+  - Latest version: 2.0.1 (October 2026)
   - Platforms: iOS 18+, iPadOS 18+
-  - Privacy: All watermarking and C2PA signing happen offline on-device. Nothing is uploaded.
+  - Privacy: All processing and C2PA signing happen offline on-device. No account, no analytics. Nothing is uploaded.
 
 ## Blog — Auto Align
 All articles: https://www.orbitaar.com/autoalign/blog/
