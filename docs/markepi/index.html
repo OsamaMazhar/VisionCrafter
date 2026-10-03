@@ -275,7 +275,7 @@
         .hero .ctas { margin-top: 20px; }
         .hero .note { font-size: 14px; color: var(--text-2); margin-top: 10px; }
         .film { margin: 32px auto 0; width: min(100%, 1200px); border-radius: 24px; overflow: hidden; background: #000; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18); }
-        .film video { display: block; width: 100%; aspect-ratio: 16 / 9; }
+        .film video { display: block; width: 100%; height: auto; }
 
         /* Acts: text on one side, one picture on the other */
         .act { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
@@ -291,14 +291,16 @@
         }
 
         /* Phone frame around real screens */
-        .phone { width: 290px; max-width: 70vw; aspect-ratio: 640 / 1390; background: var(--phone); border-radius: 48px; padding: 10px; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2); flex: none; position: relative; }
-        .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 38px; }
-        .phone .stack { position: relative; width: 100%; height: 100%; }
-        .phone .stack img { position: absolute; inset: 0; opacity: 0; transition: opacity 0.45s ease; }
+        .phone { width: 290px; max-width: 70vw; background: var(--phone); border-radius: 48px; padding: 10px; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2); flex: none; }
+        .phone img { width: 100%; height: auto; border-radius: 38px; }
+        .phone .stack { position: relative; }
+        .phone .stack img + img { position: absolute; inset: 0; }
+        .phone .stack img { opacity: 0; transition: opacity 0.45s ease; }
         .phone .stack img.on { opacity: 1; }
-        .pair { position: relative; display: flex; }
-        .pair .phone + .phone { margin-left: -70px; margin-top: 70px; }
-        @media (max-width: 600px) { .pair .phone { width: 200px; } .pair .phone + .phone { margin-left: -60px; margin-top: 50px; } }
+        .pair { display: flex; gap: 24px; align-items: flex-start; }
+        .pair .phone { width: 250px; max-width: calc(50vw - 34px); }
+        .pair .phone + .phone { margin-top: 60px; }
+        @media (max-width: 600px) { .pair { gap: 16px; } .pair .phone { border-radius: 30px; padding: 6px; } .pair .phone img { border-radius: 25px; } .pair .phone + .phone { margin-top: 40px; } }
 
         /* Frame style switcher */
         .seg { display: flex; flex-wrap: wrap; justify-content: center; width: max-content; max-width: 100%; margin: 22px auto 0; background: var(--hairline); border-radius: 980px; padding: 3px; }
@@ -323,8 +325,8 @@
 
         /* How it works: vertical video beside the steps */
         .how { display: grid; grid-template-columns: auto 1fr; gap: 72px; align-items: center; max-width: 1000px; margin: 0 auto; }
-        .how .reel { width: 320px; max-width: 80vw; aspect-ratio: 886 / 1920; border-radius: 36px; overflow: hidden; background: #000; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22); }
-        .how .reel video { width: 100%; height: 100%; display: block; object-fit: cover; }
+        .how .reel { width: 320px; max-width: 80vw; border-radius: 36px; overflow: hidden; background: #000; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22); }
+        .how .reel video { width: 100%; height: auto; display: block; }
         .steps { list-style: none; counter-reset: s; display: grid; gap: 22px; margin-top: 28px; }
         .steps li { counter-increment: s; position: relative; padding-left: 50px; font-size: 17px; color: var(--text-2); line-height: 1.4; }
         .steps li::before { content: counter(s); position: absolute; left: 0; top: -3px; width: 32px; height: 32px; border-radius: 50%; background: var(--button); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
@@ -335,7 +337,7 @@
         .gallery { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 44px max(22px, calc((100vw - 1200px) / 2)) 16px; scrollbar-width: none; }
         .gallery::-webkit-scrollbar { display: none; }
         .gallery figure { flex: none; scroll-snap-align: center; }
-        .gallery img { width: 240px; height: auto; aspect-ratio: 660 / 1434; border-radius: 24px; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14); object-fit: cover; }
+        .gallery img { width: 240px; height: auto; border-radius: 24px; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14); }
         .gallery-nav { display: flex; justify-content: center; gap: 14px; margin-top: 12px; }
         .gallery-nav button { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--hairline); color: var(--text); font-size: 20px; cursor: pointer; }
 
@@ -382,7 +384,6 @@
         <a class="item" href="#share">Share</a>
         <a class="item" href="#credentials">Credentials</a>
         <a class="item" href="#how">How it works</a>
-        <a class="item" href="#pricing">Pricing</a>
         <a class="item" href="#faq">FAQ</a>
         <a class="pill" href="https://apps.apple.com/app/id6782552371" rel="noopener">Download</a>
     </div></nav>
@@ -395,7 +396,7 @@
             <div class="ctas"><a class="pill big" href="https://apps.apple.com/app/id6782552371" rel="noopener">Download on the App Store</a></div>
             <p class="note">Free on iPhone and iPad. No account.</p>
             <div class="film">
-                <video id="filmVideo" controls muted loop playsinline preload="metadata" poster="assets/v2/video/markepi-in-action-poster.jpg" aria-label="Markepi framing a photo, adding a watermark and signature, and sharing it">
+                <video id="filmVideo" width="1920" height="1080" controls muted loop playsinline preload="metadata" poster="assets/v2/video/markepi-in-action-poster.jpg" aria-label="Markepi framing a photo, adding a watermark and signature, and sharing it">
                     <source src="assets/v2/video/markepi-in-action.mp4" type="video/mp4">
                 </video>
             </div>
@@ -418,8 +419,8 @@
                 </div>
                 <div class="visual">
                     <div class="pair">
-                        <div class="phone"><img src="assets/v2/app/text.jpg" alt="Text watermark panel with the name Northlight Studio in a script font" loading="lazy" width="640" height="1390"></div>
-                        <div class="phone"><img src="assets/v2/app/logo.jpg" alt="Logo panel with opacity, position and size controls" loading="lazy" width="640" height="1390"></div>
+                        <div class="phone"><img src="assets/v2/app/text.jpg" alt="Text watermark panel with the name Northlight Studio in a script font" loading="lazy" width="712" height="1546"></div>
+                        <div class="phone"><img src="assets/v2/app/logo.jpg" alt="Logo panel with opacity, position and size controls" loading="lazy" width="712" height="1546"></div>
                     </div>
                 </div>
             </div>
@@ -442,10 +443,10 @@
                 </div>
                 <div class="visual">
                     <div class="phone"><div class="stack" id="styleStack">
-                        <img class="on" src="assets/v2/app/frame-noir.jpg" alt="A harbour photo in the Noir frame" width="640" height="1390">
-                        <img src="assets/v2/app/frame-aura.jpg" alt="The same photo in the Aura frame, coloured from the photo" loading="lazy" width="640" height="1390">
-                        <img src="assets/v2/app/frame-sunlight.jpg" alt="The same photo in the Sunlight frame" loading="lazy" width="640" height="1390">
-                        <img src="assets/v2/app/frame-readout.jpg" alt="The same photo in the Readout frame with camera settings" loading="lazy" width="640" height="1390">
+                        <img class="on" src="assets/v2/app/frame-noir.jpg" alt="A harbour photo in the Noir frame" width="712" height="1546">
+                        <img src="assets/v2/app/frame-aura.jpg" alt="The same photo in the Aura frame, coloured from the photo" loading="lazy" width="712" height="1546">
+                        <img src="assets/v2/app/frame-sunlight.jpg" alt="The same photo in the Sunlight frame" loading="lazy" width="712" height="1546">
+                        <img src="assets/v2/app/frame-readout.jpg" alt="The same photo in the Readout frame with camera settings" loading="lazy" width="712" height="1546">
                     </div></div>
                     <div class="seg" role="group" aria-label="Frame style" id="styleSeg">
                         <button type="button" aria-pressed="true">Noir</button>
@@ -470,7 +471,7 @@
                     </ul>
                 </div>
                 <div class="visual">
-                    <div class="phone"><img src="assets/v2/app/share-in.jpg" alt="The Photos share sheet with Markepi among the apps" loading="lazy" width="640" height="1390"></div>
+                    <div class="phone"><img src="assets/v2/app/share-in.jpg" alt="The Photos share sheet with Markepi among the apps" loading="lazy" width="712" height="1546"></div>
                 </div>
             </div>
         </section>
@@ -490,8 +491,8 @@
                 </div>
                 <div class="visual">
                     <div class="pair">
-                        <div class="phone"><img src="assets/v2/app/sign.jpg" alt="Sign export sheet explaining what Content Credentials seal" loading="lazy" width="640" height="1390"></div>
-                        <div class="phone"><img src="assets/v2/app/signed.jpg" alt="Protected and Ready summary listing creator, copyright and an intact signature" loading="lazy" width="640" height="1390"></div>
+                        <div class="phone"><img src="assets/v2/app/sign.jpg" alt="Sign export sheet explaining what Content Credentials seal" loading="lazy" width="712" height="1546"></div>
+                        <div class="phone"><img src="assets/v2/app/signed.jpg" alt="Protected and Ready summary listing creator, copyright and an intact signature" loading="lazy" width="712" height="1546"></div>
                     </div>
                 </div>
             </div>
@@ -514,7 +515,7 @@
         <section id="how">
             <div class="how">
                 <div class="reel">
-                    <video id="howVideo" controls muted loop playsinline preload="metadata" poster="assets/v2/video/markepi-how-it-works-poster.jpg" aria-label="Markepi recorded in use: frame styles, text, logo, video, share in, signing and share out">
+                    <video id="howVideo" width="886" height="1920" controls muted loop playsinline preload="metadata" poster="assets/v2/video/markepi-how-it-works-poster.jpg" aria-label="Markepi recorded in use: frame styles, text, logo, video, share in, signing and share out">
                         <source src="assets/v2/video/markepi-how-it-works.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -551,35 +552,6 @@
             </div>
         </section>
 
-        <section id="pricing">
-            <div class="wrap">
-                <h2 class="center">Free to use. Pro for full quality.</h2>
-                <div class="compare">
-                    <div class="good">
-                        <h3>Free</h3>
-                        <p class="price">Unlimited exports</p>
-                        <ul>
-                            <li>Every watermark, frame and template</li>
-                            <li>Photos up to 2048 px, videos up to 1080p</li>
-                            <li>Standard dynamic range</li>
-                            <li>A small Markepi mark, placed clear of your own text and logo</li>
-                            <li>Content Credentials on photos</li>
-                        </ul>
-                    </div>
-                    <div class="good pro">
-                        <h3>Markepi Pro</h3>
-                        <p class="price">$0.99 a month, $2.99 a year, or $4.99 once</p>
-                        <ul>
-                            <li>Everything in Free</li>
-                            <li>Full-resolution photos and videos</li>
-                            <li>HDR kept</li>
-                            <li>No Markepi mark</li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="fine center">US prices. The App Store shows the price in your country.</p>
-            </div>
-        </section>
 
         <section class="alt">
             <div class="wrap">
