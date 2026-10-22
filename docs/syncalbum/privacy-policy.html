@@ -21,9 +21,16 @@
     <link rel="stylesheet" href="../autoalign/blog/reader.css" />
 <style>
   h2 { font-size: 24px; margin-top: 44px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0; }
+  td, th { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--bg-alt); }
+  th { font-weight: 600; }
   .email-button { font: inherit; font-size: 15px; background: var(--bg-alt); color: var(--text); border: none; border-radius: 980px; padding: 8px 16px; cursor: pointer; }
   .email-display { display: none; margin-left: 10px; font-size: 16px; }
   .email-display.visible { display: inline; }
+  .notice { background: var(--bg-alt); border-radius: 14px; padding: 16px 20px; margin: 20px 0 8px; font-size: 16px; line-height: 1.5; }
+  .notice strong { display: block; margin-bottom: 4px; }
+  .soon { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; padding: 4px 9px; border-radius: 980px; border: 1px solid currentColor; opacity: 0.7; vertical-align: 2px; margin: 0 2px; white-space: nowrap; }
+  h2 .soon { vertical-align: 4px; margin-left: 8px; }
 </style>
     <script type="application/ld+json">
 {
@@ -86,43 +93,50 @@
   <h1>Privacy Policy</h1>
   <div class="meta">SyncAlbum by orbitaar · Last updated October 2026</div>
 
-  <p>This Privacy Policy explains how SyncAlbum handles your information.</p>
+  <p>This Privacy Policy explains how SyncAlbum handles your information on iPhone, iPad and Mac, and on Android once SyncAlbum for Android is released.</p>
+
+  <div class="notice">
+    <strong>SyncAlbum 5.0 is coming soon</strong>
+    This policy already covers SyncAlbum 5.0, including the new Android app. Parts marked <span class="soon">Coming in 5.0</span> describe features that arrive with that release and do not apply to the version currently on the App Store. Everything else applies today.
+  </div>
 
   <h2>The Short Version</h2>
-  <p>orbitaar does not run servers for SyncAlbum and does not collect your data. There is no SyncAlbum account, no analytics, no advertising and no tracking. Your albums are stored in your own iCloud and shared through Apple's iCloud. orbitaar never receives your photos, comments or any other content.</p>
+  <p>orbitaar does not run servers for SyncAlbum and does not collect your data. There is no SyncAlbum account, no analytics, no advertising and no tracking. Your albums live in your own iCloud (and, if you choose, your own Google Drive) and are shared through Apple's iCloud. orbitaar never receives your photos, comments or any other content. The only other companies involved are Apple and Google.</p>
 
   <h2>Where Your Albums Live</h2>
-  <p>Albums, photos, videos, captions, comments, reactions, favourites and journal entries are stored with Apple's iCloud (CloudKit) under your Apple Account. When you share an album, the people you approve can see and add to it through iCloud sharing. Their contributions to your album are stored in your iCloud, and the albums you join are stored in their owner's iCloud. Apple's handling of iCloud data is governed by Apple's privacy policy.</p>
+  <p>Albums, photos, videos, captions, comments, reactions, favourites and journal entries are stored in Apple's iCloud under your Apple Account, on every platform. Apple encrypts this data in transit and on its servers; how Apple protects it, including the option of end-to-end encryption with Advanced Data Protection, is described in Apple's iCloud security overview. When you share an album, the people you approve can see and add to it through iCloud sharing. Their contributions to your album are stored in your iCloud, and the albums you join are stored in their owner's iCloud.</p>
+  <p><span class="soon">Coming in 5.0</span> SyncAlbum for Android keeps albums in iCloud too, so it also needs an Apple Account. Shared albums are also end-to-end encrypted by SyncAlbum: photos, videos and their details are encrypted on your device with keys only the album's members hold, so no one else, including Apple, Google and orbitaar, can read them.</p>
+
+  <h2>Google Drive (optional) <span class="soon">Coming in 5.0</span></h2>
+  <p>You can choose to keep an album's full-resolution files in your own Google Drive instead of iCloud, on iPhone, iPad, Mac or Android. If you do, you sign in with Google, and SyncAlbum can access only the files it creates, never the rest of your Drive. The files are encrypted on your device before upload, so Google stores data it cannot read, and only the album's members can open them in SyncAlbum. Your Google account's name and email are shown in the app and are not sent to orbitaar.</p>
 
   <h2>Sharing and Joining</h2>
-  <p>An album is shared only when you share its link or QR code. Anyone with the link can ask to join; nobody gets in until the owner approves. When you ask to join, your display name and the album's name are stored as a join request in SyncAlbum's iCloud database so the owner can see it. Your display name and the photos, comments and reactions you add are visible to everyone in that album. The owner can remove people at any time.</p>
+  <p>An album is shared only when you share its link or QR code. Anyone with the link can ask to join; nobody gets in until the owner approves. Your display name and the photos, comments and reactions you add are visible to everyone in that album. The owner can remove people at any time.</p>
+  <p><span class="soon">Coming in 5.0</span> When you ask to join, your name and the album's name are encrypted so only the album's owner can read them.</p>
   <p>People in an album may save copies of photos, for example to their own library or as a screenshot, while they have access. Copies they saved stay with them after access is removed, and orbitaar cannot control them.</p>
 
   <h2>Private and Hidden Albums</h2>
-  <p>Albums marked Only on this iPhone are stored on your device only and never sync. Hidden albums can be locked with Face ID or Touch ID; the check is done by iOS and SyncAlbum never sees your biometric data.</p>
+  <p>Private albums are stored on your device only and never sync. Hidden albums can be locked with Face ID or Touch ID (and, <span class="soon">Coming in 5.0</span>, your Android fingerprint or face unlock); the check is done by the operating system and SyncAlbum never sees your biometric data.</p>
+
+  <h2>What Leaves Your Device</h2>
+  <p>We do not collect any data. Your albums are stored in your own iCloud, or in your Google Drive if you choose, so only you and the people you share with have access to them. To provide the app's features, Apple and Google process limited data, such as photo locations for place names, notifications and purchases, under their own privacy policies.</p>
+  <p><span class="soon">Coming in 5.0</span> With 5.0, albums are end-to-end encrypted; Google sign-in is used if you choose Google Drive; and on Android, notifications are delivered through Google's push notification service, which uses a device identifier and carries none of your photos, names or messages, and Google's ML Kit sends anonymous usage statistics.</p>
 
   <h2>Permissions</h2>
-  <ul>
-    <li><strong>Photos:</strong> to import the photos and videos you choose, and to save exported stories and photos.</li>
-    <li><strong>Camera:</strong> for the built-in camera, only while you use it.</li>
-    <li><strong>Location:</strong> if you allow it, to tag photos you take in the app. To show place names, coordinates are sent to Apple's map service.</li>
-    <li><strong>Microphone and Speech Recognition:</strong> to record video sound and journal voice notes. Voice notes are transcribed on your device.</li>
-    <li><strong>Face ID:</strong> to unlock hidden albums.</li>
-    <li><strong>Notifications:</strong> to tell you about new photos, comments, reactions and join requests. Notifications are delivered by Apple.</li>
-  </ul>
-  <p>You can change any permission in the iPhone's Settings. SyncAlbum works without the ones you don't grant.</p>
+  <p>SyncAlbum asks for access to your photos and videos, camera, location, microphone and speech recognition, biometric unlock and notifications only to provide the related features, such as importing photos, the built-in camera, tagging places, voice notes, locking hidden albums and alerting you to album activity.</p>
+  <p>You can change any permission in the device's Settings. SyncAlbum works without the ones you don't grant.</p>
 
   <h2>Stories and Journal</h2>
   <p>Video stories, face-aware framing, the journal's days, places and chapters, and voice-note transcripts are all made on your device. Nothing is sent to orbitaar.</p>
 
   <h2>Purchases</h2>
-  <p>Unlimited Albums and any earlier purchases are handled by Apple through your Apple Account. orbitaar receives no payment details. The app may show Apple's standard prompt to rate it, which Apple handles.</p>
+  <p>Unlimited Albums and any earlier purchases are handled by Apple through your Apple Account on iPhone, iPad and Mac, and by Google Play on Android <span class="soon">Coming in 5.0</span>. orbitaar receives no payment details. The app may show the store's standard prompt to rate it, which the store handles.</p>
 
   <h2>Diagnostics</h2>
-  <p>SyncAlbum keeps a diagnostic log on your device to help fix problems. It never leaves the device unless you choose to share it with us yourself.</p>
+  <p>SyncAlbum keeps a diagnostic log on your device to help fix problems. It never leaves the device unless you choose to share it with us yourself. SyncAlbum itself has no crash reporting or analytics; the only automatic statistics will be ML Kit's on Android <span class="soon">Coming in 5.0</span>, described above.</p>
 
   <h2>Deleting Your Data</h2>
-  <p>Delete photos or albums in the app, or leave albums you joined. Deleting an album you own removes it for everyone in it. You can also manage SyncAlbum's iCloud data in the iPhone's Settings under your Apple Account, iCloud. Deleting the app removes what it stored on the device, including private albums.</p>
+  <p>Delete photos or albums in the app, or leave albums you joined. Deleting an album you own removes it for everyone in it. Signing out on a device removes that account's albums from it; albums you own stay in your iCloud. You can also manage SyncAlbum's iCloud data in your Apple Account settings (iCloud), and, <span class="soon">Coming in 5.0</span>, its Google Drive files in Google Drive. Deleting the app removes what it stored on the device, including private albums.</p>
 
   <h2>Children's Privacy</h2>
   <p>SyncAlbum is designed for general audiences and does not knowingly collect any information from children, or from anyone else.</p>

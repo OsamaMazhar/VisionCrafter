@@ -18,9 +18,9 @@ No illegal content. You may not use SyncAlbum to upload, share or store:
 
 Breaking this rule ends your right to use the App and may be reported to the authorities.
 
-2. iCloud and CloudKit
+2. iCloud and Google Drive
 
-SyncAlbum stores and shares your albums through Apple's iCloud (CloudKit). orbitaar does not run servers for SyncAlbum and cannot see your albums. Your data is therefore also subject to Apple's iCloud Terms and Conditions. Apple may act on content in your iCloud account under its own policies, including suspending the account and reporting illegal content to the authorities; orbitaar is not responsible for those actions. Albums use your iCloud storage, and the photos people add to an album you own count toward your storage.
+SyncAlbum stores and shares your albums through Apple's iCloud. orbitaar does not run servers for SyncAlbum and cannot see your albums. Your data is therefore also subject to Apple's iCloud Terms and Conditions. Apple may act on content in your iCloud account under its own policies, including suspending the account and reporting illegal content to the authorities; orbitaar is not responsible for those actions. Albums use your iCloud storage, and the photos people add to an album you own count toward your storage.
 
 3. Sharing
 
