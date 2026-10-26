@@ -6,7 +6,7 @@ Welcome to SyncAlbum. By using the SyncAlbum app ("App") you agree to these Term
 
 1. Use of the App
 
-SyncAlbum is made for private photo sharing among family and friends. You are responsible for your use of the App and for the content you add, including following the laws that apply to you.
+SyncAlbum is made for private photo sharing among family and friends. You are responsible for your use of the App and for the content you add, including following the laws that apply to you. You must be at least 18 years old, or the age of majority where you live, to use the App.
 
 No illegal content. You may not use SyncAlbum to upload, share or store:
 
@@ -32,9 +32,9 @@ You agree not to harass, abuse or harm others, impersonate anyone, interfere wit
 
 5. Free Tier and Unlimited Albums
 
-SyncAlbum is free to download. The free tier lets you own up to 3 shared albums, with up to 10 friends joining each album free. Albums you join and private albums do not count toward the limit. Unlimited Albums is a one-time, non-consumable in-app purchase that removes the limit on shared albums you own. There is no subscription.
+SyncAlbum is free to download. The free tier lets you own up to 3 shared albums, with up to 10 friends joining each album free. Albums you join and private albums do not count toward the limit. Unlimited Albums is a one-time, non-consumable in-app purchase that removes the limit on shared albums you own. If an album needs more members, Unlock More Friends is a one-time in-app purchase that permanently raises the member limit of that one album. There is no subscription.
 
-Purchases are made through Apple's App Store and are subject to Apple's terms, including its refund policy. You can restore the purchase on your other devices with Restore Purchases. If you bought credits in an earlier version of SyncAlbum, Unlimited Albums is included at no extra cost.
+Purchases are made through Apple's App Store on iPhone, iPad and Mac, and through Google Play on Android, and are subject to that store's terms, including its refund policy. Unlimited Albums is linked to your Apple Account, so it applies on every device signed in to that account, on iPhone, iPad, Mac or Android, whichever store you bought it in. Use Restore Purchases if it does not show on a device. If you bought credits in an earlier version of SyncAlbum, Unlimited Albums is included at no extra cost.
 
 6. Termination
 
@@ -50,7 +50,7 @@ To the extent permitted by law, orbitaar is not liable for indirect, incidental,
 
 9. Changes to These Terms
 
-We may change these Terms. We will post the new version on this page with a new date, and tell you in the App about important changes. Using the App after a change means you accept the new Terms.
+We may change these Terms. We will post the new version on this page with a new date. Using the App after a change means you accept the new Terms.
 
 10. Apple Standard EULA
 
