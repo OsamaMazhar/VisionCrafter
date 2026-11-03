@@ -113,7 +113,7 @@
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "Where are my photos stored?",
-          "acceptedAnswer": { "@type": "Answer", "text": "In your own iCloud. SyncAlbum has no servers of its own; albums move between devices through Apple's iCloud only. orbitaar never receives your photos." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "In your own iCloud. SyncAlbum doesn't keep your albums on servers of its own; albums move between devices through Apple's iCloud. orbitaar never receives your photos." } },
         { "@type": "Question", "name": "Is SyncAlbum free?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your first 3 shared albums are free, and up to 10 friends can join each album free. Joining other people's albums and private albums never count. Unlimited Albums is a single one-time purchase, with no subscription." } },
         { "@type": "Question", "name": "How do I share an album?",
@@ -125,7 +125,9 @@
         { "@type": "Question", "name": "Can I hide an album?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Hide albums from your home screen and lock hidden albums with Face ID. You can also make private albums that never leave your iPhone." } },
         { "@type": "Question", "name": "Can I remove someone from an album?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The album owner decides who joins and can remove access at any time." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The album owner decides who joins and can remove access at any time. SyncAlbum also alerts the owner if someone is in an album without approval." } },
+        { "@type": "Question", "name": "What does Make Private do?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Coming in 5.0. Albums shared before SyncAlbum 5.0 use an older iCloud link. SyncAlbum always asked for your approval, but the link itself was not locked. Make Private moves the album to a private share that only the people you approved can open. Everyone already in the album stays in, and nothing in it changes." } },
         { "@type": "Question", "name": "Does SyncAlbum work on iPad and Mac?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. SyncAlbum runs on iPhone and iPad with iOS 17.6 or later, and on Macs with Apple silicon. Your albums sync across them through iCloud." } }
       ]
@@ -398,10 +400,10 @@
                 <div class="text reveal">
                     <span class="num">4</span>
                     <h2>Private.</h2>
-                    <p class="lede">SyncAlbum has no servers of its own. Albums move between your people through Apple's iCloud alone, and orbitaar never sees a photo.</p>
+                    <p class="lede">SyncAlbum doesn't keep your albums on servers of its own. Albums move between your people through Apple's iCloud, and orbitaar never sees a photo.</p>
                     <div class="chips">
                         <div><b>Hide albums</b><span>Off your home screen with a long press.</span></div>
-                        <div><b>Lock with Face ID</b><span>Hidden albums open only for you.</span></div>
+                        <div><b>Lock with Face ID</b><span>Hidden albums open with your Face ID.</span></div>
                         <div><b>Only on this iPhone</b><span>Private albums that never sync anywhere.</span></div>
                     </div>
                     <div class="links"><a href="privacy-policy.html">Privacy Policy ›</a></div>
@@ -510,13 +512,14 @@
             <div class="wrap">
                 <h2 class="center">Questions.</h2>
                 <div class="faq">
-                    <details><summary>Where are my photos stored?</summary><p>In your own iCloud. SyncAlbum has no servers of its own; albums move between devices through Apple's iCloud only. orbitaar never receives your photos.</p></details>
+                    <details><summary>Where are my photos stored?</summary><p>In your own iCloud. SyncAlbum doesn't keep your albums on servers of its own; albums move between devices through Apple's iCloud. orbitaar never receives your photos.</p></details>
                     <details><summary>Is SyncAlbum free?</summary><p>Yes. Your first 3 shared albums are free, and up to 10 friends can join each album free. Joining other people's albums and private albums never count. Unlimited Albums is a single one-time purchase, with no subscription.</p></details>
                     <details><summary>How do I share an album?</summary><p>Open the album, tap ••• and choose Share Album. Send the link or QR code. The person taps it and requests access, and you approve it from Join requests under the bell. <a href="user-guide.html#share">See it step by step ›</a></p></details>
                     <details><summary>Do the people I invite need SyncAlbum?</summary><p>Yes. Everyone in an album uses SyncAlbum on an iPhone, iPad or Mac signed in to iCloud. Joining is free.</p></details>
                     <details><summary>Are photos compressed?</summary><p>No. SyncAlbum keeps full-resolution originals, including Live Photos, videos and HDR photos.</p></details>
                     <details><summary>Can I hide an album?</summary><p>Yes. Hide albums from your home screen and lock hidden albums with Face ID. You can also make private albums that never leave your iPhone.</p></details>
-                    <details><summary>Can I remove someone from an album?</summary><p>Yes. The album owner decides who joins and can remove access at any time. Anything a person saved while they had access, such as a screenshot, stays with them.</p></details>
+                    <details><summary>Can I remove someone from an album?</summary><p>Yes. The album owner decides who joins and can remove access at any time, and SyncAlbum alerts the owner if someone is in an album without approval. Anything a person saved while they had access, such as a screenshot, stays with them.</p></details>
+                    <details><summary>What does Make Private do?</summary><p>Coming in SyncAlbum 5.0. Albums shared before SyncAlbum 5.0 use an older iCloud link. SyncAlbum always asked for your approval, but the link itself wasn't locked. Make Private moves the album to a private share that only the people you approved can open. Everyone already in the album stays in, and nothing in it changes.</p></details>
                     <details><summary>Does SyncAlbum work on iPad and Mac?</summary><p>Yes. SyncAlbum runs on iPhone and iPad with iOS 17.6 or later, and on Macs with Apple silicon. Your albums sync across them through iCloud.</p></details>
                 </div>
             </div>
