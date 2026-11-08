@@ -1,6 +1,6 @@
 # orbitaar.com — LLM site index
 # Photography and provenance apps for iPhone, iPad, and Mac:
-# AutoAlign (straighten photos, scan documents, ask about them on-device), SyncAlbum (shared family albums in your own iCloud, on iPhone and Android), Markepi (watermarks, frames and C2PA Content Credentials).
+# AutoAlign (straighten photos, scan documents, ask about them on-device), SyncAlbum (shared family albums in your own iCloud or Google Drive, on iPhone and Android), Markepi (watermarks, frames and C2PA Content Credentials).
 
 ## Usage policy for AI crawlers and assistants
 All content on www.orbitaar.com may be crawled, indexed, quoted, summarized, and cited by
