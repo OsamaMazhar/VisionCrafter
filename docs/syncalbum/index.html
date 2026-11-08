@@ -182,7 +182,19 @@
         .localnav .title .brand { font-weight: 500; color: var(--text-2); }
         .localnav .title .sep { color: var(--hairline); font-weight: 400; }
         .localnav a.item { font-size: 13px; color: var(--text); opacity: 0.8; }
-        .pill.play { background: #01875f; }
+        .badge { display: inline-flex; border-radius: 10px; transition: transform .15s ease, opacity .15s ease; }
+        .badge img { height: 54px; width: auto; display: block; }
+        .badge:hover { transform: translateY(-1px); opacity: .9; }
+        .howto { display: inline-flex; align-items: center; gap: 10px; height: 54px; box-sizing: border-box; padding: 0 20px 0 14px;
+                 border: 1.5px solid var(--hairline); border-radius: 10px; background: var(--bg); color: var(--text) !important;
+                 text-decoration: none !important; text-align: left; transition: border-color .15s ease, background .15s ease; }
+        .howto svg { color: var(--button); flex: none; }
+        .howto span { font-size: 17px; font-weight: 600; line-height: 1.1; }
+        .howto small { display: block; font-size: 11px; font-weight: 500; color: var(--text-2); letter-spacing: .02em; }
+        .howto:hover { border-color: var(--button); background: var(--bg-alt); }
+        .hero .ctas { gap: 14px !important; }
+        .stores { display: inline-flex; gap: 14px; flex-wrap: nowrap; }
+        @media (max-width: 400px) { .badge img { height: 48px; } }
         .pill { display: inline-block; background: var(--button); color: #fff !important; border-radius: 980px; padding: 5px 12px; font-size: 13px; text-decoration: none !important; }
         .pill.big { font-size: 17px; padding: 12px 24px; }
         .pill:hover { filter: brightness(1.08); }
@@ -319,9 +331,9 @@
             <h1>Share. Sync. Remember.</h1>
             <p class="lede">Shared albums for your family and friends, on iPhone and Android, kept in your own iCloud or Google Drive. Everyone adds their photos, reacts and comments, and the album becomes a video story and a journal.</p>
             <div class="ctas">
-                <a class="pill big" href="https://apps.apple.com/app/id6757401130" rel="noopener">Download on the App Store</a>
-                <a class="pill big play" href="https://play.google.com/store/apps/details?id=com.orbitaar.syncalbum" rel="noopener">Get it on Google Play</a>
-                <a href="user-guide.html">How to use it ›</a>
+                <span class="stores"><a class="badge" href="https://apps.apple.com/app/id6757401130" rel="noopener"><img src="../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="54"></a>
+                <a class="badge" href="https://play.google.com/store/apps/details?id=com.orbitaar.syncalbum" rel="noopener"><img src="../assets/google-play-badge.png" alt="Get it on Google Play" height="54"></a></span>
+                <a class="howto" href="user-guide.html"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.6 6.2 5.6 3.4a.5.5 0 0 1 0 .8l-5.6 3.4a.5.5 0 0 1-.8-.4V8.6a.5.5 0 0 1 .8-.4z"/></svg><span><small>Step by step</small>How to use SyncAlbum</span></a>
             </div>
             <div class="film">
                 <video id="filmVideo" controls muted loop playsinline preload="auto" poster="assets/v4/video/syncalbum-in-30s-poster.jpg" aria-label="SyncAlbum sharing an album, reacting to photos and playing a video story">
@@ -536,8 +548,8 @@
             <h2>Every photo, one album.</h2>
             <p class="lede" style="margin:14px auto 0;max-width:640px">Free on iPhone, iPad, Mac and Android. Invite anyone, whatever phone they have.</p>
             <div class="ctas" style="margin-top:28px">
-                <a class="pill big" href="https://apps.apple.com/app/id6757401130" rel="noopener">Download on the App Store</a>
-                <a class="pill big play" href="https://play.google.com/store/apps/details?id=com.orbitaar.syncalbum" rel="noopener">Get it on Google Play</a>
+                <span class="stores"><a class="badge" href="https://apps.apple.com/app/id6757401130" rel="noopener"><img src="../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="54"></a>
+                <a class="badge" href="https://play.google.com/store/apps/details?id=com.orbitaar.syncalbum" rel="noopener"><img src="../assets/google-play-badge.png" alt="Get it on Google Play" height="54"></a></span>
             </div>
         </section>
     </main>
